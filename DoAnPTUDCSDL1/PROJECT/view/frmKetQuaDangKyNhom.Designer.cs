@@ -1,6 +1,6 @@
 ﻿namespace PROJECT.view
 {
-    partial class frmKetQua
+    partial class frmKetQuaDangKyNhom
     {
         /// <summary>
         /// Required designer variable.
