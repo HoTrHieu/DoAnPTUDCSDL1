@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PROJECT.view
 {
-    public partial class frmKetQuaDangKyChuyenDe : Form
+    public partial class frmKetQuaDangKyChuyenDeSinhVien : Form
     {
-        public frmKetQuaDangKyChuyenDe()
+        public frmKetQuaDangKyChuyenDeSinhVien()
         {
             InitializeComponent();
         }
