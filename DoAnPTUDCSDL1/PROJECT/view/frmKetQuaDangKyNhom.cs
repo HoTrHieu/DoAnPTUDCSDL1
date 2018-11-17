@@ -16,18 +16,5 @@ namespace PROJECT.view
         {
             InitializeComponent();
         }
-
-        private void InitializeComponent()
-        {
-            this.SuspendLayout();
-            // 
-            // frmKetQuaDangKyNhom
-            // 
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Name = "frmKetQuaDangKyNhom";
-            this.Text = "frmKetQuaDangKyNhom";
-            this.ResumeLayout(false);
-
-        }
     }
 }

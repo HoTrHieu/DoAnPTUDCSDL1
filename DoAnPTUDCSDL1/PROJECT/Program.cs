@@ -1,9 +1,9 @@
-﻿using PROJECT.view;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PROJECT.view;
 
 namespace PROJECT
 {
@@ -17,7 +17,7 @@ namespace PROJECT
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmDangNhap());
+            Application.Run(new frmKetQuaDangKyNhom());
         }
     }
 }

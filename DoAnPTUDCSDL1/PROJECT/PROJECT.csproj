@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{10F94128-C32A-434A-8C29-281681017DA6}</ProjectGuid>
+    <ProjectGuid>{E9DD46B4-3694-492A-9C3A-63D7B403E392}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>PROJECT</RootNamespace>
     <AssemblyName>PROJECT</AssemblyName>
@@ -47,11 +47,11 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="view\frmDangKyNhom.cs">
+    <Compile Include="view\frmDangKyChuyenDe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\frmDangKyNhom.Designer.cs">
-      <DependentUpon>frmDangKyNhom.cs</DependentUpon>
+    <Compile Include="view\frmDangKyChuyenDe.Designer.cs">
+      <DependentUpon>frmDangKyChuyenDe.cs</DependentUpon>
     </Compile>
     <Compile Include="view\frmDangNhap.cs">
       <SubType>Form</SubType>
@@ -92,12 +92,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="view\frmGiaoDienChinh.resx">
-      <DependentUpon>frmGiaoDienChinh.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\frmKetQuaDangKyChuyenDeGiaoVu.resx">
-      <DependentUpon>frmKetQuaDangKyChuyenDeGiaoVu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="view\frmKetQuaDangKyNhom.resx">
       <DependentUpon>frmKetQuaDangKyNhom.cs</DependentUpon>
     </EmbeddedResource>

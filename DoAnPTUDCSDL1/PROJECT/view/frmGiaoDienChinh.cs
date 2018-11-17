@@ -16,18 +16,5 @@ namespace PROJECT.view
         {
             InitializeComponent();
         }
-
-        private void InitializeComponent()
-        {
-            this.SuspendLayout();
-            // 
-            // frmGiaoDienChinh
-            // 
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Name = "frmGiaoDienChinh";
-            this.Text = "frmGiaoDienChinh";
-            this.ResumeLayout(false);
-
-        }
     }
 }
