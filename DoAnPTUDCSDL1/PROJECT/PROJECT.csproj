@@ -53,6 +53,12 @@
     <Compile Include="view\frmDangKyChuyenDe.Designer.cs">
       <DependentUpon>frmDangKyChuyenDe.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\frmDangKyNhom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmDangKyNhom.Designer.cs">
+      <DependentUpon>frmDangKyNhom.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
