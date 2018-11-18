@@ -98,6 +98,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="view\frmDangKyChuyenDe.resx">
+      <DependentUpon>frmDangKyChuyenDe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\frmKetQuaDangKyChuyenDeGiaoVu.resx">
       <DependentUpon>frmKetQuaDangKyChuyenDeGiaoVu.cs</DependentUpon>
     </EmbeddedResource>
