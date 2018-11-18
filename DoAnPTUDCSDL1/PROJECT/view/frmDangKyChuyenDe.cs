@@ -16,5 +16,10 @@ namespace PROJECT.view
         {
             InitializeComponent();
         }
+
+        private void frmDangKyChuyenDe_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

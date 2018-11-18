@@ -47,17 +47,17 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="view\frmDangKiNhom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmDangKiNhom.Designer.cs">
+      <DependentUpon>frmDangKiNhom.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\frmDangKyChuyenDe.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="view\frmDangKyChuyenDe.Designer.cs">
       <DependentUpon>frmDangKyChuyenDe.cs</DependentUpon>
-    </Compile>
-    <Compile Include="view\frmDangKyNhom.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="view\frmDangKyNhom.Designer.cs">
-      <DependentUpon>frmDangKyNhom.cs</DependentUpon>
     </Compile>
     <Compile Include="view\frmDangNhap.cs">
       <SubType>Form</SubType>
@@ -98,11 +98,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="view\frmDangKiNhom.resx">
+      <DependentUpon>frmDangKiNhom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\frmDangKyChuyenDe.resx">
       <DependentUpon>frmDangKyChuyenDe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\frmDangKyNhom.resx">
-      <DependentUpon>frmDangKyNhom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>

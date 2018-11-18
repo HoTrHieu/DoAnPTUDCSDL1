@@ -16,5 +16,10 @@ namespace PROJECT.view
         {
             InitializeComponent();
         }
+
+        private void frmKetQuaDangKyChuyenDeGiaoVu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

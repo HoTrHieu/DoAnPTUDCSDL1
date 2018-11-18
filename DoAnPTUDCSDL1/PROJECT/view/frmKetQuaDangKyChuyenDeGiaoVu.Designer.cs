@@ -33,6 +33,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnHienThiTatCaChuyenDe = new System.Windows.Forms.Button();
             this.cmbChuyenDe = new System.Windows.Forms.ComboBox();
             this.cmbNamHoc = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,7 +46,6 @@
             this.colMaGVQL = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
-            this.btnHienThiTatCaChuyenDe = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -105,6 +105,15 @@
             this.groupBox3.TabIndex = 14;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin tìm kiếm kết quả đăng ký";
+            // 
+            // btnHienThiTatCaChuyenDe
+            // 
+            this.btnHienThiTatCaChuyenDe.Location = new System.Drawing.Point(333, 59);
+            this.btnHienThiTatCaChuyenDe.Name = "btnHienThiTatCaChuyenDe";
+            this.btnHienThiTatCaChuyenDe.Size = new System.Drawing.Size(137, 23);
+            this.btnHienThiTatCaChuyenDe.TabIndex = 3;
+            this.btnHienThiTatCaChuyenDe.Text = "Hiển thị tất cả chuyên đề";
+            this.btnHienThiTatCaChuyenDe.UseVisualStyleBackColor = true;
             // 
             // cmbChuyenDe
             // 
@@ -212,15 +221,6 @@
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
             // 
-            // btnHienThiTatCaChuyenDe
-            // 
-            this.btnHienThiTatCaChuyenDe.Location = new System.Drawing.Point(333, 59);
-            this.btnHienThiTatCaChuyenDe.Name = "btnHienThiTatCaChuyenDe";
-            this.btnHienThiTatCaChuyenDe.Size = new System.Drawing.Size(137, 23);
-            this.btnHienThiTatCaChuyenDe.TabIndex = 3;
-            this.btnHienThiTatCaChuyenDe.Text = "Hiển thị tất cả chuyên đề";
-            this.btnHienThiTatCaChuyenDe.UseVisualStyleBackColor = true;
-            // 
             // frmKetQuaDangKyChuyenDeGiaoVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -235,6 +235,7 @@
             this.Name = "frmKetQuaDangKyChuyenDeGiaoVu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmKetQuaDangKyChuyenDeGiaoVu";
+            this.Load += new System.EventHandler(this.frmKetQuaDangKyChuyenDeGiaoVu_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);

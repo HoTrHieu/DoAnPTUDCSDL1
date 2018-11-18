@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace PROJECT.view
 {
-    public partial class frmDangKyNhom : Form
+    public partial class frmDangKiNhom : Form
     {
-        public frmDangKyNhom()
+        public frmDangKiNhom()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
