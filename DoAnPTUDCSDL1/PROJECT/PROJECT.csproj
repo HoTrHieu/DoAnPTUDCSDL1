@@ -101,6 +101,12 @@
     <EmbeddedResource Include="view\frmDangKyChuyenDe.resx">
       <DependentUpon>frmDangKyChuyenDe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\frmDangKyNhom.resx">
+      <DependentUpon>frmDangKyNhom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\frmKetQuaDangKyChuyenDeGiaoVu.resx">
       <DependentUpon>frmKetQuaDangKyChuyenDeGiaoVu.cs</DependentUpon>
     </EmbeddedResource>
