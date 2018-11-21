@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace PROJECT.view
 {
-    public partial class frmGiaoDienChinhSinhVien : Form
+    public partial class frmGiaoDienChinhGV : Form
     {
-        public frmGiaoDienChinhSinhVien()
+        public frmGiaoDienChinhGV()
         {
             InitializeComponent();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

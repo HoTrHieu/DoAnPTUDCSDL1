@@ -71,6 +71,12 @@
     <Compile Include="view\frmGiaoDienChinh.Designer.cs">
       <DependentUpon>frmGiaoDienChinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\frmGiaoDienChinhGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmGiaoDienChinhGV.Designer.cs">
+      <DependentUpon>frmGiaoDienChinhGV.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\frmKetQuaDangKyChuyenDeGiaoVu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmGiaoDienChinh.resx">
+      <DependentUpon>frmGiaoDienChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmGiaoDienChinhGV.resx">
+      <DependentUpon>frmGiaoDienChinhGV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\frmKetQuaDangKyChuyenDeGiaoVu.resx">
       <DependentUpon>frmKetQuaDangKyChuyenDeGiaoVu.cs</DependentUpon>
