@@ -61,7 +61,7 @@
             // 
             this.btnQuanLyNhom.Location = new System.Drawing.Point(219, 29);
             this.btnQuanLyNhom.Name = "btnQuanLyNhom";
-            this.btnQuanLyNhom.Size = new System.Drawing.Size(124, 23);
+            this.btnQuanLyNhom.Size = new System.Drawing.Size(132, 23);
             this.btnQuanLyNhom.TabIndex = 1;
             this.btnQuanLyNhom.Text = "Kết Quả / Hủy Đăng Ký";
             this.btnQuanLyNhom.UseVisualStyleBackColor = true;
@@ -171,7 +171,7 @@
             // 
             this.button2.Location = new System.Drawing.Point(219, 29);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(124, 23);
+            this.button2.Size = new System.Drawing.Size(132, 23);
             this.button2.TabIndex = 1;
             this.button2.Text = "Kết Quả / Chỉnh Sửa";
             this.button2.UseVisualStyleBackColor = true;
@@ -180,7 +180,7 @@
             // 
             this.btnThonTinSinhVien.Location = new System.Drawing.Point(219, 43);
             this.btnThonTinSinhVien.Name = "btnThonTinSinhVien";
-            this.btnThonTinSinhVien.Size = new System.Drawing.Size(124, 23);
+            this.btnThonTinSinhVien.Size = new System.Drawing.Size(132, 23);
             this.btnThonTinSinhVien.TabIndex = 6;
             this.btnThonTinSinhVien.Text = "Thông Tin Chi Tiết Của Sinh Viên";
             this.btnThonTinSinhVien.UseVisualStyleBackColor = true;
@@ -189,7 +189,7 @@
             // 
             this.btnDangXuat.Location = new System.Drawing.Point(231, 395);
             this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.Size = new System.Drawing.Size(124, 23);
+            this.btnDangXuat.Size = new System.Drawing.Size(132, 23);
             this.btnDangXuat.TabIndex = 8;
             this.btnDangXuat.Text = "Đăng Xuất";
             this.btnDangXuat.UseVisualStyleBackColor = true;

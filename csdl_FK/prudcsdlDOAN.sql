@@ -43,6 +43,7 @@ create table NHOM
 	MaNhom nchar(10),
 	TenNhom nvarchar(30),
 	MaLop nchar(10),
+	TrangThai bit --0 đủ thành viên, 1 thiếu thành viên
 	PRIMARY KEY(MaNhom,MaLop)
 );
 go
