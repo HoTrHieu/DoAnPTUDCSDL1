@@ -141,6 +141,9 @@
     <EmbeddedResource Include="view\frmKetQuaDangKyNhom.resx">
       <DependentUpon>frmKetQuaDangKyNhom.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\frmMoChuyenDe.resx">
+      <DependentUpon>frmMoChuyenDe.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
