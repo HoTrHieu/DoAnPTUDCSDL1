@@ -65,17 +65,17 @@
     <Compile Include="view\frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\frmGiaoDienChinh.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="view\frmGiaoDienChinh.Designer.cs">
-      <DependentUpon>frmGiaoDienChinh.cs</DependentUpon>
-    </Compile>
     <Compile Include="view\frmGiaoDienChinhGV.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="view\frmGiaoDienChinhGV.Designer.cs">
       <DependentUpon>frmGiaoDienChinhGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\frmGiaoDienChinhSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmGiaoDienChinhSV.Designer.cs">
+      <DependentUpon>frmGiaoDienChinhSV.cs</DependentUpon>
     </Compile>
     <Compile Include="view\frmKetQuaDangKyChuyenDeGiaoVu.cs">
       <SubType>Form</SubType>
@@ -113,11 +113,11 @@
     <EmbeddedResource Include="view\frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\frmGiaoDienChinh.resx">
-      <DependentUpon>frmGiaoDienChinh.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="view\frmGiaoDienChinhGV.resx">
       <DependentUpon>frmGiaoDienChinhGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmGiaoDienChinhSV.resx">
+      <DependentUpon>frmGiaoDienChinhSV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\frmKetQuaDangKyChuyenDeGiaoVu.resx">
       <DependentUpon>frmKetQuaDangKyChuyenDeGiaoVu.cs</DependentUpon>

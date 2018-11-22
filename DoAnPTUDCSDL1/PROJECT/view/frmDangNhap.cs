@@ -18,19 +18,5 @@ namespace PROJECT.view
             InitializeComponent();
         }
 
-        private void frmDangNhap_Load(object sender, EventArgs e)
-        {
-            string username = txtDangNhap.Text;
-            string password = txtMatKhau.Text;
-            if (true)
-            {
-                MessageBox.Show("Dang Nhap Thanh Cong");
-            }
-            else
-            {
-                //txtDangNhap.Clear;
-                //txtMatKhau.Clear;
-            }
-        }
     }
 }

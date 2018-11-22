@@ -51,7 +51,7 @@ create table THANHVIEN
 	MaSinhVien nchar(10),
 	MaLop nchar(10),
 	MaNhom nchar(10),
-	ChucVu nchar(20)	--nhomtruong, thanhvien!
+	VaiTro nchar(20)	--nhomtruong, thanhvien!
 	PRIMARY KEY(MaLop,MaNhom,MaSinhVien)
 );
 go
