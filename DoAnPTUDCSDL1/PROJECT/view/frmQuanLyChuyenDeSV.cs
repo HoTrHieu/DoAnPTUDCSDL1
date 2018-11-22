@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PROJECT.view
 {
-    public partial class frmDangKiNhom : Form
+    public partial class frmQuanLyChuyenDeSV : Form
     {
-        public frmDangKiNhom()
+        public frmQuanLyChuyenDeSV()
         {
             InitializeComponent();
         }
