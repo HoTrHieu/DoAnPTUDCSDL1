@@ -11,7 +11,7 @@ create table SINHVIEN
 	TenSinhVien nvarchar(50),
 	Phai bit,--true and 1 is men, 0 is women
 	NgaySinh datetime,
-	DiaChi text,
+	DiaChi nvarchar(231),
 	MaTaiKhoan char(10),
 	MaNganh char(10)
 );
@@ -93,7 +93,7 @@ create table GIAOVU
 	TenGiaoVu nvarchar(50),
 	Phai bit,
 	NgaySinh datetime,
-	DiaChi text
+	DiaChi nvarchar(231)
 );
 create table GIAOVIEN
 (
@@ -101,7 +101,7 @@ create table GIAOVIEN
 	TenGiaoVien nvarchar(50),
 	Phai bit, --1 nam, 0 nu
 	NgaySinh datetime,
-	DiaChi text,
+	DiaChi nvarchar(231),
 	MaChuyenDe char(10)
 )
 
@@ -174,5 +174,52 @@ ADD  CONSTRAINT [FK_GIAOVIEN_CHUYENDE] FOREIGN KEY([MaChuyenDe])
 REFERENCES [dbo].[CHUYENDE] ([MaChuyenDe])
 
 
+-------------------------------
+-----UPDATE THÊM DỮ LIỆU
 
-
+--INSERT INTO NGANH
+insert into NGANH(MaNganh,TenNganh,SoSinhVienTheoHoc,SoChuyenDeToiDa)
+values ('N01',N'Công Nghệ Thông Tin',500,5),
+		('N02',N'Công Nghệ Sinh Học',500,5),
+		('N03',N'Vật Lí',200,4),
+		('N04',N'Hoá Học',350,6),
+		('N05',N'Sinh Học',400,7),
+		('N06',N'Môi Trường',100,5),
+		('N07',N'Vật Lí Hạt Nhân',50,4)
+--INSERT INTO CHUYENDE
+insert into CHUYENDE(MaChuyenDe, TenChuyenDe, SoSinhVienToiDa, MaNganh)
+values ('CD01',N'Mạng Máy Tính',50,'N01'),
+		('CD02',N'Quản trị cơ sở dữ liệu',150,'N01'),
+		('CD03',N'Xác suất thống kê',50,'N02'),
+		('CD04',N'Cơ nhiệt',80,'N03'),
+		('CD05',N'Hóa đại cương 1',150,'N04'),
+		('CD06',N'Hóa phân tích 1',75,'N04'),
+		('CD07',N'Sinh Lý Thực Vật',70,'N05'),
+		('CD08',N'Sinh học tế bào',60,'N05'),
+		('CD09',N'Kinh tế môi trường',70,'N06'),
+		('CD10',N'Điện Tử Cao Tần',80,'N07'),
+		('CD11',N'Khoa Học Vật Liệu Cơ Bản',50,'N07')
+--INSERT INTO GIAOVIEN
+insert into GIAOVIEN(MaGiaoVien,TenGiaoVien,Phai,NgaySinh,DiaChi,MaChuyenDe)
+values('GV01',N'Tô Ngọc Vân',0,18-08-1992,N'Số 1 Nguyễn Văn Cừ, phường Cầu Ông Lãnh, quận 1, TP Hồ Chí Minh','CD01'),
+	  ('GV02',N'Phạm Nguyễn Sơn Tùng',1,18-08-1984,N'Số 2 Phạm Ngũ Lão, phường Cầu Ông Lãnh, quận 1, TP Hồ Chí Minh','CD01'),
+	  ('GV03',N'Nguyễn Đức Huy',1,20-03-1990,N'Số 3 Trần Hưng Đạo, phường Cầu Ông Lãnh, quận 1, TP Hồ Chí Minh','CD03'),
+	  ('GV04',N'Thái Hùng Văn',1,11-09-1980,N'Số 4 Nguyễn Cư Trinh, quận 2, TP Hồ Chí Minh','CD04'),
+	  ('GV05',N'Đặng Bình Phương',1,01-02-1984,N'Số 5 Hoàng Hoa Thám, quận 3, TP Hồ Chí Minh','CD05'),
+	  ('GV06',N'Nguyễn Ngọc Thảo',0,08-08-1987,N'Số 6 Trương Định, quận 4, TP Hồ Chí Minh','CD06'),
+	  ('GV07',N'Tiết Gia Hồng',0,02-02-1984,N'Số 7 Nguyễn Tri Phương, quận 8, TP Hồ Chí Minh','CD07'),
+	  ('GV08',N'Nguyễn Phạm Phương Nam',1,10-02-1984,N'Số 8 An Dương Vương, quận Tân Bình, TP Hồ Chí Minh','CD08'),
+	  ('GV09',N'Hồ Lê Thị Kim Nhung',0,18-08-1990,N'Số 9 Lý Thái Tổ, quận 5, TP Hồ Chí Minh','CD09'),
+	  ('GV10',N'Lương Vỹ Minh',1,05-05-1984,N'Số 10 Lê Lai, quận 1, TP Hồ Chí Minh','CD10'),
+	  ('GV11',N'Hồ Tuấn Thanh',1,23-08-1980,N'Số 11, quận 3, TP Hồ Chí Minh','CD11'),
+	  ('GV12',N'Hồ Trung Hiếu',1,01-06-1997,N'Số 135 Trần Hưng Đạo, phường Cầu Ông Lãnh, quận 1, TP Hồ Chí Minh','CD02')
+--INSERT INTO GIAOVU
+insert into GIAOVU(MaGiaoVu,TenGiaoVu,Phai,NgaySinh ,DiaChi)
+values('GVU01',N'Nguyễn Bá Đạo',1 ,18-06-1992,N'Số 16C Tôn Đức Thắng, phường Mỹ Bình, TP. Long Xuyên, tỉnh An Giang'),
+	  ('GVU02',N'Nguyễn Tường Minh',1,18-06-1982,N'Số 1 Phạm Văn Đồng, phường Phước Trung, TP. Bà Rịa, tỉnh Bà Rịa – Vũng Tàu'),
+	  ('GVU03',N'Hoàng Bảo Ngân',0,18-06-1991,N'Số 04 đường Phan Đình Phùng, phường 3, TP.Bạc Liêu, tỉnh Bạc Liêu'),
+	  ('GVU04',N'Minh Huyền',0,18-06-1990,N'Số 82  đường Hùng Vương, TP. Bắc Giang, tỉnh Bắc Giang'),
+	  ('GVU05',N'Phan Bá Tánh',1,18-06-1993,N'Tổ 1A, phường Phùng Chí Kiên, TX.Bắc Kạn, tỉnh Bắc Kạn')
+-------------------mai lam tiep
+select *
+from GIAOVIEN

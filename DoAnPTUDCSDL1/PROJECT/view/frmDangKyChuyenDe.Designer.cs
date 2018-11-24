@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvChuyenDe = new System.Windows.Forms.DataGridView();
             this.MaCD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenCD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoSVToiDa = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,7 +47,7 @@
             this.btnDangKy = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvChuyenDe)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,7 +63,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.dgvChuyenDe);
             this.groupBox1.Location = new System.Drawing.Point(12, 216);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(620, 265);
@@ -71,18 +71,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh Sách Chuyên Đề Đăng Ký";
             // 
-            // dataGridView1
+            // dgvChuyenDe
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvChuyenDe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvChuyenDe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaCD,
             this.TenCD,
             this.SoSVToiDa,
             this.SoSVDaDK});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 16);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(608, 232);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvChuyenDe.Location = new System.Drawing.Point(6, 16);
+            this.dgvChuyenDe.Name = "dgvChuyenDe";
+            this.dgvChuyenDe.Size = new System.Drawing.Size(608, 232);
+            this.dgvChuyenDe.TabIndex = 1;
             // 
             // MaCD
             // 
@@ -225,7 +225,7 @@
             this.Text = "frmDangKyChuyenDe";
             this.Load += new System.EventHandler(this.frmDangKyChuyenDe_Load);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvChuyenDe)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -237,7 +237,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvChuyenDe;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblHocKi;
