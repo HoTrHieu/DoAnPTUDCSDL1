@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Linq;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,7 +20,8 @@ namespace PROJECT.view
 
         private void frmDangKyChuyenDe_Load(object sender, EventArgs e)
         {
-
+            var db = new data.LINQDataContext();
+           
         }
     }
 }

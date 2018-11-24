@@ -11,7 +11,7 @@ create table SINHVIEN
 	TenSinhVien nvarchar(50),
 	Phai bit,--true and 1 is men, 0 is women
 	NgaySinh datetime,
-	DiaChi nvarchar(50),
+	DiaChi text,
 	MaTaiKhoan char(10),
 	MaNganh char(10)
 );
@@ -93,7 +93,7 @@ create table GIAOVU
 	TenGiaoVu nvarchar(50),
 	Phai bit,
 	NgaySinh datetime,
-	DiaChi nvarchar(50)
+	DiaChi text
 );
 create table GIAOVIEN
 (
@@ -101,7 +101,7 @@ create table GIAOVIEN
 	TenGiaoVien nvarchar(50),
 	Phai bit, --1 nam, 0 nu
 	NgaySinh datetime,
-	Diachi nvarchar(50),
+	DiaChi text,
 	MaChuyenDe char(10)
 )
 
