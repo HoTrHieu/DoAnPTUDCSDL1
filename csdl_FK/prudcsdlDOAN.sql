@@ -18,9 +18,10 @@ create table SINHVIEN
 go
 create table TAIKHOAN 
 (
-	MaSinhVien char(10) NOT NULL PRIMARY KEY,
+	MaTaiKhoan char(10) NOT NULL PRIMARY KEY,
 	MatKhau nchar(20),
-	MaGiaoVu char(10)
+	LoaiTaiKhoan char(5),
+	MaGiaoVuTao char(10)
 );
 go
 create table THONGTINDANGKY 
@@ -125,11 +126,11 @@ GO
 --k4
 ALTER TABLE [dbo].[SINHVIEN]  WITH CHECK 
 ADD  CONSTRAINT [FK_SINHVIEN_TAIKHOAN] FOREIGN KEY([MaSinhVien])
-REFERENCES [dbo].[TAIKHOAN] ([MaSinhVien])
+REFERENCES [dbo].[TAIKHOAN] ([MaTaiKhoan])
 GO
 --k5
 ALTER TABLE [dbo].[TAIKHOAN]  WITH CHECK 
-ADD  CONSTRAINT [FK_TAIKHOAN_GIAOVU] FOREIGN KEY([MaGiaoVu])
+ADD  CONSTRAINT [FK_TAIKHOAN_GIAOVU] FOREIGN KEY([MaGiaoVuTao])
 REFERENCES [dbo].[GIAOVU] ([MaGiaoVu])
 GO
 --k6
@@ -171,6 +172,10 @@ GO
 ALTER TABLE [dbo].[GIAOVIEN]  WITH CHECK 
 ADD  CONSTRAINT [FK_GIAOVIEN_CHUYENDE] FOREIGN KEY([MaChuyenDe])
 REFERENCES [dbo].[CHUYENDE] ([MaChuyenDe])
+--k14
+ALTER TABLE [dbo].[GIAOVU]  WITH CHECK 
+ADD  CONSTRAINT [FK_GIAOVU_TAIKHOAN] FOREIGN KEY([MaGiaoVu])
+REFERENCES [dbo].[TAIKHOAN] ([MaTaiKhoan])
 
 
 -------------------------------
@@ -188,16 +193,16 @@ values ('N01',N'Công Nghệ Thông Tin',500,5),
 --INSERT INTO CHUYENDE
 insert into CHUYENDE(MaChuyenDe, TenChuyenDe, SoSinhVienToiDa, MaNganh)
 values ('CD01',N'Mạng Máy Tính',50,'N01'),
-		('CD02',N'Quản trị cơ sở dữ liệu',150,'N01'),
-		('CD03',N'Xác suất thống kê',50,'N02'),
-		('CD04',N'Cơ nhiệt',80,'N03'),
-		('CD05',N'Hóa đại cương 1',150,'N04'),
-		('CD06',N'Hóa phân tích 1',75,'N04'),
-		('CD07',N'Sinh Lý Thực Vật',70,'N05'),
-		('CD08',N'Sinh học tế bào',60,'N05'),
-		('CD09',N'Kinh tế môi trường',70,'N06'),
-		('CD10',N'Điện Tử Cao Tần',80,'N07'),
-		('CD11',N'Khoa Học Vật Liệu Cơ Bản',50,'N07')
+	   ('CD02',N'Quản trị cơ sở dữ liệu',150,'N01'),
+	   ('CD03',N'Xác suất thống kê',50,'N02'),
+	   ('CD04',N'Cơ nhiệt',80,'N03'),
+	   ('CD05',N'Hóa đại cương 1',150,'N04'),
+	   ('CD06',N'Hóa phân tích 1',75,'N04'),
+	   ('CD07',N'Sinh Lý Thực Vật',70,'N05'),
+	   ('CD08',N'Sinh học tế bào',60,'N05'),
+	   ('CD09',N'Kinh tế môi trường',70,'N06'),
+	   ('CD10',N'Điện Tử Cao Tần',80,'N07'),
+	   ('CD11',N'Khoa Học Vật Liệu Cơ Bản',50,'N07')
 --INSERT INTO GIAOVIEN
 insert into GIAOVIEN(MaGiaoVien,TenGiaoVien,Phai,NgaySinh,DiaChi,MaChuyenDe)
 values('GV01',N'Tô Ngọc Vân',0,18-08-1992,N'Số 1 Nguyễn Văn Cừ, phường Cầu Ông Lãnh, quận 1, TP Hồ Chí Minh','CD01'),
@@ -212,32 +217,37 @@ values('GV01',N'Tô Ngọc Vân',0,18-08-1992,N'Số 1 Nguyễn Văn Cừ, phư�
 	  ('GV10',N'Lương Vỹ Minh',1,05-05-1984,N'Số 10 Lê Lai, quận 1, TP Hồ Chí Minh','CD10'),
 	  ('GV11',N'Hồ Tuấn Thanh',1,23-08-1980,N'Số 11, quận 3, TP Hồ Chí Minh','CD11'),
 	  ('GV12',N'Hồ Trung Hiếu',1,01-06-1997,N'Số 135 Trần Hưng Đạo, phường Cầu Ông Lãnh, quận 1, TP Hồ Chí Minh','CD02')
+--INSERT TAI KHOAN GIAO VU GOC
+insert into TAIKHOAN(MaTaiKhoan,MatKhau,LoaiTaiKhoan,MaGiaoVuTao)
+values('GVU01','GVU01','GVU',null)
+--INSERT GIAOVU GOC
+insert into GIAOVU(MaGiaoVu,TenGiaoVu,Phai,NgaySinh ,DiaChi)
+values('GVU01',N'Nguyễn Bá Đạo',1 ,18-06-1992,N'Số 16C Tôn Đức Thắng, phường Mỹ Bình, TP. Long Xuyên, tỉnh An Giang')
+
+
+--INSERT INTO TAIKHOAN GIAOVU
+insert into TAIKHOAN(MaTaiKhoan,MatKhau,LoaiTaiKhoan,MaGiaoVuTao)
+values
+	  ('GVU02','GVU02','GVU','GVU01'),
+	  ('GVU03','GVU03','GVU','GVU01'),
+	  ('GVU04','GVU04','GVU','GVU01'),
+	  ('GVU05','GVU05','GVU','GVU01')
 --INSERT INTO GIAOVU
 insert into GIAOVU(MaGiaoVu,TenGiaoVu,Phai,NgaySinh ,DiaChi)
-values('GVU01',N'Nguyễn Bá Đạo',1 ,18-06-1992,N'Số 16C Tôn Đức Thắng, phường Mỹ Bình, TP. Long Xuyên, tỉnh An Giang'),
+values
 	  ('GVU02',N'Nguyễn Tường Minh',1,18-06-1982,N'Số 1 Phạm Văn Đồng, phường Phước Trung, TP. Bà Rịa, tỉnh Bà Rịa – Vũng Tàu'),
 	  ('GVU03',N'Hoàng Bảo Ngân',0,18-06-1991,N'Số 04 đường Phan Đình Phùng, phường 3, TP.Bạc Liêu, tỉnh Bạc Liêu'),
 	  ('GVU04',N'Minh Huyền',0,18-06-1990,N'Số 82  đường Hùng Vương, TP. Bắc Giang, tỉnh Bắc Giang'),
 	  ('GVU05',N'Phan Bá Tánh',1,18-06-1993,N'Tổ 1A, phường Phùng Chí Kiên, TX.Bắc Kạn, tỉnh Bắc Kạn')
---INSERT INTO GIAOVU
-insert into HOCKY(HocKy,NienHoc,NgayBatDau,NgayKetThuc)
-values(1,'2015-2016',01-08-2015,31-12-2015),
-	  (2,'2015-2016',01-01-2016,31-05-2016),
-	  (1,'2016-2017',01-08-2016,31-12-2016),
-	  (2,'2016-2017',01-01-2017,31-05-2017),
-	  (1,'2017-2018',01-08-2017,31-12-2017),
-	  (2,'2017-2018',01-01-2018,31-05-2018),
-	  (1,'2018-2019',01-08-2018,31-12-2018),
-	  (2,'2018-2019',01-01-2019,31-05-2019)
---INSERT INTO TAIKHOAN
-insert into TAIKHOAN(MaSinhVien,MatKhau,MaGiaoVu)
-values('SV01','SV01','GVU01'),
-	  ('SV02','SV02','GVU01'),
-	  ('SV03','SV03','GVU02'),
-	  ('SV04','SV04','GVU03'),
-	  ('SV05','SV05','GVU04'),
-	  ('SV06','SV06','GVU02'),
-	  ('SV07','SV07','GVU02')
+--INSERT INTO TAIKHOAN SINHVINE
+insert into TAIKHOAN(MaTaiKhoan,MatKhau,LoaiTaiKhoan,MaGiaoVuTao)
+values('SV01','SV01','SV','GVU01'),
+	  ('SV02','SV02','SV','GVU01'),
+	  ('SV03','SV03','SV','GVU02'),
+	  ('SV04','SV04','SV','GVU03'),
+	  ('SV05','SV05','SV','GVU04'),
+	  ('SV06','SV06','SV','GVU02'),
+	  ('SV07','SV07','SV','GVU01')
 --INSERT INTO SINHVIEN
 insert into SINHVIEN(MaSinhVien, TenSinhVien,Phai,NgaySinh,DiaChi,MaNganh)
 values('SV01', N'Hoàng Nguyễn Bình An',1,31-6-1998,N'Số 7D, Đường số 4, Khu phố 6, Phường Hiệp Bình Phước, Quận Thủ Đức, TP Hồ Chí Minh','N01'),
@@ -247,6 +257,16 @@ values('SV01', N'Hoàng Nguyễn Bình An',1,31-6-1998,N'Số 7D, Đường số
 	  ('SV05', N'Mai Minh Phương',0,12-8-1998,N'Lô L2-12,L2 Vincom Center Landmark 81,số 772 Điện Biên Phủ, Phường 22, Quận Bình Thạnh, TP Hồ Chí Minh','N05'),
 	  ('SV06', N'Vũ Minh Thư',0,21-6-1998,N'Số 7-9 Nguyễn Bỉnh Khiêm, Phường Bến Nghé, Quận 1, TP Hồ Chí Minh','N01'),
 	  ('SV07', N'Nguyễn Mạnh Tùng',1,9-10-1998,N'Phòng 501, Lầu 5, số 13C đường 12, Khu phố 4, Phường Bình An, Quận 2, TP Hồ Chí Minh','N03')
+--INSERT INTO HOCKY
+insert into HOCKY(HocKy,NienHoc,NgayBatDau,NgayKetThuc)
+values(1,'2015-2016',01-08-2015,31-12-2015),
+	  (2,'2015-2016',01-01-2016,31-05-2016),
+	  (1,'2016-2017',01-08-2016,31-12-2016),
+	  (2,'2016-2017',01-01-2017,31-05-2017),
+	  (1,'2017-2018',01-08-2017,31-12-2017),
+	  (2,'2017-2018',01-01-2018,31-05-2018),
+	  (1,'2018-2019',01-08-2018,31-12-2018),
+	  (2,'2018-2019',01-01-2019,31-05-2019)
 --INSERT INTO LOP
 insert into LOPHOC(MaLop,TenLop)
 values('L01','CQO1'),
@@ -254,6 +274,30 @@ values('L01','CQO1'),
 	  ('L03','CQO3'),
 	  ('L04','CQO4'),
 	  ('L05','CQO5')
--------------------mai lam tiep
+--INSERT INTO THONGTINMOCHUYENDE
+insert THONGTINMOCHUYENDE(MaThongTinMoChuyenDe, HocKy, NienHoc, MaGiaoVu, MaChuyenDe)
+	values('MCD01',1,'2017-2018','GVU01','CD01'),
+		  ('MCD02',1,'2017-2018','GVU02','CD02'),
+		  ('MCD03',1,'2017-2018','GVU05','CD03'),
+		  ('MCD04',1,'2017-2018','GVU03','CD04'),
+		  ('MCD05',1,'2017-2018','GVU04','CD05'),
+		  ('MCD06',2,'2017-2018','GVU01','CD06'),
+		  ('MCD07',2,'2017-2018','GVU04','CD07'),
+		  ('MCD08',2,'2017-2018','GVU02','CD08'),
+		  ('MCD09',2,'2017-2018','GVU05','CD09'),
+		  ('MCD10',2,'2017-2018','GVU03','CD10')
+--INSERT INTO THONGTINDANGKY
+insert THONGTINDANGKY(MaDangKy, MaSinhVien, MaThongTinMoChuyenDe, MaLop)
+values('DK01','SV01','MCD01','L01'),
+		('DK02','SV01','MCD02','L02'),
+		('DK03','SV02','MCD01','L01'),
+		('DK04','SV02','MCD02','L02'),
+		('DK05','SV02','MCD04','L04'),
+		('DK06','SV03','MCD05','L02'),
+		('DK07','SV04','MCD06','L03'),
+		('DK08','SV05','MCD03','L04'),
+		('DK09','SV05','MCD07','L04'),
+		('DK10','SV06','MCD09','L05')
+--
 select *
 from taikhoan
