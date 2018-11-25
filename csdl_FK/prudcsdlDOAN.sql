@@ -220,6 +220,16 @@ values('GVU01',N'Nguyễn Bá Đạo',1 ,18-06-1992,N'Số 16C Tôn Đức Thắ
 	  ('GVU03',N'Hoàng Bảo Ngân',0,18-06-1991,N'Số 04 đường Phan Đình Phùng, phường 3, TP.Bạc Liêu, tỉnh Bạc Liêu'),
 	  ('GVU04',N'Minh Huyền',0,18-06-1990,N'Số 82  đường Hùng Vương, TP. Bắc Giang, tỉnh Bắc Giang'),
 	  ('GVU05',N'Phan Bá Tánh',1,18-06-1993,N'Tổ 1A, phường Phùng Chí Kiên, TX.Bắc Kạn, tỉnh Bắc Kạn')
+--INSERT INTO GIAOVU
+insert into HOCKY(HocKy,NienHoc,NgayBatDau,NgayKetThuc)
+values(1,'2015-2016',01-08-2015,31-12-2015),
+	  (2,'2015-2016',01-01-2016,31-05-2016),
+	  (1,'2016-2017',01-08-2016,31-12-2016),
+	  (2,'2016-2017',01-01-2017,31-05-2017),
+	  (1,'2017-2018',01-08-2017,31-12-2017),
+	  (2,'2017-2018',01-01-2018,31-05-2018),
+	  (1,'2018-2019',01-08-2018,31-12-2018),
+	  (2,'2018-2019',01-01-2019,31-05-2019)
 -------------------mai lam tiep
 select *
-from GIAOVIEN
+from hocky
