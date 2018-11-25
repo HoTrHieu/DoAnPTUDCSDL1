@@ -65,7 +65,7 @@ create table THONGTINMOCHUYENDE
 (
 	MaThongTinMoChuyenDe char(10)NOT NULL PRIMARY KEY,
 	HocKy int,
-	NienHoc int,
+	NienHoc char(20),
 	MaGiaoVu char(10),
 	MaChuyenDe char(10)
 );
@@ -81,7 +81,7 @@ go
 create table HOCKY 
 (
 	HocKy int,
-	NienHoc int,
+	NienHoc char(20),
 	NgayBatDau datetime,
 	NgayKetThuc datetime
 	PRIMARY KEY(HocKy,NienHoc)
