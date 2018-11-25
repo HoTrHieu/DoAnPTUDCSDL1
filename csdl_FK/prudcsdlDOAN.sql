@@ -298,6 +298,26 @@ values('DK01','SV01','MCD01','L01'),
 		('DK08','SV05','MCD03','L04'),
 		('DK09','SV05','MCD07','L04'),
 		('DK10','SV06','MCD09','L05')
---
+--INSERT NHOM
+insert into NHOM(MaNhom,TenNhom,TrangThai)
+values('NHOM00',N'0 anh em',1),
+('NHOM01',N'1 anh em',1),
+('NHOM02',N'2 anh em',0),
+('NHOM03',N'3 anh em',1),
+('NHOM04',N'4 anh em',0),
+('NHOM05',N'5 anh em',0)
+--INSERT THANHVIEN
+insert into THANHVIEN(MaDangKy,MaNhom,VaiTro)
+values  ('DK01','NHOM01','trưởng nhóm'),
+		('DK02','NHOM02','trưởng nhóm'),
+		('DK03','NHOM03','trưởng nhóm'),
+		('DK04','NHOM03','thành viên'),
+		('DK05','NHOM03','thành viên'),
+		('DK06','NHOM04','trưởng nhóm'),
+		('DK07','NHOM05','trưởng nhóm'),
+		('DK08','NHOM05','thành viên'),
+		('DK09','NHOM05','thành viên'),
+		('DK10','NHOM05','thành viên')
+
 select *
-from taikhoan
+from THONGTINDANGKY
