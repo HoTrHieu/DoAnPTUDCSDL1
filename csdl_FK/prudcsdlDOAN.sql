@@ -230,6 +230,14 @@ values(1,'2015-2016',01-08-2015,31-12-2015),
 	  (2,'2017-2018',01-01-2018,31-05-2018),
 	  (1,'2018-2019',01-08-2018,31-12-2018),
 	  (2,'2018-2019',01-01-2019,31-05-2019)
+--INSERT INTO TAIKHOAN
+insert into TAIKHOAN(MaTaiKhoan,MaSinhVien,MatKhau,MaGiaoVu)
+values('TK01','SV01','123','GVU01'),
+	  ('TK02','SV01','123','GVU01'),
+	  ('TK03','SV01','123','GVU02'),
+	  ('TK04','SV01','123','GVU03'),
+	  ('TK05','SV01','123','GVU04'),
+	  ('TK06','SV01','123','GVU02')
 -------------------mai lam tiep
 select *
 from hocky
