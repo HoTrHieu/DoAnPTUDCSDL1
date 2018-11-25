@@ -247,6 +247,13 @@ values('SV01', N'Hoàng Nguyễn Bình An',1,31-6-1998,N'Số 7D, Đường số
 	  ('SV05', N'Mai Minh Phương',0,12-8-1998,N'Lô L2-12,L2 Vincom Center Landmark 81,số 772 Điện Biên Phủ, Phường 22, Quận Bình Thạnh, TP Hồ Chí Minh','N05'),
 	  ('SV06', N'Vũ Minh Thư',0,21-6-1998,N'Số 7-9 Nguyễn Bỉnh Khiêm, Phường Bến Nghé, Quận 1, TP Hồ Chí Minh','N01'),
 	  ('SV07', N'Nguyễn Mạnh Tùng',1,9-10-1998,N'Phòng 501, Lầu 5, số 13C đường 12, Khu phố 4, Phường Bình An, Quận 2, TP Hồ Chí Minh','N03')
+--INSERT INTO LOP
+insert into LOPHOC(MaLop,TenLop)
+values('L01','CQO1'),
+	  ('L02','CQO2'),
+	  ('L03','CQO3'),
+	  ('L04','CQO4'),
+	  ('L05','CQO5')
 -------------------mai lam tiep
 select *
 from taikhoan
