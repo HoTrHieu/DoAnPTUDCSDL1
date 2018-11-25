@@ -229,6 +229,24 @@ values(1,'2015-2016',01-08-2015,31-12-2015),
 	  (2,'2017-2018',01-01-2018,31-05-2018),
 	  (1,'2018-2019',01-08-2018,31-12-2018),
 	  (2,'2018-2019',01-01-2019,31-05-2019)
+--INSERT INTO TAIKHOAN
+insert into TAIKHOAN(MaSinhVien,MatKhau,MaGiaoVu)
+values('SV01','SV01','GVU01'),
+	  ('SV02','SV02','GVU01'),
+	  ('SV03','SV03','GVU02'),
+	  ('SV04','SV04','GVU03'),
+	  ('SV05','SV05','GVU04'),
+	  ('SV06','SV06','GVU02'),
+	  ('SV07','SV07','GVU02')
+--INSERT INTO SINHVIEN
+insert into SINHVIEN(MaSinhVien, TenSinhVien,Phai,NgaySinh,DiaChi,MaNganh)
+values('SV01', N'Hoàng Nguyễn Bình An',1,31-6-1998,N'Số 7D, Đường số 4, Khu phố 6, Phường Hiệp Bình Phước, Quận Thủ Đức, TP Hồ Chí Minh','N01'),
+	  ('SV02', N'Phạm Thiên Thành',1,1-4-1998,N'465 An Dương Vương, Phường 03, Quận 5, TP Hồ Chí Minh','N02'),
+	  ('SV03', N'Dương Hoàng Anh',1,1-5-1998,N'Tòa nhà Hưng Bình, Số 404-406-406/2 Ung Văn Khiêm, Phường 25, Quận Bình Thạnh, TP Hồ Chí Minh','N03'),
+	  ('SV04', N'Nguyễn Vũ Minh Ngọc',0,5-8-1998,N'19N Nguyễn Hữu Cảnh, Phường 19, Quận Bình Thạnh, TP Hồ Chí Minh','N04'),
+	  ('SV05', N'Mai Minh Phương',0,12-8-1998,N'Lô L2-12,L2 Vincom Center Landmark 81,số 772 Điện Biên Phủ, Phường 22, Quận Bình Thạnh, TP Hồ Chí Minh','N05'),
+	  ('SV06', N'Vũ Minh Thư',0,21-6-1998,N'Số 7-9 Nguyễn Bỉnh Khiêm, Phường Bến Nghé, Quận 1, TP Hồ Chí Minh','N01'),
+	  ('SV07', N'Nguyễn Mạnh Tùng',1,9-10-1998,N'Phòng 501, Lầu 5, số 13C đường 12, Khu phố 4, Phường Bình An, Quận 2, TP Hồ Chí Minh','N03')
 -------------------mai lam tiep
 select *
-from Taikhoan
+from taikhoan
