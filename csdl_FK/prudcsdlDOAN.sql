@@ -12,14 +12,13 @@ create table SINHVIEN
 	Phai bit,--true and 1 is men, 0 is women
 	NgaySinh datetime,
 	DiaChi nvarchar(231),
-	MaTaiKhoan char(10),
+	--MaTaiKhoan char(10),
 	MaNganh char(10)
 );
 go
 create table TAIKHOAN 
 (
-	MaTaiKhoan char(10) NOT NULL PRIMARY KEY,
-	MaSinhVien char(10),
+	MaSinhVien char(10) NOT NULL PRIMARY KEY,
 	MatKhau nchar(20),
 	MaGiaoVu char(10)
 );
@@ -125,8 +124,8 @@ REFERENCES [dbo].[NGANH] ([MaNganh])
 GO
 --k4
 ALTER TABLE [dbo].[SINHVIEN]  WITH CHECK 
-ADD  CONSTRAINT [FK_SINHVIEN_TAIKHOAN] FOREIGN KEY([MaTaiKhoan])
-REFERENCES [dbo].[TAIKHOAN] ([MaTaiKhoan])
+ADD  CONSTRAINT [FK_SINHVIEN_TAIKHOAN] FOREIGN KEY([MaSinhVien])
+REFERENCES [dbo].[TAIKHOAN] ([MaSinhVien])
 GO
 --k5
 ALTER TABLE [dbo].[TAIKHOAN]  WITH CHECK 
@@ -230,14 +229,6 @@ values(1,'2015-2016',01-08-2015,31-12-2015),
 	  (2,'2017-2018',01-01-2018,31-05-2018),
 	  (1,'2018-2019',01-08-2018,31-12-2018),
 	  (2,'2018-2019',01-01-2019,31-05-2019)
---INSERT INTO TAIKHOAN
-insert into TAIKHOAN(MaTaiKhoan,MaSinhVien,MatKhau,MaGiaoVu)
-values('TK01','SV01','123','GVU01'),
-	  ('TK02','SV01','123','GVU01'),
-	  ('TK03','SV01','123','GVU02'),
-	  ('TK04','SV01','123','GVU03'),
-	  ('TK05','SV01','123','GVU04'),
-	  ('TK06','SV01','123','GVU02')
 -------------------mai lam tiep
 select *
-from hocky
+from Taikhoan
