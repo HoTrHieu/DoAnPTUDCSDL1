@@ -20,8 +20,7 @@ namespace PROJECT.view
 
         private void frmDangKyChuyenDe_Load(object sender, EventArgs e)
         {
-            var db = new data.CHUYENDE();
-            dgvChuyenDe.DataSource = db;
+            
            
         }
     }
