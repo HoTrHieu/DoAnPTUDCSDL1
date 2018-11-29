@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using PROJECT.view;
+using PROJECT.GUI;
 
 namespace PROJECT
 {
@@ -17,7 +17,7 @@ namespace PROJECT
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmDangKyChuyenDe());
+            Application.Run(new frmThemTaiKhoanSinhVien());
         }
     }
 }

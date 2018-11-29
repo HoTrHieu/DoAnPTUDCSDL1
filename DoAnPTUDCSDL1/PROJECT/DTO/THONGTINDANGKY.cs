@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PROJECT.Object
+namespace PROJECT.DTO
 {
-    class GIAOVU
+    class THONGTINDANGKY
     {
     }
 }

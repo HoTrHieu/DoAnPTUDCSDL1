@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace QuanLyHocVien
+namespace PROJECT.DAO
 {
     class DataProvider
     {
@@ -17,7 +17,7 @@ namespace QuanLyHocVien
         ////////viết hàm khởi tạo
         public DataProvider()
         {
-           ConnectionString="Server=DESKTOP-KALP039; Database=QLHV;  Trusted_Connection=True;";
+           ConnectionString= "Data Source=DESKTOP-KALP039;Initial Catalog=QuanLyChuyenDe;Integrated Security=True";
         }
       
        //hàm kết nối

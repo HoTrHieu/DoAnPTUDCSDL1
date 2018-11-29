@@ -8,15 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PROJECT.view
+namespace PROJECT.GUI
 {
-    public partial class frmDangNhap : Form
+    public partial class frmThemTaiKhoanSinhVien : Form
     {
-
-        public frmDangNhap()
+        public frmThemTaiKhoanSinhVien()
         {
             InitializeComponent();
         }
-
     }
 }

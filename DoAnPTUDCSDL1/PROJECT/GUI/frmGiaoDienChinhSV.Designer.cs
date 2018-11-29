@@ -1,4 +1,4 @@
-﻿namespace PROJECT.view
+﻿namespace PROJECT.GUI
 {
     partial class frmGiaoDienChinhSV
     {

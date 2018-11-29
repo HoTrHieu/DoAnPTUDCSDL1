@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PROJECT.view
+namespace PROJECT.GUI
 {
-    public partial class frmMoChuyenDe : Form
+    public partial class frmKetQuaDangKyNhom : Form
     {
-        public frmMoChuyenDe()
+        public frmKetQuaDangKyNhom()
         {
             InitializeComponent();
         }

@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PROJECT.view
+namespace PROJECT.GUI
 {
-    public partial class frmGiaoDienChinhSV : Form
+    public partial class frmKetQuaDangKyChuyenDeGiaoVu : Form
     {
-        public frmGiaoDienChinhSV()
+        public frmKetQuaDangKyChuyenDeGiaoVu()
         {
             InitializeComponent();
+        }
+
+        private void frmKetQuaDangKyChuyenDeGiaoVu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
