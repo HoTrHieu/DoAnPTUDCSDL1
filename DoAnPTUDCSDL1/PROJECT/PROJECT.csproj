@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="data\DataProvider.cs" />
+    <Compile Include="Object\GIAOVIEN.cs" />
     <Compile Include="Object\GIAOVU.cs" />
     <Compile Include="Object\SINHVIEN.cs" />
     <Compile Include="Object\TAIKHOAN.cs" />
