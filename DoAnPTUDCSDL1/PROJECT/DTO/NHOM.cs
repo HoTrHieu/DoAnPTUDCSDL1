@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace PROJECT.DTO
 {
-    class NHOM
+    public class NHOM
     {
+        public string maNhom { get; set; }
+        public string tenNhom { get; set; }
+
+        public byte trangThai { get; set; }
+
+        public NHOM(string MaNhom, string TenNhom, byte TrThai)
+        {
+            maNhom = MaNhom;
+            tenNhom = TenNhom;
+            trangThai = TrThai;
+        }
     }
 }
