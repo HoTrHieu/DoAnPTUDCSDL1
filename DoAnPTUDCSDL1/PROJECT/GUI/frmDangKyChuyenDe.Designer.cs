@@ -31,10 +31,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvChuyenDe = new System.Windows.Forms.DataGridView();
-            this.MaCD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenCD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoSVToiDa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoSVDaDK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.lblHocKi = new System.Windows.Forms.Label();
@@ -46,6 +42,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnDangKy = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
+            this.SoSVDaDK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoSVToiDa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenCD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaCD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChuyenDe)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -83,26 +83,6 @@
             this.dgvChuyenDe.Name = "dgvChuyenDe";
             this.dgvChuyenDe.Size = new System.Drawing.Size(608, 232);
             this.dgvChuyenDe.TabIndex = 1;
-            // 
-            // MaCD
-            // 
-            this.MaCD.HeaderText = "Mã Chuyên Đề";
-            this.MaCD.Name = "MaCD";
-            // 
-            // TenCD
-            // 
-            this.TenCD.HeaderText = "Tên Chuyên Đề";
-            this.TenCD.Name = "TenCD";
-            // 
-            // SoSVToiDa
-            // 
-            this.SoSVToiDa.HeaderText = "Số Sinh Viên Tối Đa";
-            this.SoSVToiDa.Name = "SoSVToiDa";
-            // 
-            // SoSVDaDK
-            // 
-            this.SoSVDaDK.HeaderText = "Số Sinh Viên Đã Đăng Ký";
-            this.SoSVDaDK.Name = "SoSVDaDK";
             // 
             // groupBox2
             // 
@@ -211,6 +191,26 @@
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
             // 
+            // SoSVDaDK
+            // 
+            this.SoSVDaDK.HeaderText = "Số Sinh Viên Đã Đăng Ký";
+            this.SoSVDaDK.Name = "SoSVDaDK";
+            // 
+            // SoSVToiDa
+            // 
+            this.SoSVToiDa.HeaderText = "Số Sinh Viên Tối Đa";
+            this.SoSVToiDa.Name = "SoSVToiDa";
+            // 
+            // TenCD
+            // 
+            this.TenCD.HeaderText = "Tên Chuyên Đề";
+            this.TenCD.Name = "TenCD";
+            // 
+            // MaCD
+            // 
+            this.MaCD.HeaderText = "Mã Chuyên Đề";
+            this.MaCD.Name = "MaCD";
+            // 
             // frmDangKyChuyenDe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -247,11 +247,11 @@
         private System.Windows.Forms.Label lblMaSV;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnDangKy;
+        private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaCD;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenCD;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoSVToiDa;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoSVDaDK;
-        private System.Windows.Forms.Button btnDangKy;
-        private System.Windows.Forms.Button btnThoat;
     }
 }

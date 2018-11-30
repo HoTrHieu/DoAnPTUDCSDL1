@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PROJECT.DTO
 {
-    public class NHOM
+    class NHOM
     {
         public string maNhom { get; set; }
         public string tenNhom { get; set; }
@@ -15,9 +15,9 @@ namespace PROJECT.DTO
 
         public NHOM(string MaNhom, string TenNhom, byte TrThai)
         {
-            maNhom = MaNhom;
-            tenNhom = TenNhom;
-            trangThai = TrThai;
+            this.maNhom = MaNhom;
+            this.tenNhom = TenNhom;
+            this.trangThai = TrThai;
         }
     }
 }

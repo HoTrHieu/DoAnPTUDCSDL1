@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PROJECT.BUS;
 
 namespace PROJECT.GUI
 {
@@ -20,7 +21,7 @@ namespace PROJECT.GUI
 
         private void frmDangKyChuyenDe_Load(object sender, EventArgs e)
         {
-            
+            SinhVienBUS.Instance.GetAll(dgvChuyenDe);
            
         }
     }

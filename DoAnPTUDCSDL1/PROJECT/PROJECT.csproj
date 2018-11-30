@@ -61,7 +61,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\SinhVienBUS.cs" />
+    <Compile Include="DAO\ChuyenDeDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\NganhDAO.cs" />
+    <Compile Include="DAO\SinhVienDAO.cs" />
+    <Compile Include="DAO\ThongTinDangKyDAO.cs" />
+    <Compile Include="DAO\ThongTinMoChuyenDeDAO.cs" />
     <Compile Include="DTO\CHUYENDE.cs" />
     <Compile Include="DTO\GIAOVIEN.cs" />
     <Compile Include="DTO\GIAOVU.cs" />
@@ -191,9 +197,7 @@
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BUS\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
       <Visible>False</Visible>

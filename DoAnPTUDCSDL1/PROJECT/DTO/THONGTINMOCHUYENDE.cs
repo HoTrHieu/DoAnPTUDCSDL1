@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PROJECT.DTO
 {
-    public class THONGTINMOCHUYENDE
+    class THONGTINMOCHUYENDE
     {
         public string maThongTinMoChuyenDe { get; set; }
         public int hocKy { get; set; }
@@ -16,11 +16,11 @@ namespace PROJECT.DTO
 
         public THONGTINMOCHUYENDE(string MaTTMChuyenDe, int HocKy, string NienHoc, string MaGV, string MaCD)
         {
-            maThongTinMoChuyenDe = MaTTMChuyenDe;
-            hocKy = HocKy;
-            nienHoc = NienHoc;
-            maGiaoVu = MaGV;
-            maChuyenDe = MaCD;
+            this.maThongTinMoChuyenDe = MaTTMChuyenDe;
+            this.hocKy = HocKy;
+            this.nienHoc = NienHoc;
+            this.maGiaoVu = MaGV;
+            this.maChuyenDe = MaCD;
         }
     }
 }

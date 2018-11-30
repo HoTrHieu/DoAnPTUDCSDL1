@@ -84,3 +84,22 @@ C:\Users\Ho Trung Hieu\Desktop\DEADLINE\DO_AN\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPT
 C:\Users\Ho Trung Hieu\Desktop\DEADLINE\DO_AN\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.frmKetQuaDangKyNhom.resources
 C:\Users\Ho Trung Hieu\Desktop\DEADLINE\DO_AN\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.frmMoChuyenDe.resources
 C:\Users\Ho Trung Hieu\Desktop\DEADLINE\DO_AN\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.frmThemTaiKhoanSinhVien.resources
+C:\Users\Ho Trung Hieu\Desktop\New folder (2)\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\bin\Debug\PROJECT.exe.config
+C:\Users\Ho Trung Hieu\Desktop\New folder (2)\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\bin\Debug\PROJECT.exe
+C:\Users\Ho Trung Hieu\Desktop\New folder (2)\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\bin\Debug\PROJECT.pdb
+C:\Users\Ho Trung Hieu\Desktop\New folder (2)\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.csprojResolveAssemblyReference.cache
+C:\Users\Ho Trung Hieu\Desktop\New folder (2)\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.Properties.Resources.resources
+C:\Users\Ho Trung Hieu\Desktop\New folder (2)\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.frmDangKiNhom.resources
+C:\Users\Ho Trung Hieu\Desktop\New folder (2)\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.frmDangKyChuyenDe.resources
+C:\Users\Ho Trung Hieu\Desktop\New folder (2)\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.frmDangNhap.resources
+C:\Users\Ho Trung Hieu\Desktop\New folder (2)\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.frmGiaoDienChinhGV.resources
+C:\Users\Ho Trung Hieu\Desktop\New folder (2)\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.frmGiaoDienChinhSV.resources
+C:\Users\Ho Trung Hieu\Desktop\New folder (2)\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.frmKetQuaDangKyChuyenDeGiaoVu.resources
+C:\Users\Ho Trung Hieu\Desktop\New folder (2)\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.frmKetQuaDangKyChuyenDeSinhVien.resources
+C:\Users\Ho Trung Hieu\Desktop\New folder (2)\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.frmKetQuaDangKyNhom.resources
+C:\Users\Ho Trung Hieu\Desktop\New folder (2)\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.frmMoChuyenDe.resources
+C:\Users\Ho Trung Hieu\Desktop\New folder (2)\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.frmThemTaiKhoanSinhVien.resources
+C:\Users\Ho Trung Hieu\Desktop\New folder (2)\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.csproj.GenerateResource.Cache
+C:\Users\Ho Trung Hieu\Desktop\New folder (2)\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.csproj.CoreCompileInputs.cache
+C:\Users\Ho Trung Hieu\Desktop\New folder (2)\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.exe
+C:\Users\Ho Trung Hieu\Desktop\New folder (2)\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.pdb
