@@ -8,17 +8,17 @@ namespace PROJECT.DTO
 {
     public class HOCKY
     {
-        public int HKy { get; set; }
-        public string NienKhoa { get; set; }
-        public DateTime NgayBDau { get; set; }
-        public DateTime NgayKThuc { get; set; }
+        public int hKy { get; set; }
+        public string nienKhoa { get; set; }
+        public DateTime ngayBDau { get; set; }
+        public DateTime ngayKThuc { get; set; }
 
         public HOCKY(int hKy, string nienKhoa, DateTime ngayBDau, DateTime ngayKThuc)
         {
-            HKy = hKy;
-            NienKhoa = nienKhoa;
-            NgayBDau = ngayBDau;
-            NgayKThuc = ngayKThuc;
+            this.hKy = hKy;
+            this.nienKhoa = nienKhoa;
+            this.ngayBDau = ngayBDau;
+            this.ngayKThuc = ngayKThuc;
         }
     }
 }

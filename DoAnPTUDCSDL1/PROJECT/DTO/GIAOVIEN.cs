@@ -8,21 +8,21 @@ namespace PROJECT.DTO
 {
     public class GIAOVIEN
     {
-        public string MaGVien { get; set; }
-        public string TenGVien { get; set; }
-        public bool Phai { get; set; }
-        public DateTime NgaySinh { get; set; }
-        public string DiaChi { get; set; }
-        public string MaChuyenDe { get; set; }
+        public string maGVien { get; set; }
+        public string tenGVien { get; set; }
+        public bool phai { get; set; }
+        public DateTime ngaySinh { get; set; }
+        public string diaChi { get; set; }
+        public string maChuyenDe { get; set; }
 
         public GIAOVIEN(string maGVien, string tenGVien, bool phai, DateTime ngaySinh, string diaChi, string maChuyenDe)
         {
-            MaGVien = maGVien;
-            TenGVien = tenGVien;
-            Phai = phai;
-            NgaySinh = ngaySinh;
-            DiaChi = diaChi;
-            MaChuyenDe = maChuyenDe;
+            this.maGVien = maGVien;
+            this.tenGVien = tenGVien;
+            this.phai = phai;
+            this.ngaySinh = ngaySinh;
+            this.diaChi = diaChi;
+            this.maChuyenDe = maChuyenDe;
         }
     }
 }

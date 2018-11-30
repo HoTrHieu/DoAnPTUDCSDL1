@@ -8,17 +8,17 @@ namespace PROJECT.DTO
 {
     public class CHUYENDE
     {
-        public string MaCDe { get; set; }
-        public string TenCDe { get; set; }
-        public int SoSV { get; set; }
-        public string MaNganh { get; set; }
+        public string maCDe { get; set; }
+        public string tenCDe { get; set; }
+        public int soSV { get; set; }
+        public string maNganh { get; set; }
 
         public CHUYENDE(string maCDe, string tenCDe, int soSV, string maNganh)
         {
-            MaCDe = maCDe;
-            TenCDe = tenCDe;
-            SoSV = soSV;
-            MaNganh = maNganh;
+            this.maCDe = maCDe;
+            this.tenCDe = tenCDe;
+            this.soSV = soSV;
+            this.maNganh = maNganh;
         }
     }
 }

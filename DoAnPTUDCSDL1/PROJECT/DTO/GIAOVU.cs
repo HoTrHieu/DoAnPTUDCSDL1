@@ -8,19 +8,19 @@ namespace PROJECT.DTO
 {
     public class GIAOVU
     {
-        public string MaGVu { get; set; }
-        public string TenGVu { get; set; }
-        public bool Phai { get; set; }
-        public DateTime NgaySinh { get; set; }
-        public string DiaChi { get; set; }
+        public string maGVu { get; set; }
+        public string tenGVu { get; set; }
+        public bool phai { get; set; }
+        public DateTime ngaySinh { get; set; }
+        public string diaChi { get; set; }
 
         public GIAOVU(string maGVu, string tenGVu, bool phai, DateTime ngaySinh, string diaChi)
         {
-            MaGVu = maGVu;
-            TenGVu = tenGVu;
-            Phai = phai;
-            NgaySinh = ngaySinh;
-            DiaChi = diaChi;
+            this.maGVu = maGVu;
+            this.tenGVu = tenGVu;
+            this.phai = phai;
+            this.ngaySinh = ngaySinh;
+            this.diaChi = diaChi;
         }
     }
 }
