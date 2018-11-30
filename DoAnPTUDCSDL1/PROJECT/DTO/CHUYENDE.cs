@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace PROJECT.DTO
 {
-    class CHUYENDE
+    public class CHUYENDE
     {
+        public string MaCDe { get; set; }
+        public string TenCDe { get; set; }
+        public int SoSV { get; set; }
+        public string MaNganh { get; set; }
+
+        public CHUYENDE(string maCDe, string tenCDe, int soSV, string maNganh)
+        {
+            MaCDe = maCDe;
+            TenCDe = tenCDe;
+            SoSV = soSV;
+            MaNganh = maNganh;
+        }
     }
 }

@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace PROJECT.DTO
 {
-    class HOCKY
+    public class HOCKY
     {
+        public int HKy { get; set; }
+        public string NienKhoa { get; set; }
+        public DateTime NgayBDau { get; set; }
+        public DateTime NgayKThuc { get; set; }
+
+        public HOCKY(int hKy, string nienKhoa, DateTime ngayBDau, DateTime ngayKThuc)
+        {
+            HKy = hKy;
+            NienKhoa = nienKhoa;
+            NgayBDau = ngayBDau;
+            NgayKThuc = ngayKThuc;
+        }
     }
 }
