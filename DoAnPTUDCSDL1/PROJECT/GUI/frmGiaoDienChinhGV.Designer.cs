@@ -29,17 +29,18 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDsSV = new System.Windows.Forms.Button();
+            this.btnThemTKSV = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnDsCDMo = new System.Windows.Forms.Button();
+            this.btnMoCD = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblMaGV = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
+            this.btnDsSVDK = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -47,62 +48,66 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnDsSV);
+            this.groupBox1.Controls.Add(this.btnThemTKSV);
             this.groupBox1.Location = new System.Drawing.Point(12, 130);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(433, 124);
+            this.groupBox1.Size = new System.Drawing.Size(603, 124);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Quản Lý Sinh Viên";
             // 
-            // button3
+            // btnDsSV
             // 
-            this.button3.Location = new System.Drawing.Point(248, 48);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(166, 50);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Danh Sách Sinh Viên";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnDsSV.Location = new System.Drawing.Point(225, 48);
+            this.btnDsSV.Name = "btnDsSV";
+            this.btnDsSV.Size = new System.Drawing.Size(166, 50);
+            this.btnDsSV.TabIndex = 1;
+            this.btnDsSV.Text = "Xem Danh Sách Sinh Viên";
+            this.btnDsSV.UseVisualStyleBackColor = true;
+            this.btnDsSV.Click += new System.EventHandler(this.btnDsSV_Click);
             // 
-            // button1
+            // btnThemTKSV
             // 
-            this.button1.Location = new System.Drawing.Point(32, 48);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 50);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Thêm Tài Khoản Sinh Viên";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnThemTKSV.Location = new System.Drawing.Point(32, 48);
+            this.btnThemTKSV.Name = "btnThemTKSV";
+            this.btnThemTKSV.Size = new System.Drawing.Size(149, 50);
+            this.btnThemTKSV.TabIndex = 0;
+            this.btnThemTKSV.Text = "Thêm Tài Khoản Sinh Viên";
+            this.btnThemTKSV.UseVisualStyleBackColor = true;
+            this.btnThemTKSV.Click += new System.EventHandler(this.btnThemTKSV_Click);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.btnDsSVDK);
+            this.groupBox2.Controls.Add(this.btnDsCDMo);
+            this.groupBox2.Controls.Add(this.btnMoCD);
             this.groupBox2.Location = new System.Drawing.Point(20, 271);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(433, 134);
+            this.groupBox2.Size = new System.Drawing.Size(595, 134);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin chuyên đề";
             // 
-            // button4
+            // btnDsCDMo
             // 
-            this.button4.Location = new System.Drawing.Point(240, 58);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(166, 47);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Danh Sách Chuyên Đề Đã Mở / Chỉnh Sửa/ Vô Hiệu Hóa";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnDsCDMo.Location = new System.Drawing.Point(217, 58);
+            this.btnDsCDMo.Name = "btnDsCDMo";
+            this.btnDsCDMo.Size = new System.Drawing.Size(166, 47);
+            this.btnDsCDMo.TabIndex = 3;
+            this.btnDsCDMo.Text = "Danh Sách Chuyên Đề Đã Mở / Chỉnh Sửa/ Vô Hiệu Hóa";
+            this.btnDsCDMo.UseVisualStyleBackColor = true;
+            this.btnDsCDMo.Click += new System.EventHandler(this.btnDsCDMo_Click);
             // 
-            // button2
+            // btnMoCD
             // 
-            this.button2.Location = new System.Drawing.Point(24, 58);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(149, 47);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Mở Chuyên Đề";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnMoCD.Location = new System.Drawing.Point(24, 58);
+            this.btnMoCD.Name = "btnMoCD";
+            this.btnMoCD.Size = new System.Drawing.Size(149, 47);
+            this.btnMoCD.TabIndex = 0;
+            this.btnMoCD.Text = "Mở Chuyên Đề";
+            this.btnMoCD.UseVisualStyleBackColor = true;
+            this.btnMoCD.Click += new System.EventHandler(this.btnMoCD_Click);
             // 
             // groupBox3
             // 
@@ -112,7 +117,7 @@
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Location = new System.Drawing.Point(12, 12);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(433, 100);
+            this.groupBox3.Size = new System.Drawing.Size(603, 100);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông Tin Giao Vụ";
@@ -162,11 +167,21 @@
             this.button5.Text = "Đăng Xuất";
             this.button5.UseVisualStyleBackColor = true;
             // 
+            // btnDsSVDK
+            // 
+            this.btnDsSVDK.Location = new System.Drawing.Point(412, 58);
+            this.btnDsSVDK.Name = "btnDsSVDK";
+            this.btnDsSVDK.Size = new System.Drawing.Size(166, 47);
+            this.btnDsSVDK.TabIndex = 4;
+            this.btnDsSVDK.Text = "Danh Sách Sinh Viên Đã Đăng Ký";
+            this.btnDsSVDK.UseVisualStyleBackColor = true;
+            this.btnDsSVDK.Click += new System.EventHandler(this.btnDsSVDK_Click);
+            // 
             // frmGiaoDienChinhGV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(463, 489);
+            this.ClientSize = new System.Drawing.Size(627, 489);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -184,16 +199,17 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnThemTKSV;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnMoCD;
+        private System.Windows.Forms.Button btnDsCDMo;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnDsSV;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblMaGV;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnDsSVDK;
     }
 }

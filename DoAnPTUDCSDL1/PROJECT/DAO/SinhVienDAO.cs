@@ -33,12 +33,12 @@ namespace PROJECT.DAO
 
             foreach (DataRow item in data.Rows)
             {
-                string maSV = item["maSinhVien"].ToString();
-                string tenSV = item["tenSinhVien"].ToString();
-                bool? phai =item["phai"].ToString()== string.Empty ? null: (bool?) item["phai"];
-                DateTime? ngaySinh = item["ngaySinh"].ToString() ==string.Empty ? null:(DateTime?) item["ngaySinh"];
-                string diaChi=item["diaChi"].ToString();
-                string maNganh=item["maNganh"].ToString();
+                string maSV = item["MaSinhVien"].ToString();
+                string tenSV = item["TenSinhVien"].ToString();
+                bool? phai =item["Phai"].ToString()== string.Empty ? null: (bool?) item["phai"];
+                DateTime? ngaySinh = item["NgaySinh"].ToString() ==string.Empty ? null:(DateTime?) item["ngaySinh"];
+                string diaChi=item["DiaChi"].ToString();
+                string maNganh=item["MaNganh"].ToString();
 
                 SINHVIEN sv = new SINHVIEN(maSV,tenSV,phai,ngaySinh,diaChi,maNganh);
                 sinhViens.Add(sv);

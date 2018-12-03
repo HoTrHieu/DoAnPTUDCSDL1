@@ -17,9 +17,32 @@ namespace PROJECT.GUI
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnThemTKSV_Click(object sender, EventArgs e)
         {
+            frmThemTaiKhoanSinhVien frm = new frmThemTaiKhoanSinhVien();
+            frm.ShowDialog();
+        }
 
+        private void btnDsSV_Click(object sender, EventArgs e)
+        {
+            //xuất danh sách sinh vien, sau nay sẽ them vào
+        }
+
+        private void btnMoCD_Click(object sender, EventArgs e)
+        {
+            frmMoChuyenDe frm = new frmMoChuyenDe();
+            frm.ShowDialog();
+        }
+
+        private void btnDsCDMo_Click(object sender, EventArgs e)
+        {
+            //tạo frm ds chuyen de da mo
+        }
+
+        private void btnDsSVDK_Click(object sender, EventArgs e)
+        {
+            frmKetQuaDangKyChuyenDeGiaoVu frm = new frmKetQuaDangKyChuyenDeGiaoVu();
+            frm.ShowDialog();
         }
     }
 }

@@ -32,10 +32,10 @@ namespace PROJECT.DAO
 
             foreach (DataRow item in data.Rows)
             {
-                string maTK = item["maTaiKhoan"].ToString();
-                string matK = item["matKhau"].ToString();
-                string loaiTK = item["loaiTaiKhoan"].ToString();
-                string maGV = item["maGiaoVuTao"].ToString();
+                string maTK = item["MaTaiKhoan"].ToString();
+                string matK = item["MatKhau"].ToString();
+                string loaiTK = item["LoaiTaiKhoan"].ToString();
+                string maGV = item["MaGiaoVuTao"].ToString();
 
                 TAIKHOAN tk = new TAIKHOAN(maTK, matK, loaiTK, maGV);
                 taiKhoans.Add(tk);

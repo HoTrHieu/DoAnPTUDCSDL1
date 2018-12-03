@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="BUS\SinhVienBUS.cs" />
     <Compile Include="BUS\TaiKhoanBUS.cs" />
+    <Compile Include="BUS\ThongTinDangKyBUS.cs" />
     <Compile Include="DAO\ChuyenDeDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\NganhDAO.cs" />
@@ -82,14 +83,14 @@
     <Compile Include="DTO\THANHVIEN.cs" />
     <Compile Include="DTO\THONGTINDANGKY.cs" />
     <Compile Include="DTO\THONGTINMOCHUYENDE.cs" />
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GUI\frmDangKiNhom.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmDangKiNhom.Designer.cs">
+    <Compile Include="GUI\frmDangKiNhom.designer.cs">
       <DependentUpon>frmDangKiNhom.cs</DependentUpon>
     </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GUI\frmDangKyChuyenDe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +145,9 @@
     <Compile Include="GUI\frmThemTaiKhoanSinhVien.Designer.cs">
       <DependentUpon>frmThemTaiKhoanSinhVien.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GUI\frmDangKiNhom.resx">
+      <DependentUpon>frmDangKiNhom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -153,9 +157,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="GUI\frmDangKiNhom.resx">
-      <DependentUpon>frmDangKiNhom.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmDangKyChuyenDe.resx">
       <DependentUpon>frmDangKyChuyenDe.cs</DependentUpon>
     </EmbeddedResource>
