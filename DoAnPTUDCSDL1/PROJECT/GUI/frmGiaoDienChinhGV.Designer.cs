@@ -39,7 +39,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblMaGV = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnDangXuat = new System.Windows.Forms.Button();
             this.btnDsSVDK = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -158,14 +158,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã Giáo Vụ";
             // 
-            // button5
+            // btnDangXuat
             // 
-            this.button5.Location = new System.Drawing.Point(338, 438);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(88, 37);
-            this.button5.TabIndex = 3;
-            this.button5.Text = "Đăng Xuất";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnDangXuat.Location = new System.Drawing.Point(292, 426);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.Size = new System.Drawing.Size(88, 37);
+            this.btnDangXuat.TabIndex = 3;
+            this.btnDangXuat.Text = "Đăng Xuất";
+            this.btnDangXuat.UseVisualStyleBackColor = true;
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
             // btnDsSVDK
             // 
@@ -182,7 +183,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(627, 489);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnDangXuat);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -209,7 +210,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblMaGV;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnDangXuat;
         private System.Windows.Forms.Button btnDsSVDK;
     }
 }

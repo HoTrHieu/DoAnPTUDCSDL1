@@ -44,5 +44,10 @@ namespace PROJECT.GUI
             frmKetQuaDangKyChuyenDeGiaoVu frm = new frmKetQuaDangKyChuyenDeGiaoVu();
             frm.ShowDialog();
         }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
