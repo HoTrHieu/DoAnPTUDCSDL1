@@ -63,7 +63,7 @@ namespace PROJECT.DAO
             return data;
         }
 
-        //trả ra số dòng thực thi thành công
+        //trả ra số dòng thực thi thành công cho các lệnh: insert, delete, update
         public int ExecuteNonQuery(string query, object[] parameter = null)
         {
             int data = 0;

@@ -62,10 +62,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS\SinhVienBUS.cs" />
+    <Compile Include="BUS\TaiKhoanBUS.cs" />
     <Compile Include="DAO\ChuyenDeDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\NganhDAO.cs" />
     <Compile Include="DAO\SinhVienDAO.cs" />
+    <Compile Include="DAO\TaiKhoanDAO.cs" />
     <Compile Include="DAO\ThongTinDangKyDAO.cs" />
     <Compile Include="DAO\ThongTinMoChuyenDeDAO.cs" />
     <Compile Include="DTO\CHUYENDE.cs" />

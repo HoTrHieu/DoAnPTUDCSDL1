@@ -24,5 +24,16 @@ namespace PROJECT.GUI
             SinhVienBUS.Instance.GetAll(dgvChuyenDe);
            
         }
+
+        private void btnDangKy_Click(object sender, EventArgs e)
+        {
+            if (SinhVienBUS.Instance.Update(dgvChuyenDe))
+            {
+                MessageBox.Show("Sửa thành công");
+                         //load lại data
+            }
+            else
+                MessageBox.Show("Lỗi");
+        }
     }
 }

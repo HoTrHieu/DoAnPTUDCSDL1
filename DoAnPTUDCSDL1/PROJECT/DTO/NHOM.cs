@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PROJECT.DTO
 {
-    class NHOM
+    public class NHOM
     {
         public string maNhom { get; set; }
         public string tenNhom { get; set; }

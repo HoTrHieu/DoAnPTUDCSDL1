@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PROJECT.DTO
 {
-    class GIAOVU
+    public class GIAOVU
     {
         public string maGVu { get; set; }
         public string tenGVu { get; set; }

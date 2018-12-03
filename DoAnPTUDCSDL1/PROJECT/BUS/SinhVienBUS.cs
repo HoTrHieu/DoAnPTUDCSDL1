@@ -1,10 +1,12 @@
-﻿using System;
+﻿//kiểm tra data đưa xuống cho DAO xử lý
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PROJECT.DAO;
+using PROJECT.DTO;
 
 namespace PROJECT.BUS
 {
@@ -27,5 +29,31 @@ namespace PROJECT.BUS
         {
             data.DataSource = SinhVienDAO.Instance.GetAll();
         }
+        
+        //Update
+        public bool Update(DataGridView data)
+        {
+            DataGridViewRow row = data.SelectedCells[0].OwningRow;
+            string MaSV = row.Cells["maSinhVien"].Value.ToString();
+            string TenSV = row.Cells["tenSinhVien"].Value.ToString();
+            bool? Phai=(bool?) row.Cells["phai"].Value;
+            DateTime? NgaySinh = (DateTime?)row.Cells["ngaySinh"].Value;
+            string DiaChi = row.Cells["diaChi"].Value.ToString();
+            string MaN = row.Cells["maNganh"].Value.ToString();
+
+            SINHVIEN sv = new SINHVIEN(MaSV, TenSV, Phai, NgaySinh, DiaChi, MaN);
+
+            return SinhVienDAO.Instance.Update(MaSV, sv);
+        }
+        /*
+         * if(SinhVienBUS.Instance.Update(dtgView))
+         *      {
+         *          MessageBox.Show("Sửa thành công");
+         *          //load lại data
+         *       }
+         * else
+         *      MessageBox.Show("Lỗi");
+         * 
+         */
     }
 }

@@ -47,6 +47,27 @@ namespace PROJECT.DAO
 
             return sinhViens;
         }
+        //update
+        public bool Update(string id, SINHVIEN sv)
+        {
+            string query = "Update SINHVIEN SET TenSinhVien = @ten , Phai = @phai , NgaySinh = @NS , DiaChi = @diaChi , MaNganh = @maN WHERE MaSinhVien = @maOLD ";
+
+            object[] para = new object[] 
+            {
+                sv.tenSinhVien,
+                sv.phai,
+                sv.ngaySinh,
+                sv.diaChi,
+                sv.maNganh,
+                id
+            };
+
+            if (DataProvider.Instance.ExecuteNonQuery(query, para) > 0)
+            {
+                return true;
+            }
+            return false;
+        }
 
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PROJECT.DTO
 {
-    class HOCKY
+    public class HOCKY
     {
         public int hKy { get; set; }
         public string nienKhoa { get; set; }

@@ -1,6 +1,6 @@
 ﻿namespace PROJECT.GUI
 {
-    partial class frmDangNhap
+    partial class frmtenDangNhap
     {
         /// <summary>
         /// Required designer variable.
@@ -30,9 +30,10 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtDangNhap = new System.Windows.Forms.TextBox();
+            this.txtTenDangNhap = new System.Windows.Forms.TextBox();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.btnSignIn = new System.Windows.Forms.Button();
+            this.btnThoat = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -53,12 +54,12 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Mật Khẩu:";
             // 
-            // txtDangNhap
+            // txtTenDangNhap
             // 
-            this.txtDangNhap.Location = new System.Drawing.Point(118, 36);
-            this.txtDangNhap.Name = "txtDangNhap";
-            this.txtDangNhap.Size = new System.Drawing.Size(184, 20);
-            this.txtDangNhap.TabIndex = 1;
+            this.txtTenDangNhap.Location = new System.Drawing.Point(118, 36);
+            this.txtTenDangNhap.Name = "txtTenDangNhap";
+            this.txtTenDangNhap.Size = new System.Drawing.Size(184, 20);
+            this.txtTenDangNhap.TabIndex = 1;
             // 
             // txtMatKhau
             // 
@@ -75,18 +76,30 @@
             this.btnSignIn.TabIndex = 2;
             this.btnSignIn.Text = "Đăng Nhập";
             this.btnSignIn.UseVisualStyleBackColor = true;
+            this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
             // 
-            // frmDangNhap
+            // btnThoat
+            // 
+            this.btnThoat.Location = new System.Drawing.Point(227, 124);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(75, 23);
+            this.btnThoat.TabIndex = 3;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // frmtenDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(314, 210);
+            this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnSignIn);
             this.Controls.Add(this.txtMatKhau);
-            this.Controls.Add(this.txtDangNhap);
+            this.Controls.Add(this.txtTenDangNhap);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "frmDangNhap";
+            this.Name = "frmtenDangNhap";
             this.Text = "Đăng Nhập";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -97,8 +110,9 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtDangNhap;
+        private System.Windows.Forms.TextBox txtTenDangNhap;
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.Button btnSignIn;
+        private System.Windows.Forms.Button btnThoat;
     }
 }
