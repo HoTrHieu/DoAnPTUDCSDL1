@@ -10,12 +10,12 @@ namespace PROJECT.DTO
     {
         public string maGVien { get; set; }
         public string tenGVien { get; set; }
-        public bool phai { get; set; }
-        public DateTime ngaySinh { get; set; }
+        public bool? phai { get; set; }
+        public DateTime? ngaySinh { get; set; }
         public string diaChi { get; set; }
         public string maChuyenDe { get; set; }
 
-        public GIAOVIEN(string maGVien, string tenGVien, bool phai, DateTime ngaySinh, string diaChi, string maChuyenDe)
+        public GIAOVIEN(string maGVien, string tenGVien, bool? phai, DateTime? ngaySinh, string diaChi, string maChuyenDe)
         {
             this.maGVien = maGVien;
             this.tenGVien = tenGVien;

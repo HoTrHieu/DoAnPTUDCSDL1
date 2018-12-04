@@ -61,12 +61,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\ChuyenDeBUS.cs" />
+    <Compile Include="BUS\GiaoVienBUS.cs" />
+    <Compile Include="BUS\GiaoVuBUS.cs" />
+    <Compile Include="BUS\HocKyBUS.cs" />
     <Compile Include="BUS\NganhBUS.cs" />
     <Compile Include="BUS\SinhVienBUS.cs" />
     <Compile Include="BUS\TaiKhoanBUS.cs" />
     <Compile Include="BUS\ThongTinDangKyBUS.cs" />
     <Compile Include="DAO\ChuyenDeDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\GiaoVienDAO.cs" />
+    <Compile Include="DAO\GiaoVuDAO.cs" />
+    <Compile Include="DAO\HocKyDAO.cs" />
     <Compile Include="DAO\NganhDAO.cs" />
     <Compile Include="DAO\SinhVienDAO.cs" />
     <Compile Include="DAO\TaiKhoanDAO.cs" />

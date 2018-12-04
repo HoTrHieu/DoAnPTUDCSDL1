@@ -10,10 +10,10 @@ namespace PROJECT.DTO
     {
         public int hKy { get; set; }
         public string nienKhoa { get; set; }
-        public DateTime ngayBDau { get; set; }
-        public DateTime ngayKThuc { get; set; }
+        public DateTime? ngayBDau { get; set; }
+        public DateTime? ngayKThuc { get; set; }
 
-        public HOCKY(int hKy, string nienKhoa, DateTime ngayBDau, DateTime ngayKThuc)
+        public HOCKY(int hKy, string nienKhoa, DateTime? ngayBDau, DateTime? ngayKThuc)
         {
             this.hKy = hKy;
             this.nienKhoa = nienKhoa;

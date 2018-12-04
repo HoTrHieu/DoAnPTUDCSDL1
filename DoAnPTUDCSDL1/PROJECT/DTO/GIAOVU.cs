@@ -10,11 +10,11 @@ namespace PROJECT.DTO
     {
         public string maGVu { get; set; }
         public string tenGVu { get; set; }
-        public bool phai { get; set; }
-        public DateTime ngaySinh { get; set; }
+        public bool? phai { get; set; }
+        public DateTime? ngaySinh { get; set; }
         public string diaChi { get; set; }
 
-        public GIAOVU(string maGVu, string tenGVu, bool phai, DateTime ngaySinh, string diaChi)
+        public GIAOVU(string maGVu, string tenGVu, bool? phai, DateTime? ngaySinh, string diaChi)
         {
             this.maGVu = maGVu;
             this.tenGVu = tenGVu;
