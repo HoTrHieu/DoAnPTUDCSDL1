@@ -7,25 +7,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PROJECT.DTO;
+using PROJECT.BUS;
 
 namespace PROJECT.GUI
 {
     public partial class frmDangKiNhom : Form
     {
-        //SINHVIEN sv;
+        SINHVIEN SV = SinhVienBUS.Instance.GetByID("SV01");
         public frmDangKiNhom()
         {
             InitializeComponent();
         }
 
+        public frmDangKiNhom(SINHVIEN sv)
+        {
+            InitializeComponent();
+            SV = sv;
+        }
         private void frmDangKiNhom_Load(object sender, EventArgs e)
         {
-            //LINQDataContext db = new LINQDataContext();
-            //SINHVIEN sv = db.SINHVIENs.First(p => p.MaSinhVien == "SV01");
-            //lblMSSV.Text = sv.MaSinhVien;
-            //lblTEN.Text = sv.TenSinhVien;
-           
-                                      
+            lblMSSV.Text = SV.maSinhVien;
+            lblTEN.Text = SV.tenSinhVien;
+
+            //List<CHUYENDE> lstCD = ChuyenDeBUS.Instance.GetAll();
+
 
             ////lblMaChuyenDe.Text = db.CHUYENDEs.First(p => p.TenChuyenDe == cbTenChuyenDe.Text).MaChuyenDe;
 

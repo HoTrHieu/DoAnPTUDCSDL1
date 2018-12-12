@@ -108,5 +108,28 @@ namespace PROJECT.DAO
                 return true;
             return false;
         }
+
+
+        public List<THONGTINMOCHUYENDE> GetAllByIDSV(string maSV)
+        {
+            //List<THONGTINDANGKY> ttDK = ThongTinDangKyBUS
+
+            List<THONGTINMOCHUYENDE> thongTinMoChuyenDes = new List<THONGTINMOCHUYENDE>();
+            string query = "select * from ThongTinMoChuyenDe";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                string maThongTinMoChuyenDe = item["maThongTinMoChuyenDe"].ToString();
+                int hocKy = (int)item["hocKy"];
+                string nienHoc = item["nienHoc"].ToString();
+                string maGiaoVu = item["maGiaoVu"].ToString();
+                string maChuyenDe = item["maChuyenDe"].ToString();
+
+                THONGTINMOCHUYENDE ttmcd = new THONGTINMOCHUYENDE(maThongTinMoChuyenDe, hocKy, nienHoc, maGiaoVu, maChuyenDe);
+                thongTinMoChuyenDes.Add(ttmcd);
+            }
+            return thongTinMoChuyenDes;
+        }
     }
 }

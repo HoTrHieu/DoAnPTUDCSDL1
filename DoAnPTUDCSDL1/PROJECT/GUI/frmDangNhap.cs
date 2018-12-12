@@ -13,11 +13,11 @@ using PROJECT.DTO;
 
 namespace PROJECT.GUI
 {
-    public partial class frmtenDangNhap : Form
+    public partial class frmDangNhap : Form
     {
         Thread th;//dong from cu mo form moi  
         TAIKHOAN tk;
-        public frmtenDangNhap()
+        public frmDangNhap()
         {
             InitializeComponent();
         }
@@ -36,8 +36,8 @@ namespace PROJECT.GUI
             else
             {
 
-                TAIKHOAN tk = TaiKhoanBUS.Instance.GetByID(tenDN);
-                if(tk==null || tk.matKhau.TrimEnd() != matKhau)
+                tk = TaiKhoanBUS.Instance.GetByID(tenDN);
+                if (tk == null || tk.matKhau.TrimEnd() != matKhau)
                 {
                     MessageBox.Show("Tên Đăng Nhập Hoặc Mật Khẩu Không Đúng", "Thông Báo");
                     txtTenDangNhap.Clear();
@@ -63,30 +63,30 @@ namespace PROJECT.GUI
                     }
                 }
 
-                
 
-                       
 
-                        // db.TAIKHOANs.Where(p => p.MaTaiKhoan.CompareTo(tenDangNhap)==0 && p.MatKhau.CompareTo(matKhau)==0);
-                        //x = (from i in db.TAIKHOANs
-                        //          where (i.MaTaiKhoan.CompareTo(tenDangNhap) == 0 && i.MatKhau.CompareTo(matKhau) == 0)
-                        //          select i)
-                        //          ;
-                        // MessageBox.Show(t.ToString());
-                    
 
-                
+
+                // db.TAIKHOANs.Where(p => p.MaTaiKhoan.CompareTo(tenDangNhap)==0 && p.MatKhau.CompareTo(matKhau)==0);
+                //x = (from i in db.TAIKHOANs
+                //          where (i.MaTaiKhoan.CompareTo(tenDangNhap) == 0 && i.MatKhau.CompareTo(matKhau) == 0)
+                //          select i)
+                //          ;
+                // MessageBox.Show(t.ToString());
+
+
+
             }
         }
 
 
         private void OpenFROMsv(object obj)
         {
-            Application.Run(new frmGiaoDienChinhSV());
+            Application.Run(new frmGiaoDienChinhSV(tk));
         }
         private void OpenFROMgv(object obj)
         {
-            Application.Run(new frmGiaoDienChinhGV());
+            Application.Run(new frmGiaoDienChinhGV(tk));
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -94,6 +94,6 @@ namespace PROJECT.GUI
             this.Close();
         }
 
-        
+
     }
 }

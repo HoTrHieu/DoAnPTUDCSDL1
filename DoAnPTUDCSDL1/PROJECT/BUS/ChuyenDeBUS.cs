@@ -29,6 +29,11 @@ namespace PROJECT.BUS
         {
             data.DataSource = ChuyenDeDAO.Instance.GetAll();
         }
+        //get ALl
+        //public List<CHUYENDE> GetAllByIDSV(string id)
+        
+            
+        
         //lấy chuyên đề theo mã Chuyên Đề
         public CHUYENDE GetByID(string id)
         {

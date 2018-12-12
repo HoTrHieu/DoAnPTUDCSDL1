@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PROJECT.DTO;
+using PROJECT.BUS;
 
 namespace PROJECT.GUI
 {
     public partial class frmGiaoDienChinhGV : Form
     {
-        public frmGiaoDienChinhGV()
+        GIAOVU gvu;
+        public frmGiaoDienChinhGV(TAIKHOAN tk)
         {
             InitializeComponent();
+            TRaGVU(tk);
         }
 
         private void btnThemTKSV_Click(object sender, EventArgs e)
@@ -49,5 +53,23 @@ namespace PROJECT.GUI
         {
             this.Close();
         }
+
+        private void frmGiaoDienChinhGV_Load(object sender, EventArgs e)
+        {
+            lblMaGV.Text = gvu.maGVu;
+            lblTenGVU.Text = gvu.tenGVu;
+
+            
+
+        }
+
+        public bool TRaGVU(TAIKHOAN tk)
+        {
+            gvu = GiaoVuBUS.Instance.GetByID(tk.maTaiKhoan);
+            if (gvu != null)
+                return true;
+            return false;
+        }
+
     }
 }

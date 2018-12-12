@@ -45,6 +45,12 @@ namespace PROJECT.BUS
 
             return SinhVienDAO.Instance.Update(MaSV, sv);
         }
+
+        //get by id
+        public SINHVIEN GetByID(string id)
+        {
+            return SinhVienDAO.Instance.GetByID(id);
+        }
         /*
          * if(SinhVienBUS.Instance.Update(dtgView))
          *      {

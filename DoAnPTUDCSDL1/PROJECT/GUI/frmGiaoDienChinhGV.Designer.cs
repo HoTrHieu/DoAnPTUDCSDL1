@@ -32,15 +32,15 @@
             this.btnDsSV = new System.Windows.Forms.Button();
             this.btnThemTKSV = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnDsSVDK = new System.Windows.Forms.Button();
             this.btnDsCDMo = new System.Windows.Forms.Button();
             this.btnMoCD = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblTenGVU = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblMaGV = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnDangXuat = new System.Windows.Forms.Button();
-            this.btnDsSVDK = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -89,6 +89,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin chuyên đề";
             // 
+            // btnDsSVDK
+            // 
+            this.btnDsSVDK.Location = new System.Drawing.Point(412, 58);
+            this.btnDsSVDK.Name = "btnDsSVDK";
+            this.btnDsSVDK.Size = new System.Drawing.Size(166, 47);
+            this.btnDsSVDK.TabIndex = 4;
+            this.btnDsSVDK.Text = "Danh Sách Sinh Viên Đã Đăng Ký";
+            this.btnDsSVDK.UseVisualStyleBackColor = true;
+            this.btnDsSVDK.Click += new System.EventHandler(this.btnDsSVDK_Click);
+            // 
             // btnDsCDMo
             // 
             this.btnDsCDMo.Location = new System.Drawing.Point(217, 58);
@@ -111,7 +121,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Controls.Add(this.lblTenGVU);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.lblMaGV);
             this.groupBox3.Controls.Add(this.label1);
@@ -122,14 +132,14 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông Tin Giao Vụ";
             // 
-            // label4
+            // lblTenGVU
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(129, 73);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Lớn Văn Lên";
+            this.lblTenGVU.AutoSize = true;
+            this.lblTenGVU.Location = new System.Drawing.Point(129, 73);
+            this.lblTenGVU.Name = "lblTenGVU";
+            this.lblTenGVU.Size = new System.Drawing.Size(68, 13);
+            this.lblTenGVU.TabIndex = 3;
+            this.lblTenGVU.Text = "Lớn Văn Lên";
             // 
             // label3
             // 
@@ -168,16 +178,6 @@
             this.btnDangXuat.UseVisualStyleBackColor = true;
             this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
-            // btnDsSVDK
-            // 
-            this.btnDsSVDK.Location = new System.Drawing.Point(412, 58);
-            this.btnDsSVDK.Name = "btnDsSVDK";
-            this.btnDsSVDK.Size = new System.Drawing.Size(166, 47);
-            this.btnDsSVDK.TabIndex = 4;
-            this.btnDsSVDK.Text = "Danh Sách Sinh Viên Đã Đăng Ký";
-            this.btnDsSVDK.UseVisualStyleBackColor = true;
-            this.btnDsSVDK.Click += new System.EventHandler(this.btnDsSVDK_Click);
-            // 
             // frmGiaoDienChinhGV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,6 +189,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmGiaoDienChinhGV";
             this.Text = "frmGiaoDienChinhGV";
+            this.Load += new System.EventHandler(this.frmGiaoDienChinhGV_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
@@ -206,7 +207,7 @@
         private System.Windows.Forms.Button btnDsCDMo;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btnDsSV;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblTenGVU;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblMaGV;
         private System.Windows.Forms.Label label1;

@@ -102,4 +102,4 @@ C:\Users\Ho Trung Hieu\Desktop\New folder (2)\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJEC
 C:\Users\Ho Trung Hieu\Desktop\New folder (2)\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.csproj.CoreCompileInputs.cache
 C:\Users\Ho Trung Hieu\Desktop\New folder (2)\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.exe
 C:\Users\Ho Trung Hieu\Desktop\New folder (2)\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.pdb
-C:\Users\Ho Trung Hieu\Desktop\DEADLINE\DO_AN\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.frmtenDangNhap.resources
+C:\Users\Ho Trung Hieu\Desktop\DEADLINE\DO_AN\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.frmDangNhap.resources

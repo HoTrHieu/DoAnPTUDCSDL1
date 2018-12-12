@@ -45,5 +45,30 @@ namespace PROJECT.DAO
             }
             return false;
         }
+
+        //get by id
+        public GIAOVU GetByID(string id)
+        {
+            string query = "select * from GIAOVU where MaGiaoVu = @Id ";
+            object[] para = new object[]
+            {
+                id
+            };
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, para);
+
+            DataRow item = data.Rows[0];
+
+            string maGVU = item["MaGiaoVu"].ToString();
+            string tenGVU = item["TenGiaoVu"].ToString();
+            bool? phai = item["Phai"].ToString() == string.Empty ? null : (bool?)item["phai"];
+            DateTime? ngaySinh = item["NgaySinh"].ToString() == string.Empty ? null : (DateTime?)item["ngaySinh"];
+            string diaChi = item["DiaChi"].ToString();
+            
+            GIAOVU GVU = new GIAOVU(maGVU, tenGVU, phai, ngaySinh, diaChi);
+
+            return GVU;
+        }
+
+
     }
 }

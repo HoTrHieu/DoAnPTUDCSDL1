@@ -39,5 +39,12 @@ namespace PROJECT.BUS
 
             return GiaoVuDAO.Instance.Update(MaGVu, gvu);
         }
+
+        //get by id
+        public GIAOVU GetByID(string id)
+        {
+            GIAOVU gvu = GiaoVuDAO.Instance.GetByID(id);
+            return gvu;
+        }
     }
 }

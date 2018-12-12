@@ -69,5 +69,30 @@ namespace PROJECT.DAO
             return false;
         }
 
+        //select by ID
+        public SINHVIEN GetByID(string id)
+        {
+            string query = "select * from SinhVien where MaSinhVien = @Id ";
+            object[] para = new object[]
+            {
+                id
+            };
+            DataTable data = DataProvider.Instance.ExecuteQuery(query,para);
+
+            DataRow item = data.Rows[0];
+
+            string maSV = item["MaSinhVien"].ToString();
+            string tenSV = item["TenSinhVien"].ToString();
+            bool? phai = item["Phai"].ToString() == string.Empty ? null : (bool?)item["phai"];
+            DateTime? ngaySinh = item["NgaySinh"].ToString() == string.Empty ? null : (DateTime?)item["ngaySinh"];
+            string diaChi = item["DiaChi"].ToString();
+            string maNganh = item["MaNganh"].ToString();
+
+            SINHVIEN SV = new SINHVIEN(maSV, tenSV, phai, ngaySinh, diaChi, maNganh);
+
+
+            return SV;
+        }
+
     }
 }

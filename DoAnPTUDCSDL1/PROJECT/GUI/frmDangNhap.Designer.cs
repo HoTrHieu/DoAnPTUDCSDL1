@@ -1,6 +1,6 @@
 ﻿namespace PROJECT.GUI
 {
-    partial class frmtenDangNhap
+    partial class frmDangNhap
     {
         /// <summary>
         /// Required designer variable.
@@ -88,7 +88,7 @@
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // frmtenDangNhap
+            // frmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -99,7 +99,7 @@
             this.Controls.Add(this.txtTenDangNhap);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "frmtenDangNhap";
+            this.Name = "frmDangNhap";
             this.Text = "Đăng Nhập";
             this.ResumeLayout(false);
             this.PerformLayout();
