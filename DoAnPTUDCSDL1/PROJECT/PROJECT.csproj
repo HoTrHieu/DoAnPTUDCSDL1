@@ -69,6 +69,7 @@
     <Compile Include="BUS\NhomBUS.cs" />
     <Compile Include="BUS\SinhVienBUS.cs" />
     <Compile Include="BUS\TaiKhoanBUS.cs" />
+    <Compile Include="BUS\ThanhVienBUS.cs" />
     <Compile Include="BUS\ThongTinDangKyBUS.cs" />
     <Compile Include="BUS\ThongTinMoChuyenDeBUS.cs" />
     <Compile Include="DAO\ChuyenDeDAO.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="DAO\NhomDAO.cs" />
     <Compile Include="DAO\SinhVienDAO.cs" />
     <Compile Include="DAO\TaiKhoanDAO.cs" />
+    <Compile Include="DAO\ThanhVienDAO.cs" />
     <Compile Include="DAO\ThongTinDangKyDAO.cs" />
     <Compile Include="DAO\ThongTinMoChuyenDeDAO.cs" />
     <Compile Include="DTO\CHUYENDE.cs" />

@@ -11,7 +11,7 @@ namespace PROJECT.BUS
 {
     public class ThanhVienBUS
     {
-        private static NhThanhVienBUSomBUS instance;
+        private static ThanhVienBUS instance;
 
         public static ThanhVienBUS Instance
         {

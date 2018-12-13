@@ -94,10 +94,17 @@ namespace PROJECT.GUI
 
             string maNhom = cbMaDKChuyenDe.Text+"_N";
             string tenNhom = txtTenNhom.Text;
-            bool trThai = false;           
+            //bool trThai = false;           
 
             //them thành viên đầu tiên: là người đăng ký
             NhomBUS.Instance.insertNhom(maNhom, tenNhom, false);
+            //tạo nhóm xong, mặc định thằng đầu tiên là trưởng nhóm
+            ThanhVienBUS.Instance.insertThanhVien(cbMaDKChuyenDe.Text, maNhom, "trưởng nhóm");
+        }
+
+        private void btnChonNhom_Click(object sender, EventArgs e)
+        {
+            cbMaNhom.DataSource = null; ;
         }
     }
 }

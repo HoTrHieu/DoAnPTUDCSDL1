@@ -25,9 +25,9 @@ namespace PROJECT.BUS
         }
         private ChuyenDeBUS() { }
         //lấy toàn bộ danh sách các cac chuyen de
-        public void GetAll(DataGridView data)
+        public List<CHUYENDE> GetAll()
         {
-            data.DataSource = ChuyenDeDAO.Instance.GetAll();
+            return ChuyenDeDAO.Instance.GetAll();
         }
         //get ALl
         //public List<CHUYENDE> GetAllByIDSV(string id)

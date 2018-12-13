@@ -61,18 +61,18 @@
             this.label11 = new System.Windows.Forms.Label();
             this.btnThemTV = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.btnDKNhom = new System.Windows.Forms.Button();
             this.txtTenNhom = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.chkDuSoLuong = new System.Windows.Forms.CheckBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.cbMaNhom = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTenN = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.cbMaNhom = new System.Windows.Forms.ComboBox();
+            this.btnChonNhom = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -403,6 +403,24 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thông Tin Nhóm";
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(72, 68);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(25, 13);
+            this.label16.TabIndex = 7;
+            this.label16.Text = "000";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(10, 68);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(56, 13);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Mã Nhóm:";
+            // 
             // btnDKNhom
             // 
             this.btnDKNhom.Location = new System.Drawing.Point(231, 20);
@@ -441,10 +459,10 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.textBox1);
+            this.groupBox5.Controls.Add(this.txtTenN);
             this.groupBox5.Controls.Add(this.label17);
             this.groupBox5.Controls.Add(this.cbMaNhom);
-            this.groupBox5.Controls.Add(this.button1);
+            this.groupBox5.Controls.Add(this.btnChonNhom);
             this.groupBox5.Controls.Add(this.label8);
             this.groupBox5.Location = new System.Drawing.Point(348, 172);
             this.groupBox5.Name = "groupBox5";
@@ -453,56 +471,12 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Chọn Nhóm Để Thêm Thành Viên ";
             // 
-            // button1
+            // txtTenN
             // 
-            this.button1.Location = new System.Drawing.Point(247, 22);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Chọn";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 27);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(56, 13);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Mã Nhóm:";
-            // 
-            // cbMaNhom
-            // 
-            this.cbMaNhom.FormattingEnabled = true;
-            this.cbMaNhom.Location = new System.Drawing.Point(78, 24);
-            this.cbMaNhom.Name = "cbMaNhom";
-            this.cbMaNhom.Size = new System.Drawing.Size(144, 21);
-            this.cbMaNhom.TabIndex = 6;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(10, 68);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 13);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "Mã Nhóm:";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(72, 68);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(25, 13);
-            this.label16.TabIndex = 7;
-            this.label16.Text = "000";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(76, 61);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(146, 20);
-            this.textBox1.TabIndex = 8;
+            this.txtTenN.Location = new System.Drawing.Point(76, 61);
+            this.txtTenN.Name = "txtTenN";
+            this.txtTenN.Size = new System.Drawing.Size(146, 20);
+            this.txtTenN.TabIndex = 8;
             // 
             // label17
             // 
@@ -512,6 +486,33 @@
             this.label17.Size = new System.Drawing.Size(60, 13);
             this.label17.TabIndex = 7;
             this.label17.Text = "Tên Nhóm:";
+            // 
+            // cbMaNhom
+            // 
+            this.cbMaNhom.FormattingEnabled = true;
+            this.cbMaNhom.Location = new System.Drawing.Point(78, 24);
+            this.cbMaNhom.Name = "cbMaNhom";
+            this.cbMaNhom.Size = new System.Drawing.Size(144, 21);
+            this.cbMaNhom.TabIndex = 6;
+            // 
+            // btnChonNhom
+            // 
+            this.btnChonNhom.Location = new System.Drawing.Point(247, 22);
+            this.btnChonNhom.Name = "btnChonNhom";
+            this.btnChonNhom.Size = new System.Drawing.Size(75, 23);
+            this.btnChonNhom.TabIndex = 5;
+            this.btnChonNhom.Text = "Chọn";
+            this.btnChonNhom.UseVisualStyleBackColor = true;
+            this.btnChonNhom.Click += new System.EventHandler(this.btnChonNhom_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 27);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(56, 13);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Mã Nhóm:";
             // 
             // frmDangKiNhom
             // 
@@ -585,10 +586,10 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.CheckBox chkDuSoLuong;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTenN;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ComboBox cbMaNhom;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnChonNhom;
         private System.Windows.Forms.Label label8;
     }
 }
