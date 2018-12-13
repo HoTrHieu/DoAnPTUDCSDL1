@@ -92,16 +92,12 @@ namespace PROJECT.GUI
                 MessageBox.Show("Bạn đã chọn nhóm! Bỏ chọn để đăng ký!", "Thông Báo");
             }
 
-            string maNhom = cbMaDKChuyenDe.Text;
+            string maNhom = cbMaDKChuyenDe.Text+"_N";
             string tenNhom = txtTenNhom.Text;
-
-            //lấy nhóm cuối của bảng
-            NHOM nh = NhomBUS.Instance.GetNhomLast();
-            string maTemp = nh.maNhom;
+            bool trThai = false;           
 
             //them thành viên đầu tiên: là người đăng ký
-
-            
+            NhomBUS.Instance.insertNhom(maNhom, tenNhom, false);
         }
     }
 }

@@ -288,36 +288,36 @@ insert THONGTINMOCHUYENDE(MaThongTinMoChuyenDe, HocKy, NienHoc, MaGiaoVu, MaChuy
 		  ('MCD10',2,'2017-2018','GVU03','CD10')
 --INSERT INTO THONGTINDANGKY
 insert THONGTINDANGKY(MaDangKy, MaSinhVien, MaThongTinMoChuyenDe, MaLop)
-values('DK01','SV01','MCD01','L01'),
-		('DK02','SV01','MCD02','L02'),
-		('DK03','SV02','MCD01','L01'),
-		('DK04','SV02','MCD02','L02'),
-		('DK05','SV02','MCD04','L04'),
-		('DK06','SV03','MCD05','L02'),
-		('DK07','SV04','MCD06','L03'),
-		('DK08','SV05','MCD03','L04'),
-		('DK09','SV05','MCD07','L04'),
-		('DK10','SV06','MCD09','L05')
+  VALUES('DK00001','SV01','MCD01','L01'),
+		('DK00002','SV01','MCD02','L02'),
+		('DK00003','SV02','MCD01','L01'),
+		('DK00004','SV02','MCD02','L02'),
+		('DK00005','SV02','MCD04','L04'),
+		('DK00006','SV03','MCD05','L02'),
+		('DK00007','SV04','MCD06','L03'),
+		('DK00008','SV05','MCD03','L04'),
+		('DK00009','SV05','MCD07','L04'),
+		('DK00010','SV06','MCD09','L05')
 --INSERT NHOM
 insert into NHOM(MaNhom,TenNhom,TrangThai)
-values('NHOM00',N'0 anh em',1),
-('NHOM01',N'1 anh em',1),
-('NHOM02',N'2 anh em',0),
-('NHOM03',N'3 anh em',1),
-('NHOM04',N'4 anh em',0),
-('NHOM05',N'5 anh em',0)
+  VALUES('DK00001_N',N'0 anh em',1),--0
+		('DK00002_N',N'1 anh em',1),--1
+		('DK00003_N',N'2 anh em',0),--2
+		('DK00004_N',N'3 anh em',1),--3
+		('DK00007_N',N'4 anh em',0),--4
+		('DK00010_N',N'5 anh em',0)--5
 --INSERT THANHVIEN
 insert into THANHVIEN(MaDangKy,MaNhom,VaiTro)
-values  ('DK01','NHOM01','trưởng nhóm'),
-		('DK02','NHOM02','trưởng nhóm'),
-		('DK03','NHOM03','trưởng nhóm'),
-		('DK04','NHOM03','thành viên'),
-		('DK05','NHOM03','thành viên'),
-		('DK06','NHOM04','trưởng nhóm'),
-		('DK07','NHOM05','trưởng nhóm'),
-		('DK08','NHOM05','thành viên'),
-		('DK09','NHOM05','thành viên'),
-		('DK10','NHOM05','thành viên')
+  VALUES('DK00001','DK00001_N','trưởng nhóm'),--0
+		('DK00002','DK00002_N','trưởng nhóm'),--1
+		('DK00003','DK00003_N','trưởng nhóm'),--2
+		('DK00004','DK00004_N','thành viên'),--3
+		('DK00005','DK00004_N','thành viên'),--3
+		('DK00006','DK00004_N','trưởng nhóm'),--3
+		('DK00007','DK00007_N','trưởng nhóm'),--4
+		('DK00008','DK00007_N','thành viên'),--4
+		('DK00009','DK00007_N','thành viên'),--4
+		('DK00010','DK00010_N','trưởng nhóm')--5
 
 select *
 from THONGTINDANGKY
