@@ -30,9 +30,10 @@ namespace PROJECT.GUI
             lblMSSV.Text = SV.maSinhVien;
             lblTEN.Text = SV.tenSinhVien;
 
-            //List<CHUYENDE> lstCD = ChuyenDeBUS.Instance.GetAll();
+            //ma dang ky
+            cbMaDKChuyenDe.DataSource = ThongTinDangKyBUS.Instance.GetMaDangKyByIDSV(SV.maSinhVien);
 
-
+                        
             ////lblMaChuyenDe.Text = db.CHUYENDEs.First(p => p.TenChuyenDe == cbTenChuyenDe.Text).MaChuyenDe;
 
             //cbMaDKChuyenDe.DataSource = from mdk in db.THONGTINDANGKies
@@ -61,14 +62,46 @@ namespace PROJECT.GUI
 
             //lblNienKhoa.Text = db.THONGTINMOCHUYENDEs.First(p => p.MaThongTinMoChuyenDe == maMCD).NienHoc;
 
+
+            //lấy thông tin đăng ký
+            THONGTINDANGKY thongTDK = ThongTinDangKyBUS.Instance.GetByID(cbMaDKChuyenDe.Text);
+            //lấy Thongtinmochuyende từ đăng ký
+            THONGTINMOCHUYENDE ttMoCD = ThongTinMoChuyenDeBUS.Instance.GetByID(thongTDK.maThongTimMoChuyenDe);
+            //lấy ma chuyen de tu thong tin mo chuyen de
+            lblMaChuyenDe.Text = ChuyenDeBUS.Instance.GetByID(ttMoCD.maChuyenDe).maCDe;
+            //lấy dữ liệu tên chuyen de:
+            lblTenChuyenDe.Text = ChuyenDeBUS.Instance.GetByID(ttMoCD.maChuyenDe).tenCDe;
+
+            //mã lớp học
+            lblMaLop.Text = thongTDK.maLop;
+
+            //học kỳ
+            lblHocKi.Text = ttMoCD.hocKy.ToString();
+            //niên học
+            lblNienKhoa.Text = ttMoCD.nienHoc;
         }
 
         private void btnDKNhom_Click(object sender, EventArgs e)
         {
-            //if (txtTenNhom.Text == "")
-            //{
+            if (txtTenNhom.Text == "" && cbMaNhom.Text == null)
+            {
+                MessageBox.Show("Bạn phải nhập tên nhóm!", "Thông báo");
+            }
+            if (txtTenNhom.Text != "" && cbMaNhom.Text != "")
+            {
+                MessageBox.Show("Bạn đã chọn nhóm! Bỏ chọn để đăng ký!", "Thông Báo");
+            }
 
-            //}
+            string maNhom = cbMaDKChuyenDe.Text;
+            string tenNhom = txtTenNhom.Text;
+
+            //lấy nhóm cuối của bảng
+            NHOM nh = NhomBUS.Instance.GetNhomLast();
+            string maTemp = nh.maNhom;
+
+            //them thành viên đầu tiên: là người đăng ký
+
+            
         }
     }
 }

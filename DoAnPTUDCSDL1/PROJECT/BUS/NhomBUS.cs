@@ -57,5 +57,11 @@ namespace PROJECT.BUS
         {
             return NhomDAO.Instance.deleteNhom(id);
         }
+
+        //lấy nhóm cuối:
+        public NHOM GetNhomLast()
+        {
+            return NhomDAO.Instance.GetNhomLast();
+        }
     }
 }

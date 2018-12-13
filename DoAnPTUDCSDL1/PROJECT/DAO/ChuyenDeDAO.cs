@@ -45,7 +45,7 @@ namespace PROJECT.DAO
 
         public CHUYENDE GetByID(string id)
         {
-            string query = "SELECT * FORM CHUYENDE WHERE MaChuyenDe = @maCD ";
+            string query = "SELECT * FROM CHUYENDE WHERE MaChuyenDe = @maCD ";
             object[] para = new object[]
             {
                 id

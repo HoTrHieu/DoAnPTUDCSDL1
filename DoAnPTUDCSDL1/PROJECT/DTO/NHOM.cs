@@ -11,9 +11,9 @@ namespace PROJECT.DTO
         public string maNhom { get; set; }
         public string tenNhom { get; set; }
 
-        public byte trangThai { get; set; }
+        public bool trangThai { get; set; }
 
-        public NHOM(string MaNhom, string TenNhom, byte TrThai)
+        public NHOM(string MaNhom, string TenNhom, bool TrThai)
         {
             this.maNhom = MaNhom;
             this.tenNhom = TenNhom;

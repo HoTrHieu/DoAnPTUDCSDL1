@@ -48,7 +48,7 @@ namespace PROJECT.DAO
         //lấy theo mã đăng ký
         public THONGTINDANGKY GetByID(string id)
         {
-            string query = "SELECT * FROM THONTINDANGKY";
+            string query = "SELECT * FROM THONGTINDANGKY WHERE MaDangKy = @maDK ";
             object[] para = new object[]
             {
                 id
@@ -70,7 +70,7 @@ namespace PROJECT.DAO
         {
             List<THONGTINDANGKY> thongTins = new List<THONGTINDANGKY>();
 
-            string query = "SELECT * FROM THONTINDANGKY WHERE MaSinhVien = @masv ";
+            string query = "SELECT * FROM THONGTINDANGKY WHERE MaSinhVien = @masv ";
             object[] para = new object[]
             {
                 MSSV,
@@ -127,6 +127,27 @@ namespace PROJECT.DAO
                 return true;
             }
             return false;
+        }
+
+        //get ma dang ky from id sinh vien
+        public List<string> GetMaDangKyByIDSV(string MSSV)
+        {
+            List<string> lMaDK = new List<string>();
+
+            string query = "SELECT MaDangKy FROM THONGTINDANGKY WHERE MaSinhVien = @masv ";
+            object[] para = new object[]
+            {
+                MSSV,
+            };
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, para);
+
+            foreach (DataRow item in data.Rows)
+            {
+                string maDK = item["MaDangKy"].ToString();
+
+                lMaDK.Add(maDK);
+            }
+            return lMaDK;
         }
 
     }

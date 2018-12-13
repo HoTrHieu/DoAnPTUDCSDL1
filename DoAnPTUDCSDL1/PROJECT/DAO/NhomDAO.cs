@@ -86,5 +86,24 @@ namespace PROJECT.DAO
                 return true;
             return false;
         }
+
+        //lấy nhóm cuối cùng trong danh sách
+        public NHOM GetNhomLast()
+        {
+            string query = "select * from NHOM";
+            List<NHOM> lstNhom = new List<NHOM>();
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach(DataRow item in data.Rows)
+            {
+                string maNhom = item["MaNhom"].ToString();
+                string tenNhom = item["TenNhom"].ToString();
+                bool trangThai =(bool)item["TrangThai"];
+
+                NHOM nh = new NHOM(maNhom, tenNhom, trangThai);
+                lstNhom.Add(nh);
+            }
+            return lstNhom.Last();
+        }
     }
 }

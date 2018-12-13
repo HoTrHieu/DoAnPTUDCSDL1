@@ -42,6 +42,10 @@ namespace PROJECT.BUS
             data.DataSource = ThongTinDangKyDAO.Instance.GetAllByIDSV(MSSV);
         }
 
-        //
+        //lấy ma đăng ký theo sinh vien
+        public List<string> GetMaDangKyByIDSV(string MSSV)
+        {
+            return ThongTinDangKyDAO.Instance.GetMaDangKyByIDSV(MSSV);
+        }
     }
 }
