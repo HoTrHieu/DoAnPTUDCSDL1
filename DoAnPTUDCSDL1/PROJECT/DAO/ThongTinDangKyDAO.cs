@@ -150,5 +150,40 @@ namespace PROJECT.DAO
             return lMaDK;
         }
 
+        public List<string> GetMaSVByIDMoCD(string maMo)
+        {
+            List<string> lMaMo = new List<string>();
+
+            string query = "SELECT MaSinhVien FROM THONGTINDANGKY WHERE MaThongTinMoChuyenDe = @maMo ";
+            object[] para = new object[]
+            {
+                maMo,
+            };
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, para);
+
+            foreach (DataRow item in data.Rows)
+            {
+                string maDK = item["MaSinhVien"].ToString();
+
+                lMaMo.Add(maDK);
+            }
+            return lMaMo;
+        }
+
+        public string GetMaDangKyByMMML(string maSV, string maMo, string maLop)
+        {
+            string MaDK;
+
+            string query = "SELECT MaDangKy FROM THONGTINDANGKY WHERE MaSinhVien= @maSV , MaThongTinMoChuyenDe = @maMo , MaLop= @maL ";
+            object[] para = new object[]
+            {
+                maSV,maMo,maLop
+            };
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, para);
+           // DataRow item = data.Rows[0];
+
+            return data.Rows[0]["MaDangKy"].ToString();
+            
+        }
     }
 }

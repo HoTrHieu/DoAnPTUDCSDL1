@@ -35,14 +35,14 @@ namespace PROJECT.BUS
             return NhomDAO.Instance.GetByID(id);
         }
 
-        public bool updateNhom(DataGridView data)
+        public bool updateNhom(string MaNhom,NHOM nh)
         {
-            DataGridViewRow row = data.SelectedCells[0].OwningRow;
-            string MaNhom = row.Cells["MaNhom"].Value.ToString();
-            string TenNhom = row.Cells["TenNhom"].Value.ToString();
-            bool TrangThai = (bool)row.Cells["TrangThai"].Value;
+            //DataGridViewRow row = data.SelectedCells[0].OwningRow;
+            //string MaNhom = row.Cells["MaNhom"].Value.ToString();
+            //string TenNhom = row.Cells["TenNhom"].Value.ToString();
+            //bool TrangThai = (bool)row.Cells["TrangThai"].Value;
 
-            NHOM nh = new NHOM(MaNhom, TenNhom, TrangThai);
+            //NHOM nh = new NHOM(MaNhom, TenNhom, TrangThai);
 
             return NhomDAO.Instance.updateNhom(MaNhom, nh);
         }
@@ -63,5 +63,8 @@ namespace PROJECT.BUS
         {
             return NhomDAO.Instance.GetNhomLast();
         }
+
+
+
     }
 }

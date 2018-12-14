@@ -47,5 +47,16 @@ namespace PROJECT.BUS
         {
             return ThongTinDangKyDAO.Instance.GetMaDangKyByIDSV(MSSV);
         }
+
+        //lấy mã sinh vien
+        public List<string> GetMaSVByIDMoCD(string maMo)
+        {
+            return ThongTinDangKyDAO.Instance.GetMaSVByIDMoCD(maMo);
+        }
+        //lấy mã đăng ký by mamochuyende va ma lop
+        public string GetMaDangKyByMMML(string maSV, string maMo,string maLop)
+        {
+            return ThongTinDangKyDAO.Instance.GetMaDangKyByMMML(maSV, maMo, maLop);
+        }
     }
 }

@@ -97,6 +97,24 @@ namespace PROJECT.DAO
             return false;
         }
 
+        //getAllByIDNhom
+        // lấy tất cả thông tin trong bảng thành viên
+        public List<THANHVIEN> GetAllByIDN(string mNhom)
+        {
+            List<THANHVIEN> thanhViens = new List<THANHVIEN>();
+            string query = "select * from ThanhVien where MaNhom= @maN ";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query,new object[]{ mNhom});
 
+            foreach (DataRow item in data.Rows)
+            {
+                string maDangKy = item["maDangKy"].ToString();
+                string maNhom = item["maNhom"].ToString();
+                string vaiTro = item["vaiTro"].ToString();
+
+                THANHVIEN tv = new THANHVIEN(maDangKy, maNhom, vaiTro);
+                thanhViens.Add(tv);
+            }
+            return thanhViens;
+        }
     }
 }

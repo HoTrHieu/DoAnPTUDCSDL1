@@ -63,7 +63,7 @@ namespace PROJECT.DAO
         // thêm nhóm mới từ Mã Nhóm, Tên Nhóm và Trạng Thái của nhóm
         public bool insertNhom(NHOM nh)
         {
-            string query = "insert into Nhom values(@maNhom , @tenNhom , @trangThai )";
+            string query = "insert into Nhom values( @maNhom , @tenNhom , @trangThai )";
             if (DataProvider.Instance.ExecuteNonQuery(query, new object[] { nh.maNhom, nh.tenNhom, nh.trangThai }) > 0)
                 return true;
             return false;

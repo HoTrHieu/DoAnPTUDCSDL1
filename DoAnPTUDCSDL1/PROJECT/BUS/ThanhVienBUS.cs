@@ -57,5 +57,11 @@ namespace PROJECT.BUS
         {
             return ThanhVienDAO.Instance.deleteThanhVien(maDangKy, maNhom);
         }
+
+        //
+        public List<THANHVIEN> GetAllByIDN(string mNhom)
+        {
+            return ThanhVienDAO.Instance.GetAllByIDN(mNhom);
+        }
     }
 }

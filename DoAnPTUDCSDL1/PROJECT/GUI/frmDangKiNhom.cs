@@ -14,7 +14,9 @@ namespace PROJECT.GUI
 {
     public partial class frmDangKiNhom : Form
     {
-        SINHVIEN SV = SinhVienBUS.Instance.GetByID("SV01");
+        SINHVIEN SV;// = SinhVienBUS.Instance.GetByID("SV01");
+        string MaMoCD, MaLop;
+        string tenN;
         public frmDangKiNhom()
         {
             InitializeComponent();
@@ -29,42 +31,16 @@ namespace PROJECT.GUI
         {
             lblMSSV.Text = SV.maSinhVien;
             lblTEN.Text = SV.tenSinhVien;
-
             //ma dang ky
-            cbMaDKChuyenDe.DataSource = ThongTinDangKyBUS.Instance.GetMaDangKyByIDSV(SV.maSinhVien);
-
-                        
-            ////lblMaChuyenDe.Text = db.CHUYENDEs.First(p => p.TenChuyenDe == cbTenChuyenDe.Text).MaChuyenDe;
-
-            //cbMaDKChuyenDe.DataSource = from mdk in db.THONGTINDANGKies
-            //                            where (
-            //                                     mdk.MaSinhVien == sv.MaSinhVien
-            //                                 )
-            //                            select mdk.MaDangKy;
-
-            ////lblMaChuyenDe.Text = db.THONGTINMOCHUYENDEs.First(p => p.MaThongTinMoChuyenDe == cbMaDKChuyenDe.Text).MaChuyenDe;
-
+            cbMaDKChuyenDe.DataSource = ThongTinDangKyBUS.Instance.GetMaDangKyByIDSV(SV.maSinhVien);                        
         }
 
         private void cbMaDKChuyenDe_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //LINQDataContext db = new LINQDataContext();
-            //THONGTINDANGKY dk = db.THONGTINDANGKies.First(p => p.MaDangKy == cbMaDKChuyenDe.Text);
-            //string maMCD = db.THONGTINDANGKies.First(p => p.MaDangKy == cbMaDKChuyenDe.Text).MaThongTinMoChuyenDe;
-            //lblMaChuyenDe.Text = db.THONGTINMOCHUYENDEs.First(p => p.MaThongTinMoChuyenDe == maMCD).MaChuyenDe;
-
-            ////ten chuyen de
-            //lblTenChuyenDe.Text = db.CHUYENDEs.First(p => p.MaChuyenDe == lblMaChuyenDe.Text).TenChuyenDe;
-            ////ma lop
-            //lblMaLop.Text = db.LOPHOCs.First(p => p.MaLop == dk.MaLop).MaLop;
-
-            //lblHocKi.Text = db.THONGTINMOCHUYENDEs.First(p => p.MaThongTinMoChuyenDe == maMCD).HocKy.ToString();
-
-            //lblNienKhoa.Text = db.THONGTINMOCHUYENDEs.First(p => p.MaThongTinMoChuyenDe == maMCD).NienHoc;
-
-
             //lấy thông tin đăng ký
             THONGTINDANGKY thongTDK = ThongTinDangKyBUS.Instance.GetByID(cbMaDKChuyenDe.Text);
+            MaLop = thongTDK.maLop;
+            MaMoCD = thongTDK.maThongTimMoChuyenDe;
             //lấy Thongtinmochuyende từ đăng ký
             THONGTINMOCHUYENDE ttMoCD = ThongTinMoChuyenDeBUS.Instance.GetByID(thongTDK.maThongTimMoChuyenDe);
             //lấy ma chuyen de tu thong tin mo chuyen de
@@ -79,32 +55,55 @@ namespace PROJECT.GUI
             lblHocKi.Text = ttMoCD.hocKy.ToString();
             //niên học
             lblNienKhoa.Text = ttMoCD.nienHoc;
+            //thông tin thêm thành vien
+            cbxMaSVDK.DataSource = ThongTinDangKyBUS.Instance.GetMaSVByIDMoCD(thongTDK.maThongTimMoChuyenDe);
+            //tên của thêm thành viên
+            lblTenSVDK.Text = SinhVienBUS.Instance.GetByID(cbxMaSVDK.Text).tenSinhVien;
         }
 
         private void btnDKNhom_Click(object sender, EventArgs e)
         {
-            if (txtTenNhom.Text == "" && cbMaNhom.Text == null)
+            //trường hợp chưa thuộc nhóm nào
+            if (txtTenNhom.Text == "")
             {
-                MessageBox.Show("Bạn phải nhập tên nhóm!", "Thông báo");
+                MessageBox.Show("Bạn phải nhập tên nhóm!", "Thông báo");            
             }
-            if (txtTenNhom.Text != "" && cbMaNhom.Text != "")
-            {
-                MessageBox.Show("Bạn đã chọn nhóm! Bỏ chọn để đăng ký!", "Thông Báo");
-            }
-
-            string maNhom = cbMaDKChuyenDe.Text+"_N";
+          
+            string maNhom = cbMaDKChuyenDe.Text.TrimEnd()+"_N";
             string tenNhom = txtTenNhom.Text;
+            tenN = tenNhom;
             //bool trThai = false;           
 
             //them thành viên đầu tiên: là người đăng ký
             NhomBUS.Instance.insertNhom(maNhom, tenNhom, false);
             //tạo nhóm xong, mặc định thằng đầu tiên là trưởng nhóm
             ThanhVienBUS.Instance.insertThanhVien(cbMaDKChuyenDe.Text, maNhom, "trưởng nhóm");
+            //sau khi đăng ký xong thì mã nhóm và tên nhóm sẽ ở trong group chọn thông tin nhóm
+            lblMaNhom.Text = maNhom;
+            //hiện thành viên đầu tiên là trưởng nhóm trong datagirdview
+            dgvThanhVien.DataSource = ThanhVienBUS.Instance.GetAllByIDN(maNhom);
         }
 
-        private void btnChonNhom_Click(object sender, EventArgs e)
+        private void btnThoat_Click(object sender, EventArgs e)
         {
-            cbMaNhom.DataSource = null; ;
+            if (chkDuSoLuong.Checked)
+            {
+                NHOM nh = new NHOM(lblMaNhom.Text, tenN, true);
+                NhomBUS.Instance.updateNhom(lblMaNhom.Text, nh);
+            }
+
+            this.Close();
+        }
+
+        private void btnThemTV_Click(object sender, EventArgs e)
+        {
+            string maDK = ThongTinDangKyBUS.Instance.GetMaDangKyByMMML(cbxMaSVDK.Text, MaMoCD, MaLop);
+            //them thanh vien
+            ThanhVienBUS.Instance.insertThanhVien(maDK, lblMaNhom.Text, "thành viên");
+
+            dgvThanhVien.Update();
+            dgvThanhVien.Refresh();
+
         }
     }
 }
