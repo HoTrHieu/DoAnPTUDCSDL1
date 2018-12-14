@@ -23,6 +23,12 @@ namespace PROJECT.BUS
             }
         }
 
+        //lấy toàn bộ danh sách Giao vien
+        public List<GIAOVIEN> GetAll()
+        {
+            return GiaoVienDAO.Instance.GetAll();
+        }
+
         //Update
         public bool Update(DataGridView data)
         {

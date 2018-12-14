@@ -25,6 +25,27 @@ namespace PROJECT.DAO
 
         private GiaoVienDAO() { }
 
+        public List<GIAOVIEN> GetAll()
+        {
+            List<GIAOVIEN> giaoviens = new List<GIAOVIEN>();
+            string query = "SELECT * FROM GIAOVIEN";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                string maGV = item["MaGiaoVien"].ToString();
+                string tenGV = item["TenGiaoVien"].ToString();
+                bool phai = (bool)item["Phai"];
+                DateTime ngaySinh = (DateTime)item["NgaySinh"];
+                string diaChi = item["DiaChi"].ToString();
+                string maCD = item["MaChuyenDe"].ToString();
+
+                GIAOVIEN gv = new GIAOVIEN(maGV, tenGV, phai, ngaySinh, diaChi, maCD);
+                giaoviens.Add(gv);
+            }
+
+            return giaoviens;
+        }
+
         //update
         public bool Update(string id, GIAOVIEN gvien)
         {

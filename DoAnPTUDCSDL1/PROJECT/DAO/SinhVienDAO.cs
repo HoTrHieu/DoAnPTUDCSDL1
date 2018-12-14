@@ -94,5 +94,35 @@ namespace PROJECT.DAO
             return SV;
         }
 
+        // hàm lấy sinh viên cuối cùng cuối cùng
+        public SINHVIEN GetSinhVienLast()
+        {
+            string query = "SELECT TOP 1 * FROM SINHVIEN ORDER BY MaSinhVien DESC ";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            DataRow item = data.Rows[0];
+            string maSV = item["MaSinhVien"].ToString();
+            string tenSV = item["TenSinhVien"].ToString();
+            bool phai = (bool)item["Phai"];
+            DateTime ngaySinh = (DateTime)item["NgaySinh"];
+            string diaChi = item["DiaChi"].ToString();
+            string maNganh = item["MaNganh"].ToString();
+
+            SINHVIEN sv = new SINHVIEN(maSV, tenSV, phai, ngaySinh, diaChi, maNganh);
+
+            return sv;
+        }
+
+        // tạo mã sinh viên mới
+        public string CreateMaSinhVien()
+        {
+            string maSinhVienOld = SinhVienDAO.Instance.GetSinhVienLast().maSinhVien;
+            string _2charFirst = maSinhVienOld.Substring(0, 2);
+            int stt = int.Parse(maSinhVienOld.Substring(2, 3));
+            string sttNew = (stt < 10) ? ("0" + (++stt)) : ("" + (++stt));
+            string maSinhVienNew = _2charFirst + sttNew;
+            return maSinhVienNew;
+        }
     }
 }

@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblHoTenSV = new System.Windows.Forms.Label();
-            this.txtHoTenSV = new System.Windows.Forms.TextBox();
-            this.lblPhai = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.lblNgaySinh = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.txtMSSV = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbNganh = new System.Windows.Forms.ComboBox();
+            this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
+            this.lblNgaySinh = new System.Windows.Forms.Label();
+            this.rdbNu = new System.Windows.Forms.RadioButton();
+            this.rdbNam = new System.Windows.Forms.RadioButton();
+            this.lblPhai = new System.Windows.Forms.Label();
+            this.txtHoTenSV = new System.Windows.Forms.TextBox();
+            this.lblHoTenSV = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.lblTenTaiKhoan = new System.Windows.Forms.Label();
@@ -54,11 +54,11 @@
             this.groupBox1.Controls.Add(this.txtMSSV);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.cbNganh);
+            this.groupBox1.Controls.Add(this.dtpNgaySinh);
             this.groupBox1.Controls.Add(this.lblNgaySinh);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.rdbNu);
+            this.groupBox1.Controls.Add(this.rdbNam);
             this.groupBox1.Controls.Add(this.lblPhai);
             this.groupBox1.Controls.Add(this.txtHoTenSV);
             this.groupBox1.Controls.Add(this.lblHoTenSV);
@@ -69,85 +69,12 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin  Tài khoản";
             // 
-            // lblHoTenSV
+            // txtMSSV
             // 
-            this.lblHoTenSV.AutoSize = true;
-            this.lblHoTenSV.Location = new System.Drawing.Point(22, 29);
-            this.lblHoTenSV.Name = "lblHoTenSV";
-            this.lblHoTenSV.Size = new System.Drawing.Size(43, 13);
-            this.lblHoTenSV.TabIndex = 0;
-            this.lblHoTenSV.Text = "Họ Tên";
-            // 
-            // txtHoTenSV
-            // 
-            this.txtHoTenSV.Location = new System.Drawing.Point(109, 26);
-            this.txtHoTenSV.Name = "txtHoTenSV";
-            this.txtHoTenSV.Size = new System.Drawing.Size(189, 20);
-            this.txtHoTenSV.TabIndex = 1;
-            // 
-            // lblPhai
-            // 
-            this.lblPhai.AutoSize = true;
-            this.lblPhai.Location = new System.Drawing.Point(336, 26);
-            this.lblPhai.Name = "lblPhai";
-            this.lblPhai.Size = new System.Drawing.Size(28, 13);
-            this.lblPhai.TabIndex = 2;
-            this.lblPhai.Text = "Phái";
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(405, 26);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(47, 17);
-            this.radioButton1.TabIndex = 3;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Nam";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(459, 26);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(39, 17);
-            this.radioButton2.TabIndex = 4;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Nữ";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // lblNgaySinh
-            // 
-            this.lblNgaySinh.AutoSize = true;
-            this.lblNgaySinh.Location = new System.Drawing.Point(22, 73);
-            this.lblNgaySinh.Name = "lblNgaySinh";
-            this.lblNgaySinh.Size = new System.Drawing.Size(54, 13);
-            this.lblNgaySinh.TabIndex = 5;
-            this.lblNgaySinh.Text = "Ngày sinh";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(109, 73);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(189, 20);
-            this.dateTimePicker1.TabIndex = 7;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(405, 76);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(119, 21);
-            this.comboBox1.TabIndex = 8;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(336, 80);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 13);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Ngành";
+            this.txtMSSV.Location = new System.Drawing.Point(109, 142);
+            this.txtMSSV.Name = "txtMSSV";
+            this.txtMSSV.Size = new System.Drawing.Size(189, 20);
+            this.txtMSSV.TabIndex = 11;
             // 
             // label2
             // 
@@ -158,12 +85,85 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "MSSV";
             // 
-            // txtMSSV
+            // label1
             // 
-            this.txtMSSV.Location = new System.Drawing.Point(109, 142);
-            this.txtMSSV.Name = "txtMSSV";
-            this.txtMSSV.Size = new System.Drawing.Size(189, 20);
-            this.txtMSSV.TabIndex = 11;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(336, 80);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Ngành";
+            // 
+            // cbNganh
+            // 
+            this.cbNganh.FormattingEnabled = true;
+            this.cbNganh.Location = new System.Drawing.Point(405, 76);
+            this.cbNganh.Name = "cbNganh";
+            this.cbNganh.Size = new System.Drawing.Size(119, 21);
+            this.cbNganh.TabIndex = 8;
+            // 
+            // dtpNgaySinh
+            // 
+            this.dtpNgaySinh.Location = new System.Drawing.Point(109, 73);
+            this.dtpNgaySinh.Name = "dtpNgaySinh";
+            this.dtpNgaySinh.Size = new System.Drawing.Size(189, 20);
+            this.dtpNgaySinh.TabIndex = 7;
+            // 
+            // lblNgaySinh
+            // 
+            this.lblNgaySinh.AutoSize = true;
+            this.lblNgaySinh.Location = new System.Drawing.Point(22, 73);
+            this.lblNgaySinh.Name = "lblNgaySinh";
+            this.lblNgaySinh.Size = new System.Drawing.Size(54, 13);
+            this.lblNgaySinh.TabIndex = 5;
+            this.lblNgaySinh.Text = "Ngày sinh";
+            // 
+            // rdbNu
+            // 
+            this.rdbNu.AutoSize = true;
+            this.rdbNu.Location = new System.Drawing.Point(459, 26);
+            this.rdbNu.Name = "rdbNu";
+            this.rdbNu.Size = new System.Drawing.Size(39, 17);
+            this.rdbNu.TabIndex = 4;
+            this.rdbNu.TabStop = true;
+            this.rdbNu.Text = "Nữ";
+            this.rdbNu.UseVisualStyleBackColor = true;
+            // 
+            // rdbNam
+            // 
+            this.rdbNam.AutoSize = true;
+            this.rdbNam.Location = new System.Drawing.Point(405, 26);
+            this.rdbNam.Name = "rdbNam";
+            this.rdbNam.Size = new System.Drawing.Size(47, 17);
+            this.rdbNam.TabIndex = 3;
+            this.rdbNam.TabStop = true;
+            this.rdbNam.Text = "Nam";
+            this.rdbNam.UseVisualStyleBackColor = true;
+            // 
+            // lblPhai
+            // 
+            this.lblPhai.AutoSize = true;
+            this.lblPhai.Location = new System.Drawing.Point(336, 26);
+            this.lblPhai.Name = "lblPhai";
+            this.lblPhai.Size = new System.Drawing.Size(28, 13);
+            this.lblPhai.TabIndex = 2;
+            this.lblPhai.Text = "Phái";
+            // 
+            // txtHoTenSV
+            // 
+            this.txtHoTenSV.Location = new System.Drawing.Point(109, 26);
+            this.txtHoTenSV.Name = "txtHoTenSV";
+            this.txtHoTenSV.Size = new System.Drawing.Size(189, 20);
+            this.txtHoTenSV.TabIndex = 1;
+            // 
+            // lblHoTenSV
+            // 
+            this.lblHoTenSV.AutoSize = true;
+            this.lblHoTenSV.Location = new System.Drawing.Point(22, 29);
+            this.lblHoTenSV.Name = "lblHoTenSV";
+            this.lblHoTenSV.Size = new System.Drawing.Size(43, 13);
+            this.lblHoTenSV.TabIndex = 0;
+            this.lblHoTenSV.Text = "Họ Tên";
             // 
             // textBox1
             // 
@@ -215,6 +215,7 @@
             this.button1.TabIndex = 6;
             this.button1.Text = "Tạo";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // frmThemTaiKhoanSinhVien
             // 
@@ -230,6 +231,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmThemTaiKhoanSinhVien";
             this.Text = "frmThemTaiKhoanSinhVien";
+            this.Load += new System.EventHandler(this.frmThemTaiKhoanSinhVien_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -243,11 +245,11 @@
         private System.Windows.Forms.TextBox txtMSSV;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox cbNganh;
+        private System.Windows.Forms.DateTimePicker dtpNgaySinh;
         private System.Windows.Forms.Label lblNgaySinh;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rdbNu;
+        private System.Windows.Forms.RadioButton rdbNam;
         private System.Windows.Forms.Label lblPhai;
         private System.Windows.Forms.TextBox txtHoTenSV;
         private System.Windows.Forms.Label lblHoTenSV;

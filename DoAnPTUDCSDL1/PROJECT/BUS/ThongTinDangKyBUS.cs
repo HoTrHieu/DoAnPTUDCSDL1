@@ -58,5 +58,15 @@ namespace PROJECT.BUS
         {
             return ThongTinDangKyDAO.Instance.GetMaDangKyByMMML(maSV, maMo, maLop);
         }
+
+        public List<Tuple<int, string, string, string, string, string, string>> GetAllThongTinDangKyChuyenDeSinhVien()
+        {
+            return ThongTinDangKyDAO.Instance.GetAllThongTinDangKyChuyenDeSinhVien();
+        }
+
+        public List<Tuple<int, string, string, string, string, string, string>> GetAllThongTinDangKyChuyenDeSinhVienTheoDieuKien(int hocKy, string nienHoc, string maCD)
+        {
+            return ThongTinDangKyDAO.Instance.GetAllThongTinDangKyChuyenDeSinhVienTheoDieuKien(hocKy, nienHoc, maCD);
+        }
     }
 }

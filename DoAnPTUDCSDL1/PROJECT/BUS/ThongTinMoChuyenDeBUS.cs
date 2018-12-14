@@ -59,5 +59,16 @@ namespace PROJECT.BUS
         {
             return ThongTinMoChuyenDeDAO.Instance.deleteThongTinMoChuyenDe(id);
         }
+
+
+        public THONGTINMOCHUYENDE GetThongTinMoChuyenDeLast()
+        {
+            return ThongTinMoChuyenDeDAO.Instance.GetThongTinMoChuyenDeLast();
+        }
+
+        public string CreateMaTTMCD()
+        {
+            return ThongTinMoChuyenDeDAO.Instance.CreateMaTTMCD();
+        }
     }
 }

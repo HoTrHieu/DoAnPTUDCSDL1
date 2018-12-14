@@ -25,6 +25,11 @@ namespace PROJECT.BUS
 
         private GiaoVuBUS() { }
 
+        public List<GIAOVU> GetAll()
+        {
+            return GiaoVuDAO.Instance.GetAll();
+        }
+
         //Update
         public bool Update(DataGridView data)
         {

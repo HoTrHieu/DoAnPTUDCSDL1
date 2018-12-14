@@ -65,5 +65,35 @@ namespace PROJECT.DAO
 
             return hockys;
         }
+
+        public List<int> GetHocKy()
+        {
+            List<int> lHocKy = new List<int>();
+            string query = "SELECT DISTINCT HocKy FROM HOCKY";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                int HocKy = (int)item["HocKy"];
+
+                lHocKy.Add(HocKy);
+            }
+
+            return lHocKy;
+        }
+
+        public List<string> GetNienHoc()
+        {
+            List<string> lNienHoc = new List<string>();
+            string query = "SELECT DISTINCT NienHoc FROM HOCKY";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                string NienHoc = item["NienHoc"].ToString();
+
+                lNienHoc.Add(NienHoc);
+            }
+
+            return lNienHoc;
+        }
     }
 }

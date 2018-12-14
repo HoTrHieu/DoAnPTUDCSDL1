@@ -38,16 +38,12 @@
             this.cmbNamHoc = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lvDSSinhVienDangKyChuyenDe = new System.Windows.Forms.ListView();
-            this.colSTT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colMLop = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colMSSV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colHoTen = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colMaGVQL = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
+            this.dgvDSSinhVienDangKyChuyenDe = new System.Windows.Forms.DataGridView();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSSinhVienDangKyChuyenDe)).BeginInit();
             this.SuspendLayout();
             // 
             // btnTimTheoYeuCau
@@ -58,13 +54,11 @@
             this.btnTimTheoYeuCau.TabIndex = 3;
             this.btnTimTheoYeuCau.Text = "Hiển thị theo bộ lọc";
             this.btnTimTheoYeuCau.UseVisualStyleBackColor = true;
+            this.btnTimTheoYeuCau.Click += new System.EventHandler(this.btnTimTheoYeuCau_Click_1);
             // 
             // cmbHocKy
             // 
             this.cmbHocKy.FormattingEnabled = true;
-            this.cmbHocKy.Items.AddRange(new object[] {
-            "1",
-            "2"});
             this.cmbHocKy.Location = new System.Drawing.Point(66, 28);
             this.cmbHocKy.Name = "cmbHocKy";
             this.cmbHocKy.Size = new System.Drawing.Size(33, 21);
@@ -99,7 +93,7 @@
             this.groupBox3.Controls.Add(this.cmbHocKy);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Location = new System.Drawing.Point(19, 56);
+            this.groupBox3.Location = new System.Drawing.Point(112, 55);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(627, 96);
             this.groupBox3.TabIndex = 14;
@@ -114,16 +108,11 @@
             this.btnHienThiTatCaChuyenDe.TabIndex = 3;
             this.btnHienThiTatCaChuyenDe.Text = "Hiển thị tất cả chuyên đề";
             this.btnHienThiTatCaChuyenDe.UseVisualStyleBackColor = true;
+            this.btnHienThiTatCaChuyenDe.Click += new System.EventHandler(this.btnHienThiTatCaChuyenDe_Click_1);
             // 
             // cmbChuyenDe
             // 
             this.cmbChuyenDe.FormattingEnabled = true;
-            this.cmbChuyenDe.Items.AddRange(new object[] {
-            "Toán Rời Rạc",
-            "Kỹ Thuật Lập Trình",
-            "Tin Học Cơ Sở",
-            "Nhập Môn Lập Trình",
-            "Lập trình Web1"});
             this.cmbChuyenDe.Location = new System.Drawing.Point(434, 28);
             this.cmbChuyenDe.Name = "cmbChuyenDe";
             this.cmbChuyenDe.Size = new System.Drawing.Size(178, 21);
@@ -132,11 +121,6 @@
             // cmbNamHoc
             // 
             this.cmbNamHoc.FormattingEnabled = true;
-            this.cmbNamHoc.Items.AddRange(new object[] {
-            "2016 - 2017",
-            "2017 - 2018",
-            "2018 - 2019",
-            "2019 - 2020"});
             this.cmbNamHoc.Location = new System.Drawing.Point(199, 28);
             this.cmbNamHoc.Name = "cmbNamHoc";
             this.cmbNamHoc.Size = new System.Drawing.Size(106, 21);
@@ -153,60 +137,19 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.lvDSSinhVienDangKyChuyenDe);
+            this.groupBox2.Controls.Add(this.dgvDSSinhVienDangKyChuyenDe);
             this.groupBox2.Location = new System.Drawing.Point(19, 173);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(627, 319);
+            this.groupBox2.Size = new System.Drawing.Size(814, 319);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách sinh viên đăng ký chuyên đề";
-            // 
-            // lvDSSinhVienDangKyChuyenDe
-            // 
-            this.lvDSSinhVienDangKyChuyenDe.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.colSTT,
-            this.colMLop,
-            this.colMSSV,
-            this.colHoTen,
-            this.colMaGVQL});
-            this.lvDSSinhVienDangKyChuyenDe.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lvDSSinhVienDangKyChuyenDe.GridLines = true;
-            this.lvDSSinhVienDangKyChuyenDe.Location = new System.Drawing.Point(3, 16);
-            this.lvDSSinhVienDangKyChuyenDe.Name = "lvDSSinhVienDangKyChuyenDe";
-            this.lvDSSinhVienDangKyChuyenDe.Size = new System.Drawing.Size(621, 300);
-            this.lvDSSinhVienDangKyChuyenDe.TabIndex = 3;
-            this.lvDSSinhVienDangKyChuyenDe.UseCompatibleStateImageBehavior = false;
-            this.lvDSSinhVienDangKyChuyenDe.View = System.Windows.Forms.View.Details;
-            // 
-            // colSTT
-            // 
-            this.colSTT.Text = "STT";
-            // 
-            // colMLop
-            // 
-            this.colMLop.Text = "Lớp";
-            this.colMLop.Width = 81;
-            // 
-            // colMSSV
-            // 
-            this.colMSSV.Text = "MSSV";
-            this.colMSSV.Width = 61;
-            // 
-            // colHoTen
-            // 
-            this.colHoTen.Text = "Họ Tên";
-            this.colHoTen.Width = 127;
-            // 
-            // colMaGVQL
-            // 
-            this.colMaGVQL.Text = "Giáo Viên Quản Lý";
-            this.colMaGVQL.Width = 219;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(107, 13);
+            this.label1.Location = new System.Drawing.Point(203, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(475, 25);
             this.label1.TabIndex = 13;
@@ -221,11 +164,22 @@
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
             // 
+            // dgvDSSinhVienDangKyChuyenDe
+            // 
+            this.dgvDSSinhVienDangKyChuyenDe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDSSinhVienDangKyChuyenDe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDSSinhVienDangKyChuyenDe.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDSSinhVienDangKyChuyenDe.Location = new System.Drawing.Point(3, 16);
+            this.dgvDSSinhVienDangKyChuyenDe.Name = "dgvDSSinhVienDangKyChuyenDe";
+            this.dgvDSSinhVienDangKyChuyenDe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDSSinhVienDangKyChuyenDe.Size = new System.Drawing.Size(808, 300);
+            this.dgvDSSinhVienDangKyChuyenDe.TabIndex = 0;
+            // 
             // frmKetQuaDangKyChuyenDeGiaoVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(659, 535);
+            this.ClientSize = new System.Drawing.Size(845, 535);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label1);
@@ -239,6 +193,7 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSSinhVienDangKyChuyenDe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,16 +208,11 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ComboBox cmbNamHoc;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ListView lvDSSinhVienDangKyChuyenDe;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.ComboBox cmbChuyenDe;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ColumnHeader colSTT;
-        private System.Windows.Forms.ColumnHeader colMLop;
-        private System.Windows.Forms.ColumnHeader colMSSV;
-        private System.Windows.Forms.ColumnHeader colHoTen;
-        private System.Windows.Forms.ColumnHeader colMaGVQL;
         private System.Windows.Forms.Button btnHienThiTatCaChuyenDe;
+        private System.Windows.Forms.DataGridView dgvDSSinhVienDangKyChuyenDe;
     }
 }

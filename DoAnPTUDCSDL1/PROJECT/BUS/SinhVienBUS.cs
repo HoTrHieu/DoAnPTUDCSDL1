@@ -60,6 +60,18 @@ namespace PROJECT.BUS
          * else
          *      MessageBox.Show("Lỗi");
          * 
+         * 
+         * 
          */
+
+        public SINHVIEN GetSinhVienLast()
+        {
+            return SinhVienDAO.Instance.GetSinhVienLast();
+        }
+
+        public string CreateMaSinhVien()
+        {
+            return SinhVienDAO.Instance.CreateMaSinhVien();
+        }
     }
 }

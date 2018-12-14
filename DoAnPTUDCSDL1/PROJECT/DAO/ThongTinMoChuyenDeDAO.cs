@@ -66,7 +66,7 @@ namespace PROJECT.DAO
         // thêm một thông tin mở chuyên đề
         public bool insertThongTinMoChuyenDe(THONGTINMOCHUYENDE ttmcd)
         {
-            string query = "insert into ThongTinMoChuyenDe values(@maThongTinMoChuyenDe ,  @hocKy , @nienHoc , @maGiaoVu , @maChuyenDe ";
+            string query = "insert into ThongTinMoChuyenDe values( @maThongTinMoChuyenDe ,  @hocKy , @nienHoc , @maGiaoVu , @maChuyenDe )";
             object[] para = new object[]
             {
                 ttmcd.maThongTinMoChuyenDe,
@@ -132,6 +132,35 @@ namespace PROJECT.DAO
             return thongTinMoChuyenDes;
         }
 
+        // hàm lấy thông tin mở chuyên đề cuối cùng
+        public THONGTINMOCHUYENDE GetThongTinMoChuyenDeLast()
+        {
+            string query = "SELECT TOP 1 * FROM THONGTINMOCHUYENDE ORDER BY MaThongTinMoChuyenDe DESC ";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            DataRow item = data.Rows[0];
+            string maTTMCD = item["MaThongTinMoChuyenDe"].ToString();
+            int hocKy = (int)item["HocKy"];
+            string nienHoc = item["NienHoc"].ToString();
+            string maGVu = item["MaGiaoVu"].ToString();
+            string maCDe = item["MaChuyenDe"].ToString();
+
+            THONGTINMOCHUYENDE ttmcd = new THONGTINMOCHUYENDE(maTTMCD, hocKy, nienHoc, maGVu, maCDe);
+
+            return ttmcd;
+        }
+
+        // tạo mã thông tin mở chuyên đề mới
+        public string CreateMaTTMCD()
+        {
+            string maTTMCD = ThongTinMoChuyenDeDAO.Instance.GetThongTinMoChuyenDeLast().maThongTinMoChuyenDe;
+            string _3charFirst = maTTMCD.Substring(0, 3);
+            int stt = int.Parse(maTTMCD.Substring(3, 4));
+
+            string maTTMCDNew = _3charFirst + (++stt);
+            return maTTMCDNew;
+        }
 
     }
 }

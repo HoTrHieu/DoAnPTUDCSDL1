@@ -185,5 +185,69 @@ namespace PROJECT.DAO
             return data.Rows[0]["MaDangKy"].ToString();
             
         }
+
+        // tạo list lấy tất cả thông tin đăng ký chuyên đề
+        public List<Tuple<int, string, string, string, string, string, string>> GetAllThongTinDangKyChuyenDeSinhVien()
+        {
+
+            string query = "select ttmcd.HocKy, ttmcd.NienHoc, lh.TenLop, sv.MaSinhVien, sv.TenSinhVien, gv.TenGiaoVien, cd.TenChuyenDe " +
+                "from THONGTINDANGKY ttdk, NGANH ng, SINHVIEN sv, GIAOVIEN gv, THONGTINMOCHUYENDE ttmcd, LOPHOC lh, CHUYENDE cd " +
+                "where ttdk.MaSinhVien = sv.MaSinhVien and sv.MaNganh = ng.MaNganh and ttmcd.MaThongTinMoChuyenDe = ttdk.MaThongTinMoChuyenDe " +
+                "and ttdk.MaLop = lh.MaLop and ttmcd.MaChuyenDe = gv.MaChuyenDe and ng.MaNganh = cd.MaNganh " +
+                "Order By HocKy, NienHoc, TenLop, MaSinhVien";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            List<Tuple<int, string, string, string, string, string, string>> list = new List<Tuple<int, string, string, string, string, string, string>>();
+            foreach (DataRow item in data.Rows)
+            {
+                int hocKy = (int)item["HocKy"];
+                string nienHoc = item["NienHoc"].ToString();
+                string tenLop = item["TenLop"].ToString();
+                string maSinhVien = item["MaSinhVien"].ToString();
+                string tenSinhVien = item["TenSinhVien"].ToString();
+                string tenGiaoVien = item["TenGiaoVien"].ToString();
+                string tenChuyenDe = item["TenChuyenDe"].ToString();
+                nienHoc = nienHoc.Trim(' ');
+
+                list.Add(new Tuple<int, string, string, string, string, string, string>(hocKy, nienHoc, tenLop, maSinhVien, tenSinhVien, tenGiaoVien, tenChuyenDe));
+            }
+            return list;
+        }
+
+        // tạo list lấy tất cả thông tin đăng ký chuyên đề
+        public List<Tuple<int, string, string, string, string, string, string>> GetAllThongTinDangKyChuyenDeSinhVienTheoDieuKien(int HK, string NH, string maCD)
+        {
+
+            string query = "select ttmcd.HocKy, ttmcd.NienHoc, lh.TenLop, sv.MaSinhVien, sv.TenSinhVien, gv.TenGiaoVien, cd.TenChuyenDe " +
+                "from THONGTINDANGKY ttdk, NGANH ng, SINHVIEN sv, GIAOVIEN gv, THONGTINMOCHUYENDE ttmcd, LOPHOC lh, CHUYENDE cd " +
+                "where ttdk.MaSinhVien = sv.MaSinhVien and sv.MaNganh = ng.MaNganh and ttmcd.MaThongTinMoChuyenDe = ttdk.MaThongTinMoChuyenDe " +
+                "and ttdk.MaLop = lh.MaLop and ttmcd.MaChuyenDe = gv.MaChuyenDe and ng.MaNganh = cd.MaNganh " +
+                "and ttmcd.HocKy = @hocKy and ttmcd.NienHoc = @nienHoc and ttmcd.MaChuyenDe = @maCD " +
+                "Order By HocKy, NienHoc, TenLop, MaSinhVien";
+
+            object[] para = new object[]
+            {
+                HK, NH, maCD
+            };
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, para);
+
+            List<Tuple<int, string, string, string, string, string, string>> list = new List<Tuple<int, string, string, string, string, string, string>>();
+            foreach (DataRow item in data.Rows)
+            {
+                int hocKy = (int)item["HocKy"];
+                string nienHoc = item["NienHoc"].ToString();
+                string tenLop = item["TenLop"].ToString();
+                string maSinhVien = item["MaSinhVien"].ToString();
+                string tenSinhVien = item["TenSinhVien"].ToString();
+                string tenGiaoVien = item["TenGiaoVien"].ToString();
+                string tenChuyenDe = item["TenChuyenDe"].ToString();
+                nienHoc = nienHoc.Trim(' ');
+
+                list.Add(new Tuple<int, string, string, string, string, string, string>(hocKy, nienHoc, tenLop, maSinhVien, tenSinhVien, tenGiaoVien, tenChuyenDe));
+            }
+            return list;
+        }
     }
 }

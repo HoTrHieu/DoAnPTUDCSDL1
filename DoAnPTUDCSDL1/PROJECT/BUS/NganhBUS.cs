@@ -26,10 +26,11 @@ namespace PROJECT.BUS
         private NganhBUS() { }
 
         //lấy toàn bộ danh sách các ngành
-        public void GetAll(DataGridView data)
+        public List<NGANH> GetAll()
         {
-            data.DataSource = NganhDAO.Instance.GetAll();
+            return NganhDAO.Instance.GetAll();
         }
+
 
         //lấy ngành theo mã ngành
         public NGANH GetByID(string id)
