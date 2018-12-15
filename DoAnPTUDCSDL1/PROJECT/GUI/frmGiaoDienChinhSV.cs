@@ -29,5 +29,10 @@ namespace PROJECT.GUI
                 return true;
             return false;
         }
+
+        private void frmGiaoDienChinhSV_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

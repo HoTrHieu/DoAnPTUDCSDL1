@@ -249,5 +249,72 @@ namespace PROJECT.DAO
             }
             return list;
         }
+
+        // tạo list lấy thông tin đăng ký chuyên đề của sinh viên dựa vào mã sv
+        public List<Tuple<string, string, string, string, string>> GetTTDKCDeSinhVien(string maSV)
+        {
+
+            string query = "SELECT CD.MaChuyenDe, CD.TenChuyenDe, HK.NgayBatDau, HK.NgayKetThuc, LH.TenLop " +
+                "FROM SINHVIEN SV, LOPHOC LH, THONGTINDANGKY TTDK, THONGTINMOCHUYENDE TTMCD, CHUYENDE CD, HOCKY HK " +
+                "WHERE SV.MaSinhVien = TTDK.MaSinhVien AND LH.MaLop = TTDK.MaLop AND " +
+                "TTMCD.MaThongTinMoChuyenDe = TTDK.MaThongTinMoChuyenDe AND " +
+                " TTMCD.MaChuyenDe = CD.MaChuyenDe AND HK.HocKy = TTMCD.HocKy AND HK.NienHoc = TTMCD.NienHoc " +
+                "AND SV.MaSinhVien = @maSV ";
+
+            object[] para = new object[]
+            {
+                maSV
+            };
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, para);
+
+            List<Tuple<string, string, string, string, string>> list = new List<Tuple<string, string, string, string, string>>();
+            foreach (DataRow item in data.Rows)
+            {
+                string maCD = item["MaChuyenDe"].ToString();
+                string tenCD = item["tenChuyenDe"].ToString();
+                string ngayBD = item["NgayBatDau"].ToString();
+                ngayBD = ngayBD.Substring(0, 10);
+                string ngayKT = item["NgayKetThuc"].ToString();
+                ngayKT = ngayKT.Substring(0, 10);
+                string tenLop = item["TenLop"].ToString();
+                list.Add(new Tuple<string, string, string, string, string>(maCD, tenCD, ngayBD, ngayKT, tenLop));
+            }
+            return list;
+        }
+
+        // tạo list lấy thông tin đăng ký chuyên đề của sinh viên dựa vào mã sv, học kỳ , nien học
+        public List<Tuple<string, string, string, string, string>> GetTTDKCDeSinhVien(string maSV, int hocKy, string nienHoc)
+        {
+
+            string query = "SELECT CD.MaChuyenDe, CD.TenChuyenDe, HK.NgayBatDau, HK.NgayKetThuc, LH.TenLop " +
+                "FROM SINHVIEN SV, LOPHOC LH, THONGTINDANGKY TTDK, THONGTINMOCHUYENDE TTMCD, CHUYENDE CD, HOCKY HK " +
+                "WHERE SV.MaSinhVien = TTDK.MaSinhVien AND LH.MaLop = TTDK.MaLop AND " +
+                "TTMCD.MaThongTinMoChuyenDe = TTDK.MaThongTinMoChuyenDe AND " +
+                " TTMCD.MaChuyenDe = CD.MaChuyenDe AND HK.HocKy = TTMCD.HocKy AND HK.NienHoc = TTMCD.NienHoc " +
+                "AND SV.MaSinhVien = @maSV AND HK.HocKy = @hocKy AND HK.NienHoc = @nienHoc ";
+
+            object[] para = new object[]
+            {
+                maSV, hocKy, nienHoc
+            };
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query,para);
+
+            List<Tuple<string, string, string, string, string>> list = new List<Tuple<string, string, string, string, string>>();
+            foreach (DataRow item in data.Rows)
+            {
+                string maCD = item["MaChuyenDe"].ToString();
+                string tenCD = item["tenChuyenDe"].ToString();
+                string ngayBD = item["NgayBatDau"].ToString();
+                ngayBD = ngayBD.Substring(0, 10);
+                string ngayKT = item["NgayKetThuc"].ToString();
+                ngayKT = ngayKT.Substring(0, 10);
+                string tenLop = item["TenLop"].ToString();
+                list.Add(new Tuple<string, string, string, string, string>(maCD, tenCD, ngayBD, ngayKT, tenLop));
+            }
+            return list;
+        }
+
     }
 }

@@ -31,6 +31,7 @@
             this.btnQuanLyChuyenDe = new System.Windows.Forms.Button();
             this.btnQuanLyNhom = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnThonTinSinhVien = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblHoTen = new System.Windows.Forms.Label();
@@ -41,7 +42,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.btnThonTinSinhVien = new System.Windows.Forms.Button();
             this.btnDangXuat = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -81,6 +81,15 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Sinh Viên";
+            // 
+            // btnThonTinSinhVien
+            // 
+            this.btnThonTinSinhVien.Location = new System.Drawing.Point(219, 43);
+            this.btnThonTinSinhVien.Name = "btnThonTinSinhVien";
+            this.btnThonTinSinhVien.Size = new System.Drawing.Size(132, 23);
+            this.btnThonTinSinhVien.TabIndex = 6;
+            this.btnThonTinSinhVien.Text = "Thông Tin Chi Tiết Của Sinh Viên";
+            this.btnThonTinSinhVien.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -176,15 +185,6 @@
             this.button2.Text = "Kết Quả / Chỉnh Sửa";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // btnThonTinSinhVien
-            // 
-            this.btnThonTinSinhVien.Location = new System.Drawing.Point(219, 43);
-            this.btnThonTinSinhVien.Name = "btnThonTinSinhVien";
-            this.btnThonTinSinhVien.Size = new System.Drawing.Size(132, 23);
-            this.btnThonTinSinhVien.TabIndex = 6;
-            this.btnThonTinSinhVien.Text = "Thông Tin Chi Tiết Của Sinh Viên";
-            this.btnThonTinSinhVien.UseVisualStyleBackColor = true;
-            // 
             // btnDangXuat
             // 
             this.btnDangXuat.Location = new System.Drawing.Point(231, 395);
@@ -205,6 +205,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmGiaoDienChinhSV";
             this.Text = "frmGiaoDienChinhSV";
+            this.Load += new System.EventHandler(this.frmGiaoDienChinhSV_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
