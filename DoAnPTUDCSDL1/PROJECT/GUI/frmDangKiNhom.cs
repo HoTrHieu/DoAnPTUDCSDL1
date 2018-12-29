@@ -14,7 +14,7 @@ namespace PROJECT.GUI
 {
     public partial class frmDangKiNhom : Form
     {
-        SINHVIEN SV;// = SinhVienBUS.Instance.GetByID("SV01");
+        SINHVIEN SV = SinhVienBUS.Instance.GetByID("SV01");
         string MaMoCD, MaLop;
         string tenN;
         public frmDangKiNhom()

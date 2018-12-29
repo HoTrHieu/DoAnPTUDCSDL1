@@ -35,6 +35,23 @@ namespace PROJECT.BUS
             return ThanhVienDAO.Instance.GetByIDs(maDangKy, maNhom);
         }
 
+        public THANHVIEN GetByIDDK(string maDangKy)
+        {
+            return ThanhVienDAO.Instance.GetByIDDK(maDangKy);
+        }
+
+        public bool updateTrgNhom(DataGridView data)
+        {
+            DataGridViewRow row = data.SelectedCells[0].OwningRow;
+            string maDangKy = row.Cells["MaDangKy"].Value.ToString();
+            string maNhom = row.Cells["MaNhom"].Value.ToString();
+            string vaiTro = row.Cells["VaiTro"].Value.ToString();
+
+            THANHVIEN tv = new THANHVIEN(maDangKy, maNhom, vaiTro);
+
+            return ThanhVienDAO.Instance.updateThanhVien(maDangKy, maNhom, tv);
+        }
+
         public bool updateThanhVien(DataGridView data)
         {
             DataGridViewRow row = data.SelectedCells[0].OwningRow;
@@ -62,6 +79,21 @@ namespace PROJECT.BUS
         public List<THANHVIEN> GetAllByIDN(string mNhom)
         {
             return ThanhVienDAO.Instance.GetAllByIDN(mNhom);
+        }
+        //hai them vao
+        public List<Tuple<string, string, string>> GetTVbyNhom(string MaNhom)
+        {
+            return ThanhVienDAO.Instance.GetTVbyNhom(MaNhom);
+        }
+
+        public bool checkTruongNhom(string MSSV, string MaDK)
+        {
+            return ThanhVienDAO.Instance.checkTruongNhom(MSSV, MaDK);
+        }
+
+        public bool deleteThanhVienbyHai(string maDangKy, string maNhom)
+        {
+            return ThanhVienDAO.Instance.deleteThanhVienbyHai(maDangKy, maNhom);
         }
     }
 }

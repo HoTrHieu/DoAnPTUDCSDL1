@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnQuanLyChuyenDe = new System.Windows.Forms.Button();
-            this.btnQuanLyNhom = new System.Windows.Forms.Button();
+            this.btnDangKyCD = new System.Windows.Forms.Button();
+            this.btnKQ_HuyDKy = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnThonTinSinhVien = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblNganh = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblHoTen = new System.Windows.Forms.Label();
             this.lable3 = new System.Windows.Forms.Label();
@@ -40,36 +40,36 @@
             this.lable1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnDKyNhom = new System.Windows.Forms.Button();
+            this.btnKQ_Sua_Nhom = new System.Windows.Forms.Button();
             this.btnDangXuat = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnQuanLyChuyenDe
+            // btnDangKyCD
             // 
-            this.btnQuanLyChuyenDe.Location = new System.Drawing.Point(31, 29);
-            this.btnQuanLyChuyenDe.Name = "btnQuanLyChuyenDe";
-            this.btnQuanLyChuyenDe.Size = new System.Drawing.Size(124, 23);
-            this.btnQuanLyChuyenDe.TabIndex = 0;
-            this.btnQuanLyChuyenDe.Text = "Đăng Ký Chuyên Đề";
-            this.btnQuanLyChuyenDe.UseVisualStyleBackColor = true;
+            this.btnDangKyCD.Location = new System.Drawing.Point(31, 29);
+            this.btnDangKyCD.Name = "btnDangKyCD";
+            this.btnDangKyCD.Size = new System.Drawing.Size(124, 23);
+            this.btnDangKyCD.TabIndex = 0;
+            this.btnDangKyCD.Text = "Đăng Ký Chuyên Đề";
+            this.btnDangKyCD.UseVisualStyleBackColor = true;
             // 
-            // btnQuanLyNhom
+            // btnKQ_HuyDKy
             // 
-            this.btnQuanLyNhom.Location = new System.Drawing.Point(219, 29);
-            this.btnQuanLyNhom.Name = "btnQuanLyNhom";
-            this.btnQuanLyNhom.Size = new System.Drawing.Size(132, 23);
-            this.btnQuanLyNhom.TabIndex = 1;
-            this.btnQuanLyNhom.Text = "Kết Quả / Hủy Đăng Ký";
-            this.btnQuanLyNhom.UseVisualStyleBackColor = true;
+            this.btnKQ_HuyDKy.Location = new System.Drawing.Point(219, 29);
+            this.btnKQ_HuyDKy.Name = "btnKQ_HuyDKy";
+            this.btnKQ_HuyDKy.Size = new System.Drawing.Size(132, 23);
+            this.btnKQ_HuyDKy.TabIndex = 1;
+            this.btnKQ_HuyDKy.Text = "Kết Quả / Hủy Đăng Ký";
+            this.btnKQ_HuyDKy.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnThonTinSinhVien);
-            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.lblNganh);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.lblHoTen);
             this.groupBox1.Controls.Add(this.lable3);
@@ -86,19 +86,19 @@
             // 
             this.btnThonTinSinhVien.Location = new System.Drawing.Point(219, 43);
             this.btnThonTinSinhVien.Name = "btnThonTinSinhVien";
-            this.btnThonTinSinhVien.Size = new System.Drawing.Size(132, 23);
+            this.btnThonTinSinhVien.Size = new System.Drawing.Size(182, 23);
             this.btnThonTinSinhVien.TabIndex = 6;
             this.btnThonTinSinhVien.Text = "Thông Tin Chi Tiết Của Sinh Viên";
             this.btnThonTinSinhVien.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // lblNganh
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(275, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Công Nghệ Thông Tin";
+            this.lblNganh.AutoSize = true;
+            this.lblNganh.Location = new System.Drawing.Point(275, 16);
+            this.lblNganh.Name = "lblNganh";
+            this.lblNganh.Size = new System.Drawing.Size(113, 13);
+            this.lblNganh.TabIndex = 5;
+            this.lblNganh.Text = "Công Nghệ Thông Tin";
             // 
             // label1
             // 
@@ -147,8 +147,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnQuanLyChuyenDe);
-            this.groupBox2.Controls.Add(this.btnQuanLyNhom);
+            this.groupBox2.Controls.Add(this.btnDangKyCD);
+            this.groupBox2.Controls.Add(this.btnKQ_HuyDKy);
             this.groupBox2.Location = new System.Drawing.Point(12, 172);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(407, 91);
@@ -158,8 +158,8 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Controls.Add(this.button2);
+            this.groupBox3.Controls.Add(this.btnDKyNhom);
+            this.groupBox3.Controls.Add(this.btnKQ_Sua_Nhom);
             this.groupBox3.Location = new System.Drawing.Point(12, 283);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(407, 82);
@@ -167,23 +167,23 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Quản Lý Nhóm";
             // 
-            // button1
+            // btnDKyNhom
             // 
-            this.button1.Location = new System.Drawing.Point(31, 29);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Đăng Ký Nhóm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnDKyNhom.Location = new System.Drawing.Point(31, 29);
+            this.btnDKyNhom.Name = "btnDKyNhom";
+            this.btnDKyNhom.Size = new System.Drawing.Size(124, 23);
+            this.btnDKyNhom.TabIndex = 0;
+            this.btnDKyNhom.Text = "Đăng Ký Nhóm";
+            this.btnDKyNhom.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnKQ_Sua_Nhom
             // 
-            this.button2.Location = new System.Drawing.Point(219, 29);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(132, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Kết Quả / Chỉnh Sửa";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnKQ_Sua_Nhom.Location = new System.Drawing.Point(219, 29);
+            this.btnKQ_Sua_Nhom.Name = "btnKQ_Sua_Nhom";
+            this.btnKQ_Sua_Nhom.Size = new System.Drawing.Size(132, 23);
+            this.btnKQ_Sua_Nhom.TabIndex = 1;
+            this.btnKQ_Sua_Nhom.Text = "Kết Quả / Chỉnh Sửa";
+            this.btnKQ_Sua_Nhom.UseVisualStyleBackColor = true;
             // 
             // btnDangXuat
             // 
@@ -216,10 +216,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnQuanLyChuyenDe;
-        private System.Windows.Forms.Button btnQuanLyNhom;
+        private System.Windows.Forms.Button btnDangKyCD;
+        private System.Windows.Forms.Button btnKQ_HuyDKy;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblNganh;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblHoTen;
         private System.Windows.Forms.Label lable3;
@@ -228,8 +228,8 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnThonTinSinhVien;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnDKyNhom;
+        private System.Windows.Forms.Button btnKQ_Sua_Nhom;
         private System.Windows.Forms.Button btnDangXuat;
     }
 }

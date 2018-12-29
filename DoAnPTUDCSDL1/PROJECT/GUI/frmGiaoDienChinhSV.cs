@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PROJECT.DTO;
-using PROJECT.DAO;
 using PROJECT.BUS;
 
 namespace PROJECT.GUI
@@ -32,7 +31,33 @@ namespace PROJECT.GUI
 
         private void frmGiaoDienChinhSV_Load(object sender, EventArgs e)
         {
-
+            lblMaSinhVien.Text = sv.maSinhVien;
+            lblHoTen.Text = sv.tenSinhVien;
+            lblNganh.Text =NganhBUS.Instance.GetByID(sv.maNganh).ToString();
+        }
+        private void btnDangKyCD_Click(object sender, EventArgs e)
+        {
+            frmDangKyChuyenDe frm = new frmDangKyChuyenDe();
+            frm.ShowDialog();
+        }
+        private void btnKQ_HuyDKy_Click(object sender, EventArgs e)
+        {
+            frmKetQuaDangKyChuyenDeSinhVien frm = new frmKetQuaDangKyChuyenDeSinhVien();
+            frm.ShowDialog();
+        }
+        private void btnDKyNhom_Click(object sender, EventArgs e)
+        {
+            frmDangKiNhom frm = new frmDangKiNhom();
+            frm.ShowDialog();
+        }
+        private void btnKQ_Sua_Nhom_Click(object sender, EventArgs e)
+        {
+            frmKetQuaDangKyNhom frm = new frmKetQuaDangKyNhom();
+            frm.ShowDialog();
+        }
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

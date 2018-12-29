@@ -104,3 +104,22 @@ H:\DO AN NAM 3\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.frmKetQ
 H:\DO AN NAM 3\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.frmMoChuyenDe.resources
 H:\DO AN NAM 3\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.frmThemTaiKhoanSinhVien.resources
 H:\DO AN NAM 3\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.csprojAssemblyReference.cache
+D:\data\desktop\git\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\bin\Debug\PROJECT.exe.config
+D:\data\desktop\git\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\bin\Debug\PROJECT.exe
+D:\data\desktop\git\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\bin\Debug\PROJECT.pdb
+D:\data\desktop\git\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.frmDangKiNhom.resources
+D:\data\desktop\git\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.Properties.Resources.resources
+D:\data\desktop\git\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.frmDangKyChuyenDe.resources
+D:\data\desktop\git\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.frmDangNhap.resources
+D:\data\desktop\git\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.frmGiaoDienChinhGV.resources
+D:\data\desktop\git\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.frmGiaoDienChinhSV.resources
+D:\data\desktop\git\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.frmKetQuaDangKyChuyenDeGiaoVu.resources
+D:\data\desktop\git\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.frmKetQuaDangKyChuyenDeSinhVien.resources
+D:\data\desktop\git\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.frmKetQuaDangKyNhom.resources
+D:\data\desktop\git\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.frmMoChuyenDe.resources
+D:\data\desktop\git\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.frmThemTaiKhoanSinhVien.resources
+D:\data\desktop\git\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.csproj.GenerateResource.cache
+D:\data\desktop\git\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.csproj.CoreCompileInputs.cache
+D:\data\desktop\git\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.exe
+D:\data\desktop\git\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.pdb
+D:\data\desktop\git\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.csprojAssemblyReference.cache

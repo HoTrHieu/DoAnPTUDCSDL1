@@ -25,8 +25,8 @@ namespace PROJECT.DAO
 
         private DataProvider() { }
 
-        private string connectionSTR = "Data Source=DESKTOP-KTD1ED7\\SQLEXPRESS;Initial Catalog=QuanLyChuyenDe;Integrated Security=True";
-
+        //private string connectionSTR = "Data Source=DESKTOP-KTD1ED7\\SQLEXPRESS;Initial Catalog=QuanLyChuyenDe;Integrated Security=True";
+        private string connectionSTR = "Data Source = DELL-DOTO\\SQLEXPRESS;Initial Catalog = QuanLyChuyenDe; Integrated Security = True";
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             //quyry có parameter: @s1 , @s2 ,.......

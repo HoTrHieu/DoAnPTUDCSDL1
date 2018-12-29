@@ -39,5 +39,10 @@ namespace PROJECT.BUS
         {
             return ChuyenDeDAO.Instance.GetByID(id);
         }
+        //lấy chuyên đề theo mã ngành
+        public List<CHUYENDE> GetByMaNganh(string maNganh)
+        {
+            return ChuyenDeDAO.Instance.GetByMaNganh(maNganh);
+        }
     }
 }

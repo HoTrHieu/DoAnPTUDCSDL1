@@ -43,6 +43,29 @@ namespace PROJECT.DAO
             return chuyendes;
         }
 
+        public List<CHUYENDE> GetByMaNganh(string maNganh)
+        {
+            List<CHUYENDE> chuyendes = new List<CHUYENDE>();
+            string query = "select * from CHUYENDE WHERE MaChuyenDe = @maNganh";
+            object[] para = new object[]
+{
+                maNganh
+            };
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, para);
+            foreach (DataRow item in data.Rows)
+            {
+                string MaCD = item["MaChuyenDe"].ToString();
+                string TenCD = item["TenChuyenDe"].ToString();
+                int SoSVMax = (int)item["SoSinhVienToiDa"];
+                string MaN = item["MaNganh"].ToString();
+
+                CHUYENDE CD = new CHUYENDE(MaCD, TenCD, SoSVMax, MaN);
+                chuyendes.Add(CD);
+            }
+
+            return chuyendes;
+        }
+
         public CHUYENDE GetByID(string id)
         {
             string query = "SELECT * FROM CHUYENDE WHERE MaChuyenDe = @maCD ";
