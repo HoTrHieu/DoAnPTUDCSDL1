@@ -64,20 +64,6 @@ namespace PROJECT.GUI
                         th.Start();
                     }
                 }
-
-
-
-
-
-                // db.TAIKHOANs.Where(p => p.MaTaiKhoan.CompareTo(tenDangNhap)==0 && p.MatKhau.CompareTo(matKhau)==0);
-                //x = (from i in db.TAIKHOANs
-                //          where (i.MaTaiKhoan.CompareTo(tenDangNhap) == 0 && i.MatKhau.CompareTo(matKhau) == 0)
-                //          select i)
-                //          ;
-                // MessageBox.Show(t.ToString());
-
-
-
             }
         }
 
@@ -95,7 +81,5 @@ namespace PROJECT.GUI
         {
             this.Close();
         }
-
-
     }
 }

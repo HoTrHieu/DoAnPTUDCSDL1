@@ -46,6 +46,11 @@ namespace PROJECT.BUS
             return SinhVienDAO.Instance.Update(MaSV, sv);
         }
 
+        //update sinh viên
+        public bool Update(SINHVIEN sv)
+        {
+            return SinhVienDAO.Instance.Update(sv.maSinhVien, sv);
+        }
         //get by id
         public SINHVIEN GetByID(string id)
         {
