@@ -18,6 +18,12 @@ namespace PROJECT.GUI
         {
             InitializeComponent();
         }
+        private string _maSV;
+        public frmKetQuaDangKyChuyenDeSinhVien(string maSV)
+        {
+            _maSV = maSV;
+            InitializeComponent();
+        }
         private class Item
         {
             public string Name, Value;
@@ -38,12 +44,11 @@ namespace PROJECT.GUI
             cmbHocKy.DataSource = HocKyBUS.Instance.GetHocKy();
             cmbNamHoc.DataSource = HocKyBUS.Instance.GetNienHoc();
 
-            string maSV = lblMaSV.Text;
-            SINHVIEN sv = SinhVienBUS.Instance.GetByID(maSV);
+            //string maSV = lblMaSV.Text;
+            SINHVIEN sv = SinhVienBUS.Instance.GetByID(_maSV);
             string tenSV = sv.tenSinhVien;
-            lblTenSV.Text = tenSV;
 
-            dgvKetQuaDangKy.DataSource = ThongTinDangKyBUS.Instance.GetTTDKCDeSinhVien(maSV);
+            dgvKetQuaDangKy.DataSource = ThongTinDangKyBUS.Instance.GetTTDKCDeSinhVien(_maSV);
             dgvKetQuaDangKy.Columns[0].HeaderText = "Mã CĐ";
             dgvKetQuaDangKy.Columns[1].HeaderText = "Tên Chuyên Đề";
             dgvKetQuaDangKy.Columns[2].HeaderText = "Ngày Bắt Đầu";
@@ -61,7 +66,7 @@ namespace PROJECT.GUI
             string nienHoc = cmbNamHoc.SelectedItem.ToString();
             int hocKy = int.Parse(cmbHocKy.SelectedItem.ToString());
 
-            dgvKetQuaDangKy.DataSource = ThongTinDangKyBUS.Instance.GetTTDKCDeSinhVien(lblMaSV.Text, hocKy, nienHoc);
+            dgvKetQuaDangKy.DataSource = ThongTinDangKyBUS.Instance.GetTTDKCDeSinhVien(_maSV, hocKy, nienHoc);
             dgvKetQuaDangKy.Columns[0].HeaderText = "Mã CĐ";
             dgvKetQuaDangKy.Columns[1].HeaderText = "Tên Chuyên Đề";
             dgvKetQuaDangKy.Columns[2].HeaderText = "Ngày Bắt Đầu";
@@ -77,6 +82,11 @@ namespace PROJECT.GUI
         private void btnShowAll_Click(object sender, EventArgs e)
         {
             frmKetQuaDangKyChuyenDeSinhVien_Load(sender,  e);
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

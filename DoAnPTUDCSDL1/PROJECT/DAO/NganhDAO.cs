@@ -45,7 +45,7 @@ namespace PROJECT.DAO
 
         public NGANH GetByID(string id)
         {
-            string query = "SELECT * FORM NGANH WHERE MaNganh = @maN ";
+            string query = "SELECT * FROM NGANH WHERE MaNganh = @maN ";
             object[] para = new object[]
             {
                 id

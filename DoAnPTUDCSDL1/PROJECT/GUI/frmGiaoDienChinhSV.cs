@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;//dung de dong form cu mo form moi?
 using PROJECT.DTO;
 using PROJECT.BUS;
 
@@ -14,6 +15,7 @@ namespace PROJECT.GUI
 {
     public partial class frmGiaoDienChinhSV : Form
     {
+        Thread th;//dong from cu mo form moi  
         SINHVIEN sv;
         public frmGiaoDienChinhSV(TAIKHOAN tk)
         {
@@ -31,33 +33,56 @@ namespace PROJECT.GUI
 
         private void frmGiaoDienChinhSV_Load(object sender, EventArgs e)
         {
-            lblMaSinhVien.Text = sv.maSinhVien;
+            lblMaSinhVien.Text = sv.maSinhVien.Trim();
             lblHoTen.Text = sv.tenSinhVien;
-            lblNganh.Text =NganhBUS.Instance.GetByID(sv.maNganh).ToString();
-        }
-        private void btnDangKyCD_Click(object sender, EventArgs e)
-        {
-            frmDangKyChuyenDe frm = new frmDangKyChuyenDe();
-            frm.ShowDialog();
-        }
-        private void btnKQ_HuyDKy_Click(object sender, EventArgs e)
-        {
-            frmKetQuaDangKyChuyenDeSinhVien frm = new frmKetQuaDangKyChuyenDeSinhVien();
-            frm.ShowDialog();
-        }
-        private void btnDKyNhom_Click(object sender, EventArgs e)
-        {
-            frmDangKiNhom frm = new frmDangKiNhom();
-            frm.ShowDialog();
-        }
-        private void btnKQ_Sua_Nhom_Click(object sender, EventArgs e)
-        {
-            frmKetQuaDangKyNhom frm = new frmKetQuaDangKyNhom();
-            frm.ShowDialog();
+
+            string tenNganh = NganhBUS.Instance.GetByID(sv.maNganh).tenNganh;
+            lblNganh.Text = tenNganh;
         }
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnKQ_HuyDKy_Click_1(object sender, EventArgs e)
+        {
+            frmKetQuaDangKyChuyenDeSinhVien frm = new frmKetQuaDangKyChuyenDeSinhVien(sv.maSinhVien);
+            frm.ShowDialog();
+        }
+
+        private void btnDangKyCD_Click_1(object sender, EventArgs e)
+        {
+            frmDangKyChuyenDe frm = new frmDangKyChuyenDe();
+            frm.ShowDialog();
+        }
+
+        private void btnDKyNhom_Click_1(object sender, EventArgs e)
+        {
+            frmDangKiNhom frm = new frmDangKiNhom();
+            frm.ShowDialog();
+        }
+
+        private void btnKQ_Sua_Nhom_Click_1(object sender, EventArgs e)
+        {
+            frmKetQuaDangKyNhom frm = new frmKetQuaDangKyNhom();
+            frm.ShowDialog();
+        }
+
+        private void btnDangXuat_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            th = new Thread(OpenFROMLogin);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
+        }
+        private void OpenFROMLogin(object obj)
+        {
+            Application.Run(new frmDangNhap());
+        }
+
+        private void btnThonTinSinhVien_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

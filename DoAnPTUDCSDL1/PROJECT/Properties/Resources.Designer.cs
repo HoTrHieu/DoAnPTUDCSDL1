@@ -129,5 +129,25 @@ namespace PROJECT.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Wikipedia_User_ICON_byNightsight2 {
+            get {
+                object obj = ResourceManager.GetObject("Wikipedia_User-ICON_byNightsight2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Wikipedia_User_ICON_byNightsight3 {
+            get {
+                object obj = ResourceManager.GetObject("Wikipedia_User-ICON_byNightsight3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

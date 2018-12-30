@@ -73,7 +73,7 @@ namespace PROJECT.GUI
                 ThongTinMoChuyenDeBUS.Instance.insertThongTinMoChuyenDe(maTTMCDNew, hocKy, nienHoc, _maGVT, maCD);
                 MessageBox.Show("Thêm Thông Tin Mở Chuyên Đề Thành Công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Mở chuyên đề không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }

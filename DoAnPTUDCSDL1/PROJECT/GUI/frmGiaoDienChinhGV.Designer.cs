@@ -69,6 +69,7 @@
             // btnDsSV
             // 
             this.btnDsSV.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnDsSV.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDsSV.FlatAppearance.BorderColor = System.Drawing.Color.Green;
             this.btnDsSV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDsSV.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -83,6 +84,7 @@
             // btnThemTKSV
             // 
             this.btnThemTKSV.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnThemTKSV.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThemTKSV.FlatAppearance.BorderColor = System.Drawing.Color.Green;
             this.btnThemTKSV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThemTKSV.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -111,6 +113,7 @@
             // btnDsSVDK
             // 
             this.btnDsSVDK.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnDsSVDK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDsSVDK.FlatAppearance.BorderColor = System.Drawing.Color.Green;
             this.btnDsSVDK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDsSVDK.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -125,6 +128,7 @@
             // btnDsCDMo
             // 
             this.btnDsCDMo.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnDsCDMo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDsCDMo.FlatAppearance.BorderColor = System.Drawing.Color.Green;
             this.btnDsCDMo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDsCDMo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -139,6 +143,7 @@
             // btnMoCD
             // 
             this.btnMoCD.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnMoCD.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMoCD.FlatAppearance.BorderColor = System.Drawing.Color.Green;
             this.btnMoCD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMoCD.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -159,7 +164,7 @@
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.Black;
-            this.groupBox3.Location = new System.Drawing.Point(1, -6);
+            this.groupBox3.Location = new System.Drawing.Point(0, -6);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(193, 466);
             this.groupBox3.TabIndex = 2;
@@ -192,7 +197,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Image = global::PROJECT.Properties.Resources.Wikipedia_User_ICON_byNightsight1;
+            this.pictureBox2.Image = global::PROJECT.Properties.Resources.Wikipedia_User_ICON_byNightsight3;
             this.pictureBox2.Location = new System.Drawing.Point(46, 11);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(91, 97);
@@ -245,6 +250,7 @@
             // btnDangXuat
             // 
             this.btnDangXuat.BackColor = System.Drawing.Color.Honeydew;
+            this.btnDangXuat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDangXuat.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDangXuat.ForeColor = System.Drawing.Color.SeaGreen;
