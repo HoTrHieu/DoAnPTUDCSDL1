@@ -18,6 +18,12 @@ namespace PROJECT.GUI
         {
             InitializeComponent();
         }
+        private string _maGVT;
+        public frmMoChuyenDe(string MaGVu)
+        {
+            _maGVT = MaGVu;
+            InitializeComponent();
+        }
 
         private class Item
         {
@@ -44,24 +50,14 @@ namespace PROJECT.GUI
                 cbChuyenDeCanMo.Items.Add(new Item(item.tenCDe, item.maCDe));
             }
 
-            // load dữ liệu vào cbGVPT
-            foreach (var item in GiaoVuBUS.Instance.GetAll())
-            {
-                cbGVPT.Items.Add(new Item(item.tenGVu, item.maGVu));
-            }
-
-            // gán giá trị đang được chọn cho cbChuyenDeCanMo và cbGVPT là phần tử đầu tiên
+            // gán giá trị đang được chọn cho cbChuyenDeCanMo là phần tử đầu tiên
             cbChuyenDeCanMo.SelectedIndex = 0;
-            cbGVPT.SelectedIndex = 0;
         }
 
-        private void btnMoChuyenDe_Click_1(object sender, EventArgs e)
+        private void btnMoChuyenDe_Click(object sender, EventArgs e)
         {
             string nienHoc = cbNamHoc.SelectedItem.ToString();
             int hocKy = int.Parse(cbHocKy.SelectedItem.ToString());
-
-            Item giaoVu = (Item)cbGVPT.SelectedItem;
-            string maGVu = giaoVu.Value;
 
             Item chuyenDe = (Item)cbChuyenDeCanMo.SelectedItem;
             string maCD = chuyenDe.Value;
@@ -72,10 +68,20 @@ namespace PROJECT.GUI
             string maTTMCDNew = ThongTinMoChuyenDeBUS.Instance.CreateMaTTMCD();
 
             //MessageBox.Show(hocKy + "\n" + nienHoc + "\n" + maGVu + "\n" + maCD + "\n" + maTTMCDNew);
-            if (ThongTinMoChuyenDeBUS.Instance.insertThongTinMoChuyenDe(maTTMCDNew, hocKy, nienHoc, maGVu, maCD))
+            try
             {
+                ThongTinMoChuyenDeBUS.Instance.insertThongTinMoChuyenDe(maTTMCDNew, hocKy, nienHoc, _maGVT, maCD);
                 MessageBox.Show("Thêm Thông Tin Mở Chuyên Đề Thành Công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Mở chuyên đề không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

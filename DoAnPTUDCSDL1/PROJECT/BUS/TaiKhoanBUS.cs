@@ -34,5 +34,10 @@ namespace PROJECT.BUS
             return TaiKhoanDAO.Instance.GetByID(id);
         }
 
+        public bool Insert(TAIKHOAN tk)
+        {
+            return TaiKhoanDAO.Instance.Insert(tk);
+        }
+
     }
 }

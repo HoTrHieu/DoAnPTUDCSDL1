@@ -169,6 +169,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="GUI\frmDangKyChuyenDe.resx">
       <DependentUpon>frmDangKyChuyenDe.cs</DependentUpon>
@@ -213,7 +214,9 @@
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\polygon-1178265_960_720.png" />
+  </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
       <Visible>False</Visible>
@@ -225,6 +228,27 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black-and-red-wallpaper-designs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Slider-1-927x642.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wikipedia_User-ICON_byNightsight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\light-blue-line-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-khtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="LIB\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\Wikipedia_User-ICON_byNightsight.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -20,6 +20,8 @@ namespace PROJECT.GUI
         public frmDangNhap()
         {
             InitializeComponent();
+
+            txtMatKhau.PasswordChar = (char)0x2022;
         }
 
         private void btnSignIn_Click(object sender, EventArgs e)

@@ -81,5 +81,10 @@ namespace PROJECT.GUI
             dgvDSSinhVienDangKyChuyenDe.Columns[5].HeaderText = "Tên GVQL";
             dgvDSSinhVienDangKyChuyenDe.Columns[6].HeaderText = "Tên Chuyên Đề";
         }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -66,7 +66,7 @@ namespace PROJECT.DAO
         //insert
         public bool Insert(TAIKHOAN tk)
         {
-            string query = "Insert into TAIKHOAN(maTaiKhoan, matKhau, loaiTaiKhoan, maGiaoVuTao) values( @maTK , @matK , @loaiTK , @maGV )";
+            string query = "Insert into TAIKHOAN(maTaiKhoan, matKhau, loaiTaiKhoan, maGiaoVuTao) values( @maTK , @matKhau , @loaiTK , @maGVU )";
 
             object[] para = new object[]
             {
