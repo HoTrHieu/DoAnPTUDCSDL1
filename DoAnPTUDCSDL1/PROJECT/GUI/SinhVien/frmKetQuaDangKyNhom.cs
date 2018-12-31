@@ -68,26 +68,6 @@ namespace PROJECT.GUI
         //    MessageBox.Show("Thất Bại", "Thông Báo", MessageBoxButtons.OK);
         //}
 
-        private void btnRutKhoiNhom_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblHoTen_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblLop_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void cbMaDKChuyenDe_SelectedValueChanged(object sender, EventArgs e)
         {
 
@@ -117,6 +97,10 @@ namespace PROJECT.GUI
                 lblMaNhom.Text = nhom.maNhom;
                 lblTenNhom.Text = nhom.tenNhom;
                 dgvDSThanhVien.DataSource = ThanhVienBUS.Instance.GetTVbyNhom(nhom.maNhom);
+                dgvDSThanhVien.DataSource = ThanhVienBUS.Instance.GetTVbyNhom(nhom.maNhom);
+                dgvDSThanhVien.Columns[0].HeaderText = "MSSV";
+                dgvDSThanhVien.Columns[1].HeaderText = "Họ và tên";
+                dgvDSThanhVien.Columns[2].HeaderText = "Vai trò";
             }
         }
 
@@ -232,6 +216,11 @@ namespace PROJECT.GUI
             }
         }
 
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         void loadinfo()
         {
             cbMaDKChuyenDe.DataSource = ThongTinDangKyBUS.Instance.GetMaDangKyByIDSV(SV.maSinhVien);
@@ -262,6 +251,9 @@ namespace PROJECT.GUI
                 lblMaNhom.Text = nhom.maNhom;
                 lblTenNhom.Text = nhom.tenNhom;
                 dgvDSThanhVien.DataSource = ThanhVienBUS.Instance.GetTVbyNhom(nhom.maNhom);
+                dgvDSThanhVien.Columns[0].HeaderText = "MSSV";
+                dgvDSThanhVien.Columns[1].HeaderText = "Họ và tên";
+                dgvDSThanhVien.Columns[2].HeaderText = "Vai trò";
             }
         }
     }
