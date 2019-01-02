@@ -79,5 +79,22 @@ namespace PROJECT.BUS
             return ThongTinDangKyDAO.Instance.GetTTDKCDeSinhVien(maSV);
         }
 
+        //tạo mã đăng ký
+        public string CreateMaDK()
+        {
+            return ThongTinDangKyDAO.Instance.CreateMaDK();
+        }
+
+        //insert
+        public bool Insert(THONGTINDANGKY tt)
+        {
+            return ThongTinDangKyDAO.Instance.Insert(tt);
+        }
+
+        //get all by IDSV
+        public List<THONGTINDANGKY> GetAllByIDSV(string masv)
+        {
+            return ThongTinDangKyDAO.Instance.GetAllByIDSV(masv);
+        }
     }
 }

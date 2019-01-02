@@ -172,7 +172,7 @@ namespace PROJECT.DAO
 
         public string GetMaDangKyByMMML(string maSV, string maMo, string maLop)
         {
-            string MaDK;
+            //string MaDK;
 
             string query = "SELECT MaDangKy FROM THONGTINDANGKY WHERE MaSinhVien= @maSV , MaThongTinMoChuyenDe = @maMo , MaLop= @maL ";
             object[] para = new object[]
@@ -315,6 +315,24 @@ namespace PROJECT.DAO
             }
             return list;
         }
+        
+        //create maDK
+        public string CreateMaDK()
+        {
+            string query = "select max(t.MaDangKy) as N'MaDangKy' from THONGTINDANGKY t where LEN(t.MaDangKy)" +
+                ">= all(select len(x.MaDangKy) from THONGTINDANGKY x)";
+     
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
+            DataRow item = data.Rows[0];
+
+            string maDK = item["MaDangKy"].ToString().TrimEnd();
+            string x = maDK.Substring(maDK.Length - 2);
+            string y = (int.Parse(x) + 1).ToString();
+            return "DK" + y;
+        }
+
+        
     }
+
 }

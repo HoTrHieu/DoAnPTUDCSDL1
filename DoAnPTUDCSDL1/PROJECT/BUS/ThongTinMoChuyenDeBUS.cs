@@ -70,5 +70,17 @@ namespace PROJECT.BUS
         {
             return ThongTinMoChuyenDeDAO.Instance.CreateMaTTMCD();
         }
+
+        //lấy thông tin mở chuyên đề theo mã ngành
+        public List<THONGTINMOCHUYENDE> GetThonTinMoChuyenDeByNganh(string maN)
+        {
+            return ThongTinMoChuyenDeDAO.Instance.GetAllByMaNganh(maN);
+        }
+
+        //lấy mã mở chuyên đề by mã ChuyenDe
+        public THONGTINMOCHUYENDE GetMoChuyenDeByMaCD(string maCD)
+        {
+            return ThongTinMoChuyenDeDAO.Instance.GetMoChuyenDeByMaCD(maCD);
+        }
     }
 }

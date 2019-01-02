@@ -44,5 +44,11 @@ namespace PROJECT.BUS
         {
             return ChuyenDeDAO.Instance.GetByMaNganh(maNganh);
         }
+
+        //lấy chuyen de dang duoc mo
+        public List<CHUYENDE> ChuyenDeMo(string maN)
+        {
+            return ChuyenDeDAO.Instance.ChuyenDeMo(maN);
+        }
     }
 }

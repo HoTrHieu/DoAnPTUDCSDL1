@@ -31,12 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvChuyenDe = new System.Windows.Forms.DataGridView();
-            this.MaCD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenCD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoSVToiDa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoSVDaDK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblNienKhoa = new System.Windows.Forms.Label();
             this.lblHocKi = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -46,6 +42,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnDangKy = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChuyenDe)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -74,39 +72,14 @@
             // dgvChuyenDe
             // 
             this.dgvChuyenDe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvChuyenDe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaCD,
-            this.TenCD,
-            this.SoSVToiDa,
-            this.SoSVDaDK});
             this.dgvChuyenDe.Location = new System.Drawing.Point(6, 16);
             this.dgvChuyenDe.Name = "dgvChuyenDe";
             this.dgvChuyenDe.Size = new System.Drawing.Size(608, 232);
             this.dgvChuyenDe.TabIndex = 1;
             // 
-            // MaCD
-            // 
-            this.MaCD.HeaderText = "Mã Chuyên Đề";
-            this.MaCD.Name = "MaCD";
-            // 
-            // TenCD
-            // 
-            this.TenCD.HeaderText = "Tên Chuyên Đề";
-            this.TenCD.Name = "TenCD";
-            // 
-            // SoSVToiDa
-            // 
-            this.SoSVToiDa.HeaderText = "Số Sinh Viên Tối Đa";
-            this.SoSVToiDa.Name = "SoSVToiDa";
-            // 
-            // SoSVDaDK
-            // 
-            this.SoSVDaDK.HeaderText = "Số Sinh Viên Đã Đăng Ký";
-            this.SoSVDaDK.Name = "SoSVDaDK";
-            // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.lblNienKhoa);
             this.groupBox2.Controls.Add(this.lblHocKi);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label6);
@@ -121,14 +94,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông Tin Sinh Viên";
             // 
-            // label5
+            // lblNienKhoa
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(384, 86);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(31, 13);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "2018";
+            this.lblNienKhoa.AutoSize = true;
+            this.lblNienKhoa.Location = new System.Drawing.Point(384, 86);
+            this.lblNienKhoa.Name = "lblNienKhoa";
+            this.lblNienKhoa.Size = new System.Drawing.Size(31, 13);
+            this.lblNienKhoa.TabIndex = 7;
+            this.lblNienKhoa.Text = "2018";
             // 
             // lblHocKi
             // 
@@ -211,12 +184,34 @@
             this.btnThoat.TabIndex = 5;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(32, 506);
+            this.label4.Name = "label4";
+            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.TabIndex = 6;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(87, 506);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(107, 13);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Đã Đăng ký trước đó";
             // 
             // frmDangKyChuyenDe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(644, 528);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnDangKy);
             this.Controls.Add(this.groupBox2);
@@ -240,7 +235,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvChuyenDe;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblNienKhoa;
         private System.Windows.Forms.Label lblHocKi;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -250,9 +245,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnDangKy;
         private System.Windows.Forms.Button btnThoat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaCD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenCD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoSVToiDa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoSVDaDK;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
