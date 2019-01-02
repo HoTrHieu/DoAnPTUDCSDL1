@@ -14,21 +14,28 @@ namespace PROJECT.GUI
 {
     public partial class frmDangKiNhom : Form
     {
-        SINHVIEN SV = SinhVienBUS.Instance.GetByID("SV01");
+       
         string MaMoCD, MaLop;
         string tenN;
         public frmDangKiNhom()
         {
             InitializeComponent();
         }
-
-        public frmDangKiNhom(SINHVIEN sv)
+        private string _maSV;
+        public frmDangKiNhom(string maSV)
         {
+            _maSV = maSV;
             InitializeComponent();
-            SV = sv;
         }
+
+        //public frmDangKiNhom(SINHVIEN sv)
+        //{
+        //    InitializeComponent();
+        //    SV = sv;
+        //}
         private void frmDangKiNhom_Load(object sender, EventArgs e)
         {
+            SINHVIEN SV = SinhVienBUS.Instance.GetByID(_maSV);
             lblMSSV.Text = SV.maSinhVien;
             lblTEN.Text = SV.tenSinhVien;
             //ma dang ky

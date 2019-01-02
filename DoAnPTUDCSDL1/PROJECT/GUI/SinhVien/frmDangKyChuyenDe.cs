@@ -15,19 +15,27 @@ namespace PROJECT.GUI
 {
     public partial class frmDangKyChuyenDe : Form
     {
-        SINHVIEN sv = SinhVienBUS.Instance.GetByID("SV2");
+        
         public frmDangKyChuyenDe()
         {
             InitializeComponent();
         }
-        public frmDangKyChuyenDe(SINHVIEN S)
+        //public frmDangKyChuyenDe(SINHVIEN S)
+        //{
+        //    InitializeComponent();
+        //    sv = S;
+        //}
+        private string _maSV;
+        public frmDangKyChuyenDe(string maSV)
         {
+            _maSV = maSV;
             InitializeComponent();
-            sv = S;
         }
+        
 
         private void frmDangKyChuyenDe_Load(object sender, EventArgs e)
         {
+            SINHVIEN sv = SinhVienBUS.Instance.GetByID(_maSV);
             //SinhVienBUS.Instance.GetAll(dgvChuyenDe);
             lblMaSV.Text = sv.maSinhVien;
             lblTen.Text = sv.tenSinhVien;
@@ -106,6 +114,7 @@ namespace PROJECT.GUI
         }
         private void btnDangKy_Click(object sender, EventArgs e)
         {
+            SINHVIEN sv = SinhVienBUS.Instance.GetByID(_maSV);
             if (HaveCheck())
             {
                 //

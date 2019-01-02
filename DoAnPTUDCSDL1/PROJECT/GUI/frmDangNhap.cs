@@ -29,41 +29,48 @@ namespace PROJECT.GUI
             string tenDN = txtTenDangNhap.Text;
             string matKhau = txtMatKhau.Text;
 
-            if (tenDN == "" || matKhau == "")
+            try
             {
-                MessageBox.Show("PHẢI ĐIỀN THÔNG TIN ĐĂNG NHẬP", "THÔNG BÁO");
-                txtTenDangNhap.Clear();
-                txtMatKhau.Clear();
-            }
-            else
-            {
-
-                tk = TaiKhoanBUS.Instance.GetByID(tenDN);
-                if (tk == null || tk.matKhau.TrimEnd() != matKhau)
+                if (tenDN == "" || matKhau == "")
                 {
-                    MessageBox.Show("Tên Đăng Nhập Hoặc Mật Khẩu Không Đúng", "Thông Báo");
+                    MessageBox.Show("PHẢI ĐIỀN THÔNG TIN ĐĂNG NHẬP", "THÔNG BÁO");
                     txtTenDangNhap.Clear();
                     txtMatKhau.Clear();
                 }
                 else
                 {
-                    string loai = tk.loaiTaiKhoan.TrimEnd();
-                    if (loai == "SV")
+
+                    tk = TaiKhoanBUS.Instance.GetByID(tenDN);
+                    if (tk == null || tk.matKhau.TrimEnd() != matKhau)
                     {
-                        this.Close();
-                        th = new Thread(OpenFROMsv);
-                        th.SetApartmentState(ApartmentState.STA);
-                        th.Start();
-                        //Visible = false;
+                        MessageBox.Show("Tên Đăng Nhập Hoặc Mật Khẩu Không Đúng", "Thông Báo");
+                        txtTenDangNhap.Clear();
+                        txtMatKhau.Clear();
                     }
-                    if (loai == "GVU")
+                    else
                     {
-                        this.Close();
-                        th = new Thread(OpenFROMgv);
-                        th.SetApartmentState(ApartmentState.STA);
-                        th.Start();
+                        string loai = tk.loaiTaiKhoan.TrimEnd();
+                        if (loai == "SV")
+                        {
+                            this.Close();
+                            th = new Thread(OpenFROMsv);
+                            th.SetApartmentState(ApartmentState.STA);
+                            th.Start();
+                            //Visible = false;
+                        }
+                        if (loai == "GVU")
+                        {
+                            this.Close();
+                            th = new Thread(OpenFROMgv);
+                            th.SetApartmentState(ApartmentState.STA);
+                            th.Start();
+                        }
                     }
                 }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Tên Đăng Nhập Hoặc Mật Khẩu Không Đúng", "Thông Báo");
             }
         }
 

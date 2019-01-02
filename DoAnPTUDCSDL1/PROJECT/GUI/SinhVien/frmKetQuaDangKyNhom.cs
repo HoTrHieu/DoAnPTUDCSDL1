@@ -14,7 +14,7 @@ namespace PROJECT.GUI
 {
     public partial class frmKetQuaDangKyNhom : Form
     {
-        SINHVIEN SV = SinhVienBUS.Instance.GetByID("SV01");
+        
         string MaMoCD, MaLop;
         string tenN;
         public frmKetQuaDangKyNhom()
@@ -22,14 +22,21 @@ namespace PROJECT.GUI
             InitializeComponent();
         }
 
-        public frmKetQuaDangKyNhom(SINHVIEN s)
+        //public frmKetQuaDangKyNhom(SINHVIEN s)
+        //{
+        //    InitializeComponent();
+        //    SV = s;
+        //}
+        private string _maSV;
+        public frmKetQuaDangKyNhom(string maSV)
         {
             InitializeComponent();
-            SV = s;
+            _maSV = maSV;
         }
 
         private void frmKetQuaDangKyNhom_Load(object sender, EventArgs e)
         {
+            SINHVIEN SV = SinhVienBUS.Instance.GetByID(_maSV);
             lblMaSinhVien.Text =SV.maSinhVien;
             lblHoTen.Text = SV.tenSinhVien;
             cbMaDKChuyenDe.DataSource = ThongTinDangKyBUS.Instance.GetMaDangKyByIDSV(SV.maSinhVien);
@@ -106,6 +113,7 @@ namespace PROJECT.GUI
 
         private void btnHuyDangKy_Click_1(object sender, EventArgs e)
         {
+            SINHVIEN SV = SinhVienBUS.Instance.GetByID(_maSV);
             if (ThanhVienBUS.Instance.checkTruongNhom(SV.maSinhVien, cbMaDKChuyenDe.Text))
             {
                 if (ThanhVienBUS.Instance.deleteThanhVienbyHai(cbMaDKChuyenDe.Text, lblMaNhom.Text))
@@ -124,7 +132,8 @@ namespace PROJECT.GUI
 
         private void btnRutKhoiNhom_Click_1(object sender, EventArgs e)
         {
-            if(lblMaNhom.Text== "Chưa Đăng Ký")
+            SINHVIEN SV = SinhVienBUS.Instance.GetByID(_maSV);
+            if (lblMaNhom.Text== "Chưa Đăng Ký")
             {
                 MessageBox.Show("Không có nhóm", "Thông Báo", MessageBoxButtons.OK);
             }
@@ -177,6 +186,7 @@ namespace PROJECT.GUI
 
         private void btnChuyenNhom_Click_1(object sender, EventArgs e)
         {
+            SINHVIEN SV = SinhVienBUS.Instance.GetByID(_maSV);
             if (lblMaNhom.Text == "Chưa Đăng Ký")
             {
                 MessageBox.Show("Không có nhóm", "Thông Báo", MessageBoxButtons.OK);
@@ -223,6 +233,7 @@ namespace PROJECT.GUI
 
         void loadinfo()
         {
+            SINHVIEN SV = SinhVienBUS.Instance.GetByID(_maSV);
             cbMaDKChuyenDe.DataSource = ThongTinDangKyBUS.Instance.GetMaDangKyByIDSV(SV.maSinhVien);
 
             THONGTINDANGKY thongTDK = ThongTinDangKyBUS.Instance.GetByID(cbMaDKChuyenDe.Text);

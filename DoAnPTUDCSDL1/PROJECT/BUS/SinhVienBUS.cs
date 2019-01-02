@@ -78,5 +78,10 @@ namespace PROJECT.BUS
         {
             return SinhVienDAO.Instance.CreateMaSinhVien();
         }
+
+        public bool InsertDefault(string maSinhVien, string maNganh)
+        {
+            return SinhVienDAO.Instance.InsertDefault(maSinhVien, maNganh);
+        }
     }
 }

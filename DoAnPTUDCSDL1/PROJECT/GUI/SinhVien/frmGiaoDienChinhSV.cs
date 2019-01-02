@@ -52,19 +52,19 @@ namespace PROJECT.GUI
 
         private void btnDangKyCD_Click_1(object sender, EventArgs e)
         {
-            frmDangKyChuyenDe frm = new frmDangKyChuyenDe();
+            frmDangKyChuyenDe frm = new frmDangKyChuyenDe(sv.maSinhVien);
             frm.ShowDialog();
         }
 
         private void btnDKyNhom_Click_1(object sender, EventArgs e)
         {
-            frmDangKiNhom frm = new frmDangKiNhom();
+            frmDangKiNhom frm = new frmDangKiNhom(sv.maSinhVien);
             frm.ShowDialog();
         }
 
         private void btnKQ_Sua_Nhom_Click_1(object sender, EventArgs e)
         {
-            frmKetQuaDangKyNhom frm = new frmKetQuaDangKyNhom();
+            frmKetQuaDangKyNhom frm = new frmKetQuaDangKyNhom(sv.maSinhVien);
             frm.ShowDialog();
         }
 

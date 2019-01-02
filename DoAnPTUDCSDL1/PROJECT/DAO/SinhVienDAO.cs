@@ -124,5 +124,23 @@ namespace PROJECT.DAO
             string maSinhVienNew = _2charFirst + sttNew;
             return maSinhVienNew;
         }
+
+        // thêm sinh viên
+        public bool InsertDefault(string maSinhVien, string maNganh)
+        {
+            string query = "Insert into SINHVIEN(maSinhVien, MaNganh) values( @maSV , @maNganh )";
+
+            object[] para = new object[]
+            {
+                maSinhVien,
+                maNganh
+            };
+
+            if (DataProvider.Instance.ExecuteNonQuery(query, para) > 0)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }
