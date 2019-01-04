@@ -121,5 +121,24 @@ namespace PROJECT.DAO
             string y = (int.Parse(x) + 1).ToString();
             return "NH" + y;
         }
+
+        //
+        public List<string> GetListMaNhom(string MaMCD)
+        {
+            List<string> lstMaN = new List<string>();
+            string query = "SELECT DISTINCT(tv.MaNhom) AS N'MaNhom' FROM THONGTINMOCHUYENDE tm, THONGTINDANGKY td, " +
+                "THANHVIEN tv , NHOM nh WHERE tm.MaThongTinMoChuyenDe = td.MaThongTinMoChuyenDe AND td.MaDangKy = tv.MaDangKy " +
+                "AND tv.MaNhom = nh.MaNhom AND nh.TrangThai = 0 AND tm.MaThongTinMoChuyenDe = @maMoCD ";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { MaMCD });
+            
+            foreach (DataRow item in data.Rows)
+            {
+                string maNhom = item["MaNhom"].ToString();
+                lstMaN.Add(maNhom);
+            }
+
+            return lstMaN;                
+        }
+
     }
 }

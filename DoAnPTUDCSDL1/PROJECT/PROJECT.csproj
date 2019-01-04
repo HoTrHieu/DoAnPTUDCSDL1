@@ -126,6 +126,12 @@
     <Compile Include="GUI\GiaoVu\frmThemChuyenDe.Designer.cs">
       <DependentUpon>frmThemChuyenDe.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\SinhVien\frmChuyenNhom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SinhVien\frmChuyenNhom.Designer.cs">
+      <DependentUpon>frmChuyenNhom.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\SinhVien\frmDangKiNhom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GiaoVu\frmThemChuyenDe.resx">
       <DependentUpon>frmThemChuyenDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SinhVien\frmChuyenNhom.resx">
+      <DependentUpon>frmChuyenNhom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\SinhVien\frmDangKiNhom.resx">
       <DependentUpon>frmDangKiNhom.cs</DependentUpon>

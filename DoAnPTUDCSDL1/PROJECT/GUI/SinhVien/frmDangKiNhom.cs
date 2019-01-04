@@ -80,7 +80,7 @@ namespace PROJECT.GUI
                 return;
             }
             //trường hợp đã đăng ký nhóm trước đó or đã là thành viên của nhóm khác
-            string maDK = ThongTinDangKyBUS.Instance.GetMaDangKyByMMML(cbxMaSVDK.Text, MaMoCD, MaLop);
+            string maDK = ThongTinDangKyBUS.Instance.GetMaDangKyByMMML(lblMSSV.Text, MaMoCD, MaLop);
             if (ThanhVienBUS.Instance.checkAdded(maDK) == true)
             {
                 MessageBox.Show("Đã đăng ký Nhóm rồi or là thành viên của nhóm khác!", "Thông Báo");

@@ -106,41 +106,51 @@ namespace PROJECT.GUI
             string maDK = ttdk.maDangKy;
 
             THANHVIEN tv = ThanhVienBUS.Instance.GetByIDDK(maDK);
-            string manhom = tv.maNhom;
+            if (tv != null)
+            {            
+                string manhom = tv.maNhom;
 
-            // kiểm tra vai trò ( true : trưởng nhóm, false: thành viên)
-            bool vaitro = ThanhVienBUS.Instance.checkTruongNhom(_maSV, maDK);
+                // kiểm tra vai trò ( true : trưởng nhóm, false: thành viên)
+                bool vaitro = ThanhVienBUS.Instance.checkTruongNhom(_maSV, maDK);
 
-            // nếu là thành viên
-            if (vaitro == false)
-            {
-                // kiểm tra có xoá thành viên được không
-                bool trangthai = ThanhVienBUS.Instance.deleteThanhVienbyHai(maDK, manhom);
-
-                // nếu xoá được thực hiện xoá đăng ký chuyên đề
-                if (trangthai)
+                // nếu là thành viên
+                if (vaitro == false)
                 {
-                    // nếu xoá đăng ký chuyên đề thành công
-                    if (ThongTinDangKyBUS.Instance.DeleteByMaDK(maDK))
+                    // kiểm tra có xoá thành viên được không
+                    bool trangthai = ThanhVienBUS.Instance.deleteThanhVienbyHai(maDK, manhom);
+
+                    // nếu xoá được thực hiện xoá đăng ký chuyên đề
+                    if (trangthai)
                     {
-                        MessageBox.Show("Huỷ đăng ký chuyên đề thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        // nếu xoá đăng ký chuyên đề thành công
+                        if (ThongTinDangKyBUS.Instance.DeleteByMaDK(maDK))
+                        {
+                            MessageBox.Show("Huỷ đăng ký chuyên đề thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            dgvKetQuaDangKy.DataSource = null;
+                            dgvKetQuaDangKy.DataSource = ThongTinDangKyBUS.Instance.GetTTDKCDeSinhVien(_maSV);
+                            dgvKetQuaDangKy.Columns[0].HeaderText = "Mã CĐ";
+                            dgvKetQuaDangKy.Columns[1].HeaderText = "Tên Chuyên Đề";
+                            dgvKetQuaDangKy.Columns[2].HeaderText = "Ngày Bắt Đầu";
+                            dgvKetQuaDangKy.Columns[3].HeaderText = "Ngày Kết Thúc";
+                            dgvKetQuaDangKy.Columns[4].HeaderText = "Tên Lớp";
+
+                        }
+                        // ngược lại
+                        else
+                        {
+                            MessageBox.Show("Huỷ đăng ký chuyên đề không thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
-                    // ngược lại
+                    // nếu không xoá được ra khỏi nhóm
                     else
                     {
-                        MessageBox.Show("Huỷ đăng ký chuyên đề không thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Xoá không thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
-                }
-                // nếu không xoá được ra khỏi nhóm
-                else
-                {
-                    MessageBox.Show("Xoá không thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
 
-            }
-            // nếu vai trò là trưởng nhóm => xoá hết thành viên trong nhóm, sau đó, xoá nhóm mà trưởng nhóm đã tạo
-            // tiếp theo, trưởng nhóm thực hiện huỷ đăng ký chuyên đề theo mong muốn
-            else if (vaitro == true)
+                }
+                // nếu vai trò là trưởng nhóm => xoá hết thành viên trong nhóm, sau đó, xoá nhóm mà trưởng nhóm đã tạo
+                // tiếp theo, trưởng nhóm thực hiện huỷ đăng ký chuyên đề theo mong muốn
+                else if (vaitro == true)
             {
                 // nếu xoá thành viên thành công
                 if (ThanhVienBUS.Instance.deleteThanhVienByMaNhom(manhom))
@@ -167,7 +177,22 @@ namespace PROJECT.GUI
                     MessageBox.Show("Không thành công");
                 }
             }
+            }
+            else
+            {
+                if (ThongTinDangKyBUS.Instance.DeleteByMaDK(maDK))
+                {
+                    MessageBox.Show("Huỷ đăng ký chuyên đề thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dgvKetQuaDangKy.DataSource = null;
+                    dgvKetQuaDangKy.DataSource = ThongTinDangKyBUS.Instance.GetTTDKCDeSinhVien(_maSV);
+                    dgvKetQuaDangKy.Columns[0].HeaderText = "Mã CĐ";
+                    dgvKetQuaDangKy.Columns[1].HeaderText = "Tên Chuyên Đề";
+                    dgvKetQuaDangKy.Columns[2].HeaderText = "Ngày Bắt Đầu";
+                    dgvKetQuaDangKy.Columns[3].HeaderText = "Ngày Kết Thúc";
+                    dgvKetQuaDangKy.Columns[4].HeaderText = "Tên Lớp";
 
+                }
+            }
         }
     }
 }

@@ -379,8 +379,10 @@ namespace PROJECT.DAO
             };
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query,para);
-
-            return (int)data.Rows[0]["SoLuong"];
+            if (data.Container != null)
+                return (int)data.Rows[0]["SoLuong"];
+            else
+                return 0;
 
         }
     }

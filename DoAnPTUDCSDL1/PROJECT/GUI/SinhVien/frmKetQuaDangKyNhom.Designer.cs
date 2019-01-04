@@ -298,7 +298,7 @@
             this.btnChuyenNhom.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnChuyenNhom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChuyenNhom.ForeColor = System.Drawing.Color.White;
-            this.btnChuyenNhom.Location = new System.Drawing.Point(31, 32);
+            this.btnChuyenNhom.Location = new System.Drawing.Point(32, 32);
             this.btnChuyenNhom.Name = "btnChuyenNhom";
             this.btnChuyenNhom.Size = new System.Drawing.Size(127, 37);
             this.btnChuyenNhom.TabIndex = 6;

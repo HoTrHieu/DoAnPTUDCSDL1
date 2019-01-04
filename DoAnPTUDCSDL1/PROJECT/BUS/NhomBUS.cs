@@ -70,5 +70,9 @@ namespace PROJECT.BUS
             return NhomDAO.Instance.CreateCode();
         }
 
+        public List<string> GetListMaNhom(string MaMCD)
+        {
+            return NhomDAO.Instance.GetListMaNhom(MaMCD);
+        }
     }
 }

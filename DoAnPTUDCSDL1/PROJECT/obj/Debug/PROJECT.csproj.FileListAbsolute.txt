@@ -200,3 +200,9 @@ C:\Users\Ho Trung Hieu\Desktop\LUUPRO\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\De
 H:\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.GiaoVu.frmDanhSachChuyenDe.resources
 H:\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.GiaoVu.frmThemChuyenDe.resources
 H:\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.GiaoVu.frmSuaChuyenDe.resources
+C:\Users\Ho Trung Hieu\Desktop\DEADLINE\DO_AN\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.GiaoVu.frmDanhSachChuyenDe.resources
+C:\Users\Ho Trung Hieu\Desktop\DEADLINE\DO_AN\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.GiaoVu.frmDanhSachChuyenDeDaMo.resources
+C:\Users\Ho Trung Hieu\Desktop\DEADLINE\DO_AN\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.frmDSSinhVien.resources
+C:\Users\Ho Trung Hieu\Desktop\DEADLINE\DO_AN\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.GiaoVu.frmSuaChuyenDe.resources
+C:\Users\Ho Trung Hieu\Desktop\DEADLINE\DO_AN\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.GiaoVu.frmThemChuyenDe.resources
+C:\Users\Ho Trung Hieu\Desktop\DEADLINE\DO_AN\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.frmChuyenNhom.resources

@@ -215,6 +215,8 @@ namespace PROJECT.GUI
                         if (ThanhVienBUS.Instance.deleteThanhVienbyHai(cbMaDKChuyenDe.Text, lblMaNhom.Text))
                         {
                             MessageBox.Show("Xóa Thành Công!", "Thông Báo", MessageBoxButtons.OK);
+                            frmChuyenNhom frmChuyenNhom = new frmChuyenNhom(_maSV, MaMoCD,cbMaDKChuyenDe.Text);
+                            frmChuyenNhom.ShowDialog();
                             loadinfo();
                         }
                         else
@@ -234,8 +236,7 @@ namespace PROJECT.GUI
                     {
                         ThanhVienBUS.Instance.deleleThanhVien(cbMaDKChuyenDe.Text, lblMaNhom.Text);
                         loadinfo();
-                        //frmDangKiNhom frmDKNhomMoi = new frmDangKiNhom();
-                        //frmDKNhomMoi.ShowDialog();
+                      
                     }
                 }
             }
