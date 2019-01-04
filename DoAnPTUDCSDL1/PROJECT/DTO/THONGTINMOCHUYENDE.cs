@@ -13,14 +13,16 @@ namespace PROJECT.DTO
         public string nienHoc { get; set; }
         public string maGiaoVu { get; set; }
         public string maChuyenDe { get; set; }
+        public bool trangThai { get; set; }
 
-        public THONGTINMOCHUYENDE(string MaTTMChuyenDe, int HocKy, string NienHoc, string MaGV, string MaCD)
+        public THONGTINMOCHUYENDE(string MaTTMChuyenDe, int HocKy, string NienHoc, string MaGV, string MaCD, bool TrangThai)
         {
             this.maThongTinMoChuyenDe = MaTTMChuyenDe;
             this.hocKy = HocKy;
             this.nienHoc = NienHoc;
             this.maGiaoVu = MaGV;
             this.maChuyenDe = MaCD;
+            this.trangThai = TrangThai;
         }
     }
 }
