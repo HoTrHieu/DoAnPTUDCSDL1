@@ -141,5 +141,11 @@ namespace PROJECT.GUI
             //update label
             lblClock.Text = time;
         }
+
+        private void btnDSCD_Click(object sender, EventArgs e)
+        {
+            frmDanhSachChuyenDe dscd = new frmDanhSachChuyenDe();
+            dscd.ShowDialog();
+        }
     }
 }

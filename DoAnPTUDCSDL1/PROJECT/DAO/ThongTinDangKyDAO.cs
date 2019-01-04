@@ -367,6 +367,22 @@ namespace PROJECT.DAO
             }
             return false;
         }
+
+        public int countByMSSV_HK_NienHoc(string mssv, int hk, string nienhoc)
+        {
+            string query = "select count(tt.MaThongTinMoChuyenDe) as N'SoLuong' from THONGTINDANGKY tt, THONGTINMOCHUYENDE m" +
+                " where tt.MaThongTinMoChuyenDe = m.MaThongTinMoChuyenDe and tt.MaSinhVien = @mssv " +
+                " and m.HocKy = @hk and m.NienHoc = @nienhoc group by tt.MaSinhVien";
+            object[] para = new object[]
+            {
+               mssv, hk, nienhoc
+            };
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query,para);
+
+            return (int)data.Rows[0]["SoLuong"];
+
+        }
     }
 
 }

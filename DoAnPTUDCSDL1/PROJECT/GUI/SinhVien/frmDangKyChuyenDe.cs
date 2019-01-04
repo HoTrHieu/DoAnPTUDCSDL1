@@ -128,11 +128,26 @@ namespace PROJECT.GUI
                         string masv = sv.maSinhVien;
                         string maLop = row.Cells[1].Value.ToString();
                         string maCD = row.Cells[2].Value.ToString();
-                        THONGTINMOCHUYENDE temp = ThongTinMoChuyenDeBUS.Instance.GetMoChuyenDeByMaCD(maCD);
 
-                        THONGTINDANGKY ttDK = new THONGTINDANGKY(maDK, masv, temp.maThongTinMoChuyenDe, maLop);
-                        //insert
-                        kq = ThongTinDangKyBUS.Instance.Insert(ttDK);
+                        THONGTINMOCHUYENDE ttmcd = ThongTinMoChuyenDeBUS.Instance.GetMoChuyenDeByMaCD(maCD);
+                        int hkCheck = ttmcd.hocKy;
+                        string nienHocCheck = ttmcd.nienHoc;
+
+                        int soLuongDaDangKy = ThongTinDangKyBUS.Instance.countByMSSV_HK_NienHoc(_maSV, hkCheck, nienHocCheck);
+
+                       if(soLuongDaDangKy >= 3)
+                        {
+                            MessageBox.Show("Chỉ được đăng ký tối đa 3 chuyên đề trong một học kỳ niên học");
+                        }
+                        else
+                        {
+                            THONGTINMOCHUYENDE temp = ThongTinMoChuyenDeBUS.Instance.GetMoChuyenDeByMaCD(maCD);
+
+                            THONGTINDANGKY ttDK = new THONGTINDANGKY(maDK, masv, temp.maThongTinMoChuyenDe, maLop);
+                            //insert
+                            kq = ThongTinDangKyBUS.Instance.Insert(ttDK);
+                        }
+                       
                     }
                 }
                 if (kq == true)

@@ -106,5 +106,9 @@ namespace PROJECT.BUS
         {
             return ThongTinDangKyDAO.Instance.DeleteByMaDK(maDK);
         }
+        public int countByMSSV_HK_NienHoc(string mssv, int hk, string nienhoc)
+        {
+            return ThongTinDangKyDAO.Instance.countByMSSV_HK_NienHoc(mssv, hk, nienhoc);
+        }
     }
 }

@@ -39,13 +39,14 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lblClock = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblMaGV = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblTenGVU = new System.Windows.Forms.Label();
             this.btnDangXuat = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnDSCD = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -61,7 +62,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(211, 87);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(175, 238);
+            this.groupBox1.Size = new System.Drawing.Size(175, 292);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Quản Lý Sinh Viên";
@@ -99,13 +100,14 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.btnDSCD);
             this.groupBox2.Controls.Add(this.btnDsSVDK);
             this.groupBox2.Controls.Add(this.btnDsCDMo);
             this.groupBox2.Controls.Add(this.btnMoCD);
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
             this.groupBox2.Location = new System.Drawing.Point(405, 87);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(194, 238);
+            this.groupBox2.Size = new System.Drawing.Size(194, 292);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin chuyên đề";
@@ -194,17 +196,6 @@
             this.panel1.Size = new System.Drawing.Size(181, 213);
             this.panel1.TabIndex = 3;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Image = global::PROJECT.Properties.Resources.Wikipedia_User_ICON_byNightsight3;
-            this.pictureBox2.Location = new System.Drawing.Point(46, 11);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(91, 97);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -274,12 +265,36 @@
             this.label2.Text = "TRANG QUẢN LÝ ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnDSCD
+            // 
+            this.btnDSCD.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnDSCD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDSCD.ForeColor = System.Drawing.Color.White;
+            this.btnDSCD.Location = new System.Drawing.Point(15, 229);
+            this.btnDSCD.Name = "btnDSCD";
+            this.btnDSCD.Size = new System.Drawing.Size(165, 51);
+            this.btnDSCD.TabIndex = 5;
+            this.btnDSCD.Text = "Danh Sách Chuyên Đề";
+            this.btnDSCD.UseVisualStyleBackColor = false;
+            this.btnDSCD.Click += new System.EventHandler(this.btnDSCD_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.Image = global::PROJECT.Properties.Resources.Wikipedia_User_ICON_byNightsight3;
+            this.pictureBox2.Location = new System.Drawing.Point(46, 11);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(91, 97);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
             // frmGiaoDienChinhGV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(611, 350);
+            this.ClientSize = new System.Drawing.Size(611, 421);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -324,5 +339,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblClock;
+        private System.Windows.Forms.Button btnDSCD;
     }
 }

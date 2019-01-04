@@ -96,6 +96,12 @@
     <Compile Include="DTO\THANHVIEN.cs" />
     <Compile Include="DTO\THONGTINDANGKY.cs" />
     <Compile Include="DTO\THONGTINMOCHUYENDE.cs" />
+    <Compile Include="GUI\GiaoVu\frmDanhSachChuyenDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GiaoVu\frmDanhSachChuyenDe.Designer.cs">
+      <DependentUpon>frmDanhSachChuyenDe.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\GiaoVu\frmDanhSachChuyenDeDaMo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,18 @@
     </Compile>
     <Compile Include="GUI\GiaoVu\frmDSSinhVien.Designer.cs">
       <DependentUpon>frmDSSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GiaoVu\frmSuaChuyenDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GiaoVu\frmSuaChuyenDe.Designer.cs">
+      <DependentUpon>frmSuaChuyenDe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GiaoVu\frmThemChuyenDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GiaoVu\frmThemChuyenDe.Designer.cs">
+      <DependentUpon>frmThemChuyenDe.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\SinhVien\frmDangKiNhom.cs">
       <SubType>Form</SubType>
@@ -176,11 +194,20 @@
     <Compile Include="GUI\GiaoVu\frmThemTaiKhoanSinhVien.Designer.cs">
       <DependentUpon>frmThemTaiKhoanSinhVien.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GUI\GiaoVu\frmDanhSachChuyenDe.resx">
+      <DependentUpon>frmDanhSachChuyenDe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\GiaoVu\frmDanhSachChuyenDeDaMo.resx">
       <DependentUpon>frmDanhSachChuyenDeDaMo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GiaoVu\frmDSSinhVien.resx">
       <DependentUpon>frmDSSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GiaoVu\frmSuaChuyenDe.resx">
+      <DependentUpon>frmSuaChuyenDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GiaoVu\frmThemChuyenDe.resx">
+      <DependentUpon>frmThemChuyenDe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\SinhVien\frmDangKiNhom.resx">
       <DependentUpon>frmDangKiNhom.cs</DependentUpon>

@@ -110,6 +110,65 @@ namespace PROJECT.DAO
             return chuyendes;
         }
 
+        public bool Insert(CHUYENDE cd)
+        {
+            string query = "Insert into CHUYENDE(MaChuyenDe, TenChuyenDe, SoSinhVienToiDa, MaNganh) values( @maCD , @tenCD , @svMAX , @maN )";
 
+            object[] para = new object[]
+            {
+               cd.maCDe,
+               cd.tenCDe,
+               cd.soSV,
+               cd.maNganh
+            };
+
+            if (DataProvider.Instance.ExecuteNonQuery(query, para) > 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public string CreateMaCD()
+        {
+            string query = "select max(c.MaChuyenDe) as N'MaChuyenDe' from CHUYENDE c " +
+                "where LEN(c.MaChuyenDe) >= all(select len(x.MaChuyenDe) from CHUYENDE x)";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            DataRow item = data.Rows[0];
+
+            string maCDNew = item["MaChuyenDe"].ToString().TrimEnd();
+            string x = maCDNew.Substring(maCDNew.Length - 2);
+            string y = (int.Parse(x) + 1).ToString();
+            return "CD" + y;
+        }
+
+        public bool deleteChuyenDe(string maCD)
+        {
+            string query = "delete from CHUYENDE where MaChuyenDe = @maCD ";
+            if (DataProvider.Instance.ExecuteNonQuery(query, new object[] { maCD }) > 0)
+                return true;
+            return false;
+        }
+
+        public bool Update(string maCD, CHUYENDE cd)
+        {
+            string query = "Update CHUYENDE SET TenChuyenDe = @tecd , SoSinhVienToiDa = @svMAX , MaNganh = @maN WHERE MaChuyenDe = @maCD ";
+
+            object[] para = new object[]
+            {
+                cd.tenCDe,
+                cd.soSV,
+                cd.maNganh,
+                maCD
+            };
+
+            if (DataProvider.Instance.ExecuteNonQuery(query, para) > 0)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }

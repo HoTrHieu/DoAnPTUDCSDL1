@@ -50,5 +50,25 @@ namespace PROJECT.BUS
         {
             return ChuyenDeDAO.Instance.ChuyenDeMo(maN);
         }
+
+        public bool Insert(CHUYENDE cd)
+        {
+            return ChuyenDeDAO.Instance.Insert(cd);
+        }
+
+        public string CreateMaCD()
+        {
+            return ChuyenDeDAO.Instance.CreateMaCD();
+        }
+
+        public bool deleteChuyenDe(string maCD)
+        {
+            return ChuyenDeDAO.Instance.deleteChuyenDe(maCD);
+        }
+
+        public bool Update(string maCD, CHUYENDE cd)
+        {
+            return ChuyenDeDAO.Instance.Update(maCD, cd);
+        }
     }
 }
