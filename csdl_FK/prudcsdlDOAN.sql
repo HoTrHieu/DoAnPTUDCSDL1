@@ -301,24 +301,20 @@ insert THONGTINDANGKY(MaDangKy, MaSinhVien, MaThongTinMoChuyenDe, MaLop)
 		('DK10','SV6','MCD9','L5')
 --INSERT NHOM
 insert into NHOM(MaNhom,TenNhom,TrangThai)
-  VALUES('DK1_N',N'0 anh em',1),--0
-		('DK2_N',N'1 anh em',1),--1
-		('DK3_N',N'2 anh em',0),--2
-		('DK4_N',N'3 anh em',1),--3
-		('DK7_N',N'4 anh em',0),--4
-		('DK10_N',N'5 anh em',0)--5
+  VALUES('NH1',N'0 anh em',1),--MCD1
+		('NH2',N'1 anh em',1),--MCD2
+		('NH3',N'2 anh em',0),--MCD2
+		('NH4',N'3 anh em',1),--MCD3
+		('NH5',N'4 anh em',0)--MCD4
 --INSERT THANHVIEN
 insert into THANHVIEN(MaDangKy,MaNhom,VaiTro)
-  VALUES('DK1','DK1_N','trưởng nhóm'),--0
-		('DK2','DK2_N','trưởng nhóm'),--1
-		('DK3','DK3_N','trưởng nhóm'),--2
-		('DK4','DK4_N','thành viên'),--3
-		('DK5','DK4_N','thành viên'),--3
-		('DK6','DK4_N','trưởng nhóm'),--3
-		('DK7','DK7_N','trưởng nhóm'),--4
-		('DK8','DK7_N','thành viên'),--4
-		('DK9','DK7_N','thành viên'),--4
-		('DK10','DK10_N','trưởng nhóm')--5
+  VALUES('DK1','NH1',N'trưởng nhóm'),--MCD1
+		('DK3','NH1',N'thành viên'),
+		('DK2','NH4',N'trưởng nhóm'),--MCD2
+		('DK4','NH3',N'trưởng nhóm'),--MCD2
+		('DK8','NH4',N'thành viên'),--MCD3
+		('DK5','NH5',N'trưởng nhóm')--MCD4
+
 
 select *
 from THONGTINDANGKY

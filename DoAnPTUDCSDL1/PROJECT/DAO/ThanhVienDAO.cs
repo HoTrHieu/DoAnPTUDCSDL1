@@ -123,7 +123,7 @@ namespace PROJECT.DAO
         // xóa/rút 1 thành viên khỏi 1 nhóm thuộc MaDangKy và MaNhom
         public bool deleteThanhVien(string maDangKy, string maNhom)
         {
-            string query = "delete from ThanhVien where MaDangKy = @maDangKy , MaNhom = @maNhom ";
+            string query = "delete from ThanhVien where MaDangKy = @maDangKy and MaNhom = @maNhom ";
             if (DataProvider.Instance.ExecuteNonQuery(query, new object[] { maDangKy, maNhom }) > 0)
                 return true;
             return false;

@@ -14,7 +14,7 @@ namespace PROJECT.GUI
 {
     public partial class frmKetQuaDangKyNhom : Form
     {
-        
+
         string MaMoCD, MaLop;
         string tenN;
         public frmKetQuaDangKyNhom()
@@ -37,7 +37,7 @@ namespace PROJECT.GUI
         private void frmKetQuaDangKyNhom_Load(object sender, EventArgs e)
         {
             SINHVIEN SV = SinhVienBUS.Instance.GetByID(_maSV);
-            lblMaSinhVien.Text =SV.maSinhVien;
+            lblMaSinhVien.Text = SV.maSinhVien;
             lblHoTen.Text = SV.tenSinhVien;
             cbMaDKChuyenDe.DataSource = ThongTinDangKyBUS.Instance.GetMaDangKyByIDSV(SV.maSinhVien);
 
@@ -55,7 +55,7 @@ namespace PROJECT.GUI
             lblMaLop.Text = thongTDK.maLop;
             //ma nhom
             //THANHVIEN nhom = ThanhVienBUS.Instance.GetByIDDK(cbMaDKChuyenDe.Text);
-            if (ThanhVienBUS.Instance.GetByIDDK(cbMaDKChuyenDe.Text)==null)
+            if (ThanhVienBUS.Instance.GetByIDDK(cbMaDKChuyenDe.Text) == null)
             {
                 lblMaNhom.Text = "Chưa Đăng Ký";
                 lblTenNhom.Text = "Chưa Đăng Ký";
@@ -127,7 +127,7 @@ namespace PROJECT.GUI
                         //ThanhVienBUS.Instance.deleteThanhVienByMaNhom(lblMaNhom.Text);
                         MessageBox.Show("Xóa Thành Công!", "Thông Báo", MessageBoxButtons.OK);
                         loadinfo();
-                    }                 
+                    }
                 }
                 else
                 {
@@ -141,7 +141,7 @@ namespace PROJECT.GUI
         private void btnRutKhoiNhom_Click_1(object sender, EventArgs e)
         {
             SINHVIEN SV = SinhVienBUS.Instance.GetByID(_maSV);
-            if (lblMaNhom.Text== "Chưa Đăng Ký")
+            if (lblMaNhom.Text == "Chưa Đăng Ký")
             {
                 MessageBox.Show("Không có nhóm", "Thông Báo", MessageBoxButtons.OK);
             }
@@ -151,10 +151,13 @@ namespace PROJECT.GUI
                 {
                     if (MessageBox.Show("Nhóm có 1 thành viên, Nhóm sẽ bị xóa", "Thông Báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
                     {
-                        if (ThanhVienBUS.Instance.deleteThanhVienbyHai(cbMaDKChuyenDe.Text, lblMaNhom.Text))
+                        if (ThanhVienBUS.Instance.deleteThanhVienbyHai(cbMaDKChuyenDe.Text, lblMaNhom.Text))//xóa thành viên
                         {
-                            MessageBox.Show("Xóa Thành Công!", "Thông Báo", MessageBoxButtons.OK);
-                            loadinfo();
+                            if (NhomBUS.Instance.deleteNhom(lblMaNhom.Text))//xóa nhóm
+                            {
+                                MessageBox.Show("Xóa Thành Công!", "Thông Báo", MessageBoxButtons.OK);
+                                loadinfo();
+                            }
                         }
                         else
                         {
@@ -172,6 +175,10 @@ namespace PROJECT.GUI
                     else
                     {
                         ThanhVienBUS.Instance.deleleThanhVien(cbMaDKChuyenDe.Text, lblMaNhom.Text);
+                        //sau khi rút khỏi nhóm thì ds thành vien là null
+                        lblMaNhom.Text = "Chưa Đăng Ký";
+                        lblTenNhom.Text = "Chưa Đăng Ký";
+                        dgvDSThanhVien.DataSource = null;
                     }
                 }
             }
@@ -227,8 +234,8 @@ namespace PROJECT.GUI
                     {
                         ThanhVienBUS.Instance.deleleThanhVien(cbMaDKChuyenDe.Text, lblMaNhom.Text);
                         loadinfo();
-                        frmDangKiNhom frmDKNhomMoi = new frmDangKiNhom();
-                        frmDKNhomMoi.ShowDialog();
+                        //frmDangKiNhom frmDKNhomMoi = new frmDangKiNhom();
+                        //frmDKNhomMoi.ShowDialog();
                     }
                 }
             }

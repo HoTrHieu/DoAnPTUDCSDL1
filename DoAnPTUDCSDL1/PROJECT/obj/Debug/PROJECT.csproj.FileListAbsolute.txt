@@ -195,3 +195,5 @@ H:\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.csproj.CoreCompileInput
 H:\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.exe
 H:\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.pdb
 H:\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.GiaoVu.frmDanhSachChuyenDeDaMo.resources
+C:\Users\Ho Trung Hieu\Desktop\LUUPRO\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.GiaoVu.frmDanhSachChuyenDeDaMo.resources
+C:\Users\Ho Trung Hieu\Desktop\LUUPRO\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.frmDSSinhVien.resources

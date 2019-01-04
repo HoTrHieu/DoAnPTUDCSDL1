@@ -48,7 +48,7 @@ namespace PROJECT.DAO
         // lấy thông tin mở chuyên đề dựa vào MaThongTinMoChuyenDe
         public THONGTINMOCHUYENDE GetByID(string MaTTMCDe)
         {
-            string query = "select MaThongTinMoChuyenDe, HocKy, NienHoc, MaGiaoVu, MaChuyenDe " +
+            string query = "select MaThongTinMoChuyenDe, HocKy, NienHoc, MaGiaoVu, MaChuyenDe, TrangThai " +
                 "from ThongTinMoChuyenDe where MaThongTinMoChuyenDe = @MaTTMCDe ";
             DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { MaTTMCDe });
             DataRow item = data.Rows[0];
