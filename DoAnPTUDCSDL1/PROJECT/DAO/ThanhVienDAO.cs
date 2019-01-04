@@ -107,7 +107,7 @@ namespace PROJECT.DAO
         // thêm thông tin 1 thành viên
         public bool insertThanhVien(THANHVIEN tv)
         {
-            string query = "insert into ThanhVien(MaDangKy, MaNhom, VaiTro) values(@maDangKy , @maNhom , @vaiTro )";
+            string query = "insert into ThanhVien(MaDangKy, MaNhom, VaiTro) values( @maDangKy , @maNhom , @vaiTro )";
             object[] para = new object[]
             {
                 tv.maDangKy,
@@ -190,6 +190,21 @@ namespace PROJECT.DAO
             string query = string.Format("delete from ThanhVien where MaNhom = '{0}' ", maNhom);
             int kq = DataProvider.Instance.ExecuteNonQuery(query);
             if (kq > 0)
+                return true;
+            return false;
+        }
+
+        //kiểm tra đã thêm vào nhóm
+        public bool checkAdded(string maDK)
+        {
+            string query = "select * from THANHVIEN WHERE MaDangKy = @madk ";
+            object[] para = new object[]
+            {
+                maDK
+            };
+            //int soDong=0;
+            object x = DataProvider.Instance.ExecuteScalar(query, para);
+            if (x != null)
                 return true;
             return false;
         }

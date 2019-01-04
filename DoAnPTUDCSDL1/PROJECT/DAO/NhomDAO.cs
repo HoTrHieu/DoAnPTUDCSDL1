@@ -105,5 +105,21 @@ namespace PROJECT.DAO
             }
             return lstNhom.Last();
         }
+
+        //tạo mã
+        public string CreateCode()
+        {
+            string query = "select max(t.MaNhom) as N'MaNhom' from NHOM t where LEN(t.MaNhom)" +
+                ">= all(select len(x.MaNhom) from NHOM x)";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            DataRow item = data.Rows[0];
+
+            string maDK = item["MaNhom"].ToString().TrimEnd();
+            string x = maDK.Substring(2);
+            string y = (int.Parse(x) + 1).ToString();
+            return "NH" + y;
+        }
     }
 }

@@ -64,7 +64,11 @@ namespace PROJECT.BUS
             return NhomDAO.Instance.GetNhomLast();
         }
 
-
+        //tạo mã nhóm
+        public string CreateCode()
+        {
+            return NhomDAO.Instance.CreateCode();
+        }
 
     }
 }

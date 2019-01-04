@@ -99,5 +99,11 @@ namespace PROJECT.BUS
         {
             return ThanhVienDAO.Instance.deleteThanhVienByMaNhom(maNhom);
         }
+
+        //kiểm tra đã add
+        public bool checkAdded(string maDK)
+        {
+            return ThanhVienDAO.Instance.checkAdded(maDK);
+        }
     }
 }

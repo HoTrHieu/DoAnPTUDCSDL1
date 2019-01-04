@@ -174,10 +174,12 @@ namespace PROJECT.DAO
         {
             //string MaDK;
 
-            string query = "SELECT MaDangKy FROM THONGTINDANGKY WHERE MaSinhVien= @maSV , MaThongTinMoChuyenDe = @maMo , MaLop= @maL ";
+            string query = "SELECT MaDangKy AS N'MaDangKy' FROM THONGTINDANGKY WHERE MaSinhVien= @maSV and MaThongTinMoChuyenDe = @maMo and MaLop= @maL ";
             object[] para = new object[]
             {
-                maSV,maMo,maLop
+                maSV,
+                maMo,
+                maLop
             };
             DataTable data = DataProvider.Instance.ExecuteQuery(query, para);
            // DataRow item = data.Rows[0];

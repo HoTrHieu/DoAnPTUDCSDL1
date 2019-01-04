@@ -39,7 +39,10 @@ namespace PROJECT.GUI
             lblMSSV.Text = SV.maSinhVien;
             lblTEN.Text = SV.tenSinhVien;
             //ma dang ky
-            cbMaDKChuyenDe.DataSource = ThongTinDangKyBUS.Instance.GetMaDangKyByIDSV(SV.maSinhVien);                        
+            cbMaDKChuyenDe.DataSource = ThongTinDangKyBUS.Instance.GetMaDangKyByIDSV(SV.maSinhVien);
+
+            //Không cho button thêm thành viên hoạt động
+            btnThemTV.Enabled = false;
         }
 
         private void cbMaDKChuyenDe_SelectedIndexChanged(object sender, EventArgs e)
@@ -73,12 +76,22 @@ namespace PROJECT.GUI
             //trường hợp chưa thuộc nhóm nào
             if (txtTenNhom.Text == "")
             {
-                MessageBox.Show("Bạn phải nhập tên nhóm!", "Thông báo");            
+                MessageBox.Show("Bạn phải nhập tên nhóm!", "Thông báo");
+                return;
             }
-          
-            string maNhom = cbMaDKChuyenDe.Text.TrimEnd()+"_N";
+            //trường hợp đã đăng ký nhóm trước đó or đã là thành viên của nhóm khác
+            string maDK = ThongTinDangKyBUS.Instance.GetMaDangKyByMMML(cbxMaSVDK.Text, MaMoCD, MaLop);
+            if (ThanhVienBUS.Instance.checkAdded(maDK) == true)
+            {
+                MessageBox.Show("Đã đăng ký Nhóm rồi or là thành viên của nhóm khác!", "Thông Báo");
+                return;
+            }
+
+            string maNhom = NhomBUS.Instance.CreateCode();
             string tenNhom = txtTenNhom.Text;
             tenN = tenNhom;
+
+
             //bool trThai = false;           
 
             //them thành viên đầu tiên: là người đăng ký
@@ -89,15 +102,19 @@ namespace PROJECT.GUI
             lblMaNhom.Text = maNhom;
             //hiện thành viên đầu tiên là trưởng nhóm trong datagirdview
             dgvThanhVien.DataSource = ThanhVienBUS.Instance.GetAllByIDN(maNhom);
+            //vô hiệu hóa sau khi đang ký
+            //btnDKNhom.Enabled = false;
+            btnThemTV.Enabled = true;
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            if (chkDuSoLuong.Checked)
-            {
-                NHOM nh = new NHOM(lblMaNhom.Text, tenN, true);
-                NhomBUS.Instance.updateNhom(lblMaNhom.Text, nh);
-            }
+            if(string.Compare(lblMaNhom.Text,"null")!=0)
+                if (chkDuSoLuong.Checked)
+                {
+                    NHOM nh = new NHOM(lblMaNhom.Text, tenN, true);
+                    NhomBUS.Instance.updateNhom(lblMaNhom.Text, nh);
+                }
 
             this.Close();
         }
@@ -105,12 +122,20 @@ namespace PROJECT.GUI
         private void btnThemTV_Click(object sender, EventArgs e)
         {
             string maDK = ThongTinDangKyBUS.Instance.GetMaDangKyByMMML(cbxMaSVDK.Text, MaMoCD, MaLop);
+            if (ThanhVienBUS.Instance.checkAdded(maDK) == true)
+            {
+                MessageBox.Show("Thành viên này đã đăng ký rồi or trong nhóm khác!", "Thông Báo");
+                return;
+            }
             //them thanh vien
             ThanhVienBUS.Instance.insertThanhVien(maDK, lblMaNhom.Text, "thành viên");
 
-            dgvThanhVien.Update();
-            dgvThanhVien.Refresh();
+            //dgvThanhVien.Rows.Clear();
+            //dgvThanhVien.Update();
+            //dgvThanhVien.Refresh();
+            dgvThanhVien.DataSource = null;
 
+            dgvThanhVien.DataSource = ThanhVienBUS.Instance.GetAllByIDN(lblMaNhom.Text);
         }
     }
 }
