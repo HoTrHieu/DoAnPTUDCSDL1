@@ -17,7 +17,7 @@ namespace PROJECT
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmDSSinhVien());
+            Application.Run(new frmDangNhap());
         }
     }
 }

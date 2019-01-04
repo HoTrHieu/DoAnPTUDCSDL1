@@ -155,12 +155,16 @@ namespace PROJECT.DAO
         // tạo mã thông tin mở chuyên đề mới
         public string CreateMaTTMCD()
         {
-            string maTTMCD = ThongTinMoChuyenDeDAO.Instance.GetThongTinMoChuyenDeLast().maThongTinMoChuyenDe;
-            string _3charFirst = maTTMCD.Substring(0, 3);
-            int stt = int.Parse(maTTMCD.Substring(3, 4));
+            string query = "select max(t.MaThongTinMoChuyenDe) as N'MaThongTinMoChuyenDe' from THONGTINMOCHUYENDE t where LEN(t.MaThongTinMoChuyenDe) >= all(select len(x.MaThongTinMoChuyenDe) from THONGTINMOCHUYENDE x)";
 
-            string maTTMCDNew = _3charFirst + (++stt);
-            return maTTMCDNew;
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            DataRow item = data.Rows[0];
+
+            string maTTMCD = item["MaThongTinMoChuyenDe"].ToString().TrimEnd();
+            string x = maTTMCD.Substring(maTTMCD.Length - 2);
+            string y = (int.Parse(x) + 1).ToString();
+            return "MCD" + y;
         }
 
         //get thong tin mo chuyen de theo ma nganh
