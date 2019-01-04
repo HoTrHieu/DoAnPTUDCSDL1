@@ -132,3 +132,4 @@ C:\Users\Ho Trung Hieu\Desktop\DEADLINE\DO_AN\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPT
 C:\Users\Ho Trung Hieu\Desktop\DEADLINE\DO_AN\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.frmThemTaiKhoanSinhVien.resources
 C:\Users\Ho Trung Hieu\Desktop\DEADLINE\DO_AN\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.frmThongTinSinhVien.resources
 H:\DO AN NAM 3\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.frmThongTinSinhVien.resources
+D:\data\desktop\git\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.frmThongTinSinhVien.resources

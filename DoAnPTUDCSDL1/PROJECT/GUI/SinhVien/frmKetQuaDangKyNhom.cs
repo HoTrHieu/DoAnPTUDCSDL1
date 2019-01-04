@@ -67,6 +67,9 @@ namespace PROJECT.GUI
                 lblMaNhom.Text = nhom.maNhom;
                 lblTenNhom.Text = nhom.tenNhom;
                 dgvDSThanhVien.DataSource = ThanhVienBUS.Instance.GetTVbyNhom(nhom.maNhom);
+                dgvDSThanhVien.Columns[0].HeaderText = "MSSV";
+                dgvDSThanhVien.Columns[1].HeaderText = "Họ và tên";
+                dgvDSThanhVien.Columns[2].HeaderText = "Vai trò";
             }
         }
 
@@ -104,7 +107,7 @@ namespace PROJECT.GUI
                 lblMaNhom.Text = nhom.maNhom;
                 lblTenNhom.Text = nhom.tenNhom;
                 dgvDSThanhVien.DataSource = ThanhVienBUS.Instance.GetTVbyNhom(nhom.maNhom);
-                dgvDSThanhVien.DataSource = ThanhVienBUS.Instance.GetTVbyNhom(nhom.maNhom);
+                //dgvDSThanhVien.DataSource = ThanhVienBUS.Instance.GetTVbyNhom(nhom.maNhom);
                 dgvDSThanhVien.Columns[0].HeaderText = "MSSV";
                 dgvDSThanhVien.Columns[1].HeaderText = "Họ và tên";
                 dgvDSThanhVien.Columns[2].HeaderText = "Vai trò";
