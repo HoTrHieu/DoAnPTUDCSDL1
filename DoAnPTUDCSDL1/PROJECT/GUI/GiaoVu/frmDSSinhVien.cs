@@ -24,5 +24,10 @@ namespace PROJECT.GUI
             //cbNganh.DataSource = NganhBUS.Instance.GetAll();
             SinhVienBUS.Instance.GetAll(dgvDSSV);
         }
+
+        private void btnThost_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

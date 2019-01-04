@@ -37,6 +37,8 @@ namespace PROJECT.GUI
         private void btnDsSV_Click(object sender, EventArgs e)
         {
             //xuất danh sách sinh vien, sau nay sẽ them vào
+            frmDSSinhVien frm = new frmDSSinhVien();
+            frm.ShowDialog();
         }
 
         private void btnMoCD_Click(object sender, EventArgs e)
