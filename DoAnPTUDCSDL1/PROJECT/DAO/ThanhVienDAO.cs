@@ -184,5 +184,14 @@ namespace PROJECT.DAO
                 return true;
             return false;
         }
+
+        public bool deleteThanhVienByMaNhom(string maNhom)
+        {
+            string query = string.Format("delete from ThanhVien where MaNhom = '{0}' ", maNhom);
+            int kq = DataProvider.Instance.ExecuteNonQuery(query);
+            if (kq > 0)
+                return true;
+            return false;
+        }
     }
 }

@@ -332,7 +332,39 @@ namespace PROJECT.DAO
             return "DK" + y;
         }
 
-        
+        public THONGTINDANGKY GetMaDangKyByMCD_MSSV(string MSSV, string maMCD)
+        {
+            string query = "SELECT * FROM THONGTINDANGKY WHERE MaSinhVien = @maSV and MaThongTinMoChuyenDe = @maMCD ";
+            object[] para = new object[]
+            {
+                MSSV, maMCD
+            };
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, para);
+
+            DataRow item = data.Rows[0];
+
+            string maDK = item["MaDangKy"].ToString();
+            string maSV = item["MaSinhVien"].ToString();
+            string maTTMCD = item["MaThongTinMoChuyenDe"].ToString();
+            string maL = item["MaLop"].ToString();
+
+            THONGTINDANGKY ttdk = new THONGTINDANGKY(maDK, maSV, maTTMCD, maL);
+            return ttdk;
+        }
+
+        public bool DeleteByMaDK(string maDK)
+        {
+            string query = "delete from THONGTINDANGKY where MaDangKy = @mdk ";
+            object[] para = new object[]
+            {
+               maDK
+            };
+            if (DataProvider.Instance.ExecuteNonQuery(query, para) > 0)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 
 }

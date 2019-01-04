@@ -39,6 +39,7 @@
             this.cmbHocKy = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnHuyDangKy = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKetQuaDangKy)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -173,11 +174,26 @@
             this.label7.TabIndex = 1;
             this.label7.Text = "Chọn Học Kỳ";
             // 
+            // btnHuyDangKy
+            // 
+            this.btnHuyDangKy.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnHuyDangKy.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnHuyDangKy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHuyDangKy.ForeColor = System.Drawing.Color.White;
+            this.btnHuyDangKy.Location = new System.Drawing.Point(345, 437);
+            this.btnHuyDangKy.Name = "btnHuyDangKy";
+            this.btnHuyDangKy.Size = new System.Drawing.Size(121, 30);
+            this.btnHuyDangKy.TabIndex = 12;
+            this.btnHuyDangKy.Text = "Huỷ đăng ký";
+            this.btnHuyDangKy.UseVisualStyleBackColor = false;
+            this.btnHuyDangKy.Click += new System.EventHandler(this.btnHuyDangKy_Click);
+            // 
             // frmKetQuaDangKyChuyenDeSinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(625, 484);
+            this.Controls.Add(this.btnHuyDangKy);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btnThoat);
@@ -210,5 +226,6 @@
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.DataGridView dgvKetQuaDangKy;
         private System.Windows.Forms.Button btnShowAll;
+        private System.Windows.Forms.Button btnHuyDangKy;
     }
 }

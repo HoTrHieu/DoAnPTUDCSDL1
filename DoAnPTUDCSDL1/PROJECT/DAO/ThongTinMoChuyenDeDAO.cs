@@ -212,5 +212,26 @@ namespace PROJECT.DAO
             return ttmcd;
         }
 
+        public THONGTINMOCHUYENDE GetByMaCD(string maCD)
+        {
+            string query = "SELECT * FROM THONGTINMOCHUYENDE where MaChuyenDe = @maCD ";
+            object[] para = new object[]
+            {
+                maCD
+            };
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, para);
+
+            DataRow item = data.Rows[0];
+            string maTTMCD = item["MaThongTinMoChuyenDe"].ToString();
+            int hocKy = (int)item["HocKy"];
+            string nienHoc = item["NienHoc"].ToString();
+            string maGVu = item["MaGiaoVu"].ToString();
+            string maCDe = item["MaChuyenDe"].ToString();
+
+            THONGTINMOCHUYENDE ttmcd = new THONGTINMOCHUYENDE(maTTMCD, hocKy, nienHoc, maGVu, maCDe);
+
+            return ttmcd;
+        }
+
     }
 }

@@ -95,5 +95,9 @@ namespace PROJECT.BUS
         {
             return ThanhVienDAO.Instance.deleteThanhVienbyHai(maDangKy, maNhom);
         }
+        public bool deleteThanhVienByMaNhom(string maNhom)
+        {
+            return ThanhVienDAO.Instance.deleteThanhVienByMaNhom(maNhom);
+        }
     }
 }

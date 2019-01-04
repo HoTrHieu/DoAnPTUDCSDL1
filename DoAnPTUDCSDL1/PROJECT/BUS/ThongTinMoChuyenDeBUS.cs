@@ -82,5 +82,10 @@ namespace PROJECT.BUS
         {
             return ThongTinMoChuyenDeDAO.Instance.GetMoChuyenDeByMaCD(maCD);
         }
+
+        public THONGTINMOCHUYENDE GetByMaCD(string maCD)
+        {
+            return ThongTinMoChuyenDeDAO.Instance.GetByMaCD(maCD);
+        }
     }
 }

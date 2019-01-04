@@ -96,5 +96,15 @@ namespace PROJECT.BUS
         {
             return ThongTinDangKyDAO.Instance.GetAllByIDSV(masv);
         }
+
+        public THONGTINDANGKY GetMaDangKyByMCD_MSSV(string MSSV, string maMCD)
+        {
+            return ThongTinDangKyDAO.Instance.GetMaDangKyByMCD_MSSV(MSSV, maMCD);
+        }
+
+        public bool DeleteByMaDK(string maDK)
+        {
+            return ThongTinDangKyDAO.Instance.DeleteByMaDK(maDK);
+        }
     }
 }
