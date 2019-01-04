@@ -119,10 +119,15 @@ namespace PROJECT.GUI
             SINHVIEN SV = SinhVienBUS.Instance.GetByID(_maSV);
             if (ThanhVienBUS.Instance.checkTruongNhom(SV.maSinhVien, cbMaDKChuyenDe.Text))
             {
-                if (ThanhVienBUS.Instance.deleteThanhVienbyHai(cbMaDKChuyenDe.Text, lblMaNhom.Text))
+                //if (ThanhVienBUS.Instance.deleteThanhVienbyHai(cbMaDKChuyenDe.Text, lblMaNhom.Text))
+                if (ThanhVienBUS.Instance.deleteThanhVienByMaNhom(lblMaNhom.Text))//xóa thành viên
                 {
-                    MessageBox.Show("Xóa Thành Công!", "Thông Báo", MessageBoxButtons.OK);
-                    loadinfo();
+                    if (NhomBUS.Instance.deleteNhom(lblMaNhom.Text))//xóa nhóm
+                    {
+                        //ThanhVienBUS.Instance.deleteThanhVienByMaNhom(lblMaNhom.Text);
+                        MessageBox.Show("Xóa Thành Công!", "Thông Báo", MessageBoxButtons.OK);
+                        loadinfo();
+                    }                 
                 }
                 else
                 {

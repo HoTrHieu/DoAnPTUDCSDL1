@@ -39,8 +39,8 @@ namespace PROJECT.DAO
                 string nienHoc = item["nienHoc"].ToString();
                 string maGiaoVu = item["maGiaoVu"].ToString();
                 string maChuyenDe = item["maChuyenDe"].ToString();
-
-                THONGTINMOCHUYENDE ttmcd = new THONGTINMOCHUYENDE(maThongTinMoChuyenDe, hocKy, nienHoc, maGiaoVu, maChuyenDe);
+                bool trangThai = (bool)item["TrangThai"];
+                THONGTINMOCHUYENDE ttmcd = new THONGTINMOCHUYENDE(maThongTinMoChuyenDe, hocKy, nienHoc, maGiaoVu, maChuyenDe, trangThai);
                 thongTinMoChuyenDes.Add(ttmcd);
             }
             return thongTinMoChuyenDes;
@@ -58,22 +58,23 @@ namespace PROJECT.DAO
             string nienHoc = item["NienHoc"].ToString();
             string maGiaoVu = item["MaGiaoVu"].ToString();
             string maChuyenDe = item["MaChuyenDe"].ToString();
-
-            THONGTINMOCHUYENDE ttmcd = new THONGTINMOCHUYENDE(maThongTinMoChuyenDe, hocKy, nienHoc, maGiaoVu, maChuyenDe);
+            bool trangThai = (bool)item["TrangThai"];
+            THONGTINMOCHUYENDE ttmcd = new THONGTINMOCHUYENDE(maThongTinMoChuyenDe, hocKy, nienHoc, maGiaoVu, maChuyenDe, trangThai);
             return ttmcd;
         }
 
         // thêm một thông tin mở chuyên đề
         public bool insertThongTinMoChuyenDe(THONGTINMOCHUYENDE ttmcd)
         {
-            string query = "insert into ThongTinMoChuyenDe values( @maThongTinMoChuyenDe ,  @hocKy , @nienHoc , @maGiaoVu , @maChuyenDe )";
+            string query = "insert into ThongTinMoChuyenDe values( @maThongTinMoChuyenDe ,  @hocKy , @nienHoc , @maGiaoVu , @maChuyenDe , @trangThai )";
             object[] para = new object[]
             {
                 ttmcd.maThongTinMoChuyenDe,
                 ttmcd.hocKy,
                 ttmcd.nienHoc,
                 ttmcd.maGiaoVu,
-                ttmcd.maChuyenDe
+                ttmcd.maChuyenDe,
+                ttmcd.trangThai
             };
             if (DataProvider.Instance.ExecuteNonQuery(query, para) > 0)
                 return true;
@@ -125,8 +126,8 @@ namespace PROJECT.DAO
                 string nienHoc = item["nienHoc"].ToString();
                 string maGiaoVu = item["maGiaoVu"].ToString();
                 string maChuyenDe = item["maChuyenDe"].ToString();
-
-                THONGTINMOCHUYENDE ttmcd = new THONGTINMOCHUYENDE(maThongTinMoChuyenDe, hocKy, nienHoc, maGiaoVu, maChuyenDe);
+                bool trangThai = (bool)item["TrangThai"];
+                THONGTINMOCHUYENDE ttmcd = new THONGTINMOCHUYENDE(maThongTinMoChuyenDe, hocKy, nienHoc, maGiaoVu, maChuyenDe, trangThai);
                 thongTinMoChuyenDes.Add(ttmcd);
             }
             return thongTinMoChuyenDes;
@@ -145,8 +146,8 @@ namespace PROJECT.DAO
             string nienHoc = item["NienHoc"].ToString();
             string maGVu = item["MaGiaoVu"].ToString();
             string maCDe = item["MaChuyenDe"].ToString();
-
-            THONGTINMOCHUYENDE ttmcd = new THONGTINMOCHUYENDE(maTTMCD, hocKy, nienHoc, maGVu, maCDe);
+            bool trangThai = (bool)item["TrangThai"];
+            THONGTINMOCHUYENDE ttmcd = new THONGTINMOCHUYENDE(maTTMCD, hocKy, nienHoc, maGVu, maCDe, trangThai);
 
             return ttmcd;
         }
@@ -183,8 +184,8 @@ namespace PROJECT.DAO
                 string nienHoc = item["nienHoc"].ToString();
                 string maGiaoVu = item["maGiaoVu"].ToString();
                 string maChuyenDe = item["maChuyenDe"].ToString();
-
-                THONGTINMOCHUYENDE ttmcd = new THONGTINMOCHUYENDE(maThongTinMoChuyenDe, hocKy, nienHoc, maGiaoVu, maChuyenDe);
+                bool trangThai = (bool)item["TrangThai"];
+                THONGTINMOCHUYENDE ttmcd = new THONGTINMOCHUYENDE(maThongTinMoChuyenDe, hocKy, nienHoc, maGiaoVu, maChuyenDe, trangThai);
                 thongTinMoChuyenDes.Add(ttmcd);
             }
             return thongTinMoChuyenDes;
@@ -206,8 +207,8 @@ namespace PROJECT.DAO
             string nienHoc = item["NienHoc"].ToString();
             string maGVu = item["MaGiaoVu"].ToString();
             string maCDe = item["MaChuyenDe"].ToString();
-
-            THONGTINMOCHUYENDE ttmcd = new THONGTINMOCHUYENDE(maTTMCD, hocKy, nienHoc, maGVu, maCDe);
+            bool trangThai = (bool)item["TrangThai"];
+            THONGTINMOCHUYENDE ttmcd = new THONGTINMOCHUYENDE(maTTMCD, hocKy, nienHoc, maGVu, maCDe, trangThai);
 
             return ttmcd;
         }
@@ -227,8 +228,8 @@ namespace PROJECT.DAO
             string nienHoc = item["NienHoc"].ToString();
             string maGVu = item["MaGiaoVu"].ToString();
             string maCDe = item["MaChuyenDe"].ToString();
-
-            THONGTINMOCHUYENDE ttmcd = new THONGTINMOCHUYENDE(maTTMCD, hocKy, nienHoc, maGVu, maCDe);
+            bool trangThai = (bool)item["TrangThai"];
+            THONGTINMOCHUYENDE ttmcd = new THONGTINMOCHUYENDE(maTTMCD, hocKy, nienHoc, maGVu, maCDe, trangThai);
 
             return ttmcd;
         }

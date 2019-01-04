@@ -43,15 +43,15 @@ namespace PROJECT.BUS
             string NienHoc = row.Cells["NienHoc"].Value.ToString();
             string MaGiaoVu = row.Cells["MaGiaoVu"].Value.ToString();
             string MaChuyenDe = row.Cells["MaChuyenDe"].Value.ToString();
-
-            THONGTINMOCHUYENDE ttmcd = new THONGTINMOCHUYENDE(MaThongTinMoChuyenDe, HocKy, NienHoc, MaGiaoVu, MaChuyenDe);
+            bool trangThai = (bool)row.Cells["TrangThai"].Value;
+            THONGTINMOCHUYENDE ttmcd = new THONGTINMOCHUYENDE(MaThongTinMoChuyenDe, HocKy, NienHoc, MaGiaoVu, MaChuyenDe, trangThai);
 
             return ThongTinMoChuyenDeDAO.Instance.updateThongTinMoChuyenDe(MaThongTinMoChuyenDe, ttmcd);
         }
 
-        public bool insertThongTinMoChuyenDe(string maTTMCDe, int hocKy, string nienHoc, string maGV, string maCD)
+        public bool insertThongTinMoChuyenDe(string maTTMCDe, int hocKy, string nienHoc, string maGV, string maCD, bool trangthai)
         {
-            THONGTINMOCHUYENDE ttmcd = new THONGTINMOCHUYENDE(maTTMCDe, hocKy, nienHoc, maGV, maCD) ;
+            THONGTINMOCHUYENDE ttmcd = new THONGTINMOCHUYENDE(maTTMCDe, hocKy, nienHoc, maGV, maCD, trangthai) ;
             return ThongTinMoChuyenDeDAO.Instance.insertThongTinMoChuyenDe(ttmcd);
         }
 
