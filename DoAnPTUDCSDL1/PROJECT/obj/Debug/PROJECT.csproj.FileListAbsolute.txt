@@ -118,7 +118,6 @@ D:\data\desktop\git\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\
 D:\data\desktop\git\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.csproj.CoreCompileInputs.cache
 D:\data\desktop\git\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.exe
 D:\data\desktop\git\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.pdb
-D:\data\desktop\git\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.csprojAssemblyReference.cache
 H:\DO AN NAM 3\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.csprojAssemblyReference.cache
 C:\Users\Ho Trung Hieu\Desktop\DEADLINE\DO_AN\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.frmDangKiNhom.resources
 C:\Users\Ho Trung Hieu\Desktop\DEADLINE\DO_AN\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.frmDangKyChuyenDe.resources
@@ -173,3 +172,4 @@ C:\Users\Ho Trung Hieu\Desktop\LUUPRO\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\De
 C:\Users\Ho Trung Hieu\Desktop\LUUPRO\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.csproj.CoreCompileInputs.cache
 C:\Users\Ho Trung Hieu\Desktop\LUUPRO\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.exe
 C:\Users\Ho Trung Hieu\Desktop\LUUPRO\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.pdb
+D:\data\desktop\git\DoAnPTUDCSDL1\DoAnPTUDCSDL1\DoAnPTUDCSDL1\PROJECT\obj\Debug\PROJECT.GUI.frmDSSinhVien.resources
