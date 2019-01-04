@@ -87,5 +87,10 @@ namespace PROJECT.BUS
         {
             return ThongTinMoChuyenDeDAO.Instance.GetByMaCD(maCD);
         }
+
+        public bool updateTrangThai(string MaTTMCDe, bool trangThai)
+        {
+            return ThongTinMoChuyenDeDAO.Instance.updateTrangThai(MaTTMCDe, trangThai);
+        }
     }
 }

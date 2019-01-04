@@ -238,5 +238,18 @@ namespace PROJECT.DAO
             return ttmcd;
         }
 
+        public bool updateTrangThai(string MaTTMCDe, bool trangThai)
+        {
+            string query = "update ThongTinMoChuyenDe " +
+                "set TrangThai = @trangthai where MaThongTinMoChuyenDe = @maThongTinMoChuyenDe ";
+            object[] para = new object[]
+            {
+               trangThai, MaTTMCDe
+            };
+
+            if (DataProvider.Instance.ExecuteNonQuery(query, para) > 0)
+                return true;
+            return false;
+        }
     }
 }

@@ -11,6 +11,7 @@ using System.Threading;//dung de dong form cu mo form moi?
 using PROJECT.DTO;
 using PROJECT.BUS;
 using Timer = System.Windows.Forms.Timer;
+using PROJECT.GUI.GiaoVu;
 
 namespace PROJECT.GUI
 {
@@ -49,7 +50,8 @@ namespace PROJECT.GUI
 
         private void btnDsCDMo_Click(object sender, EventArgs e)
         {
-            //tạo frm ds chuyen de da mo
+            frmDanhSachChuyenDeDaMo dscdm = new frmDanhSachChuyenDeDaMo();
+            dscdm.ShowDialog();
         }
 
         private void btnDsSVDK_Click(object sender, EventArgs e)

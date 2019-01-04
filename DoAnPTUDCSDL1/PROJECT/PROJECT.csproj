@@ -96,6 +96,12 @@
     <Compile Include="DTO\THANHVIEN.cs" />
     <Compile Include="DTO\THONGTINDANGKY.cs" />
     <Compile Include="DTO\THONGTINMOCHUYENDE.cs" />
+    <Compile Include="GUI\GiaoVu\frmDanhSachChuyenDeDaMo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GiaoVu\frmDanhSachChuyenDeDaMo.Designer.cs">
+      <DependentUpon>frmDanhSachChuyenDeDaMo.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\GiaoVu\frmDSSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     <Compile Include="GUI\GiaoVu\frmThemTaiKhoanSinhVien.Designer.cs">
       <DependentUpon>frmThemTaiKhoanSinhVien.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GUI\GiaoVu\frmDanhSachChuyenDeDaMo.resx">
+      <DependentUpon>frmDanhSachChuyenDeDaMo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\GiaoVu\frmDSSinhVien.resx">
       <DependentUpon>frmDSSinhVien.cs</DependentUpon>
     </EmbeddedResource>
